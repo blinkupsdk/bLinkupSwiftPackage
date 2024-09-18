@@ -134,6 +134,7 @@ public struct ConnectionRequest : Swift.Decodable, Swift.Identifiable {
   public typealias ID = Swift.String
   public init(from decoder: any Swift.Decoder) throws
 }
+
 public enum ConnectionStatus : Swift.String, Swift.Decodable {
   case connected, blocked, pending
   public init?(rawValue: Swift.String)
@@ -148,8 +149,8 @@ public struct Place : Swift.Codable, Swift.Hashable, Swift.Equatable {
   public let latitude: Swift.Double?, longitude: Swift.Double?, radius: Swift.Double?
   public let blinkpoints: [bLinkupSDK.BlinkPoint]?
   public static func == (lhs: bLinkupSDK.Place, rhs: bLinkupSDK.Place) -> Swift.Bool
-  public init(id: Swift.String, name: Swift.String, mapURL: Swift.String? = nil, geofence: Swift.String? = nil, latitude: Swift.Double? = nil, longitude: Swift.Double? = nil, radius: Swift.Double? = nil, blinkpoints: [bLinkupSDK.BlinkPoint]? = nil)
   public func hash(into hasher: inout Swift.Hasher)
+  public init(id: Swift.String, name: Swift.String, mapURL: Swift.String? = nil, geofence: Swift.String? = nil, latitude: Swift.Double? = nil, longitude: Swift.Double? = nil, radius: Swift.Double? = nil, blinkpoints: [bLinkupSDK.BlinkPoint]? = nil)
   public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
@@ -203,6 +204,10 @@ public struct SegmentControl : SwiftUI.View {
   public static func deleteCurrentUser(completion: @escaping bLinkupSDK.Completion<Swift.Void>)
   #if compiler(>=5.3) && $AsyncAwait
   public static func deleteCurrentUser() async throws
+  #endif
+  public static func setPushID(_ token: Swift.String?, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func setPushID(_ token: Swift.String?) async throws
   #endif
   public static func findUsers(query: Swift.String?, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.User]>)
   #if compiler(>=5.3) && $AsyncAwait
@@ -304,7 +309,7 @@ public struct GeoPoint {
   public let x: Swift.Double, y: Swift.Double, r: Swift.Double
   public init(name: Swift.String, x: Swift.Double, y: Swift.Double, r: Swift.Double)
 }
-public class Branding : Combine.ObservableObject {
+public class Branding : Foundation.ObservableObject {
   public init(primary: UIKit.UIColor = .black, secondary: UIKit.UIColor = .red, fontName: Swift.String? = nil, logo: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil)
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit

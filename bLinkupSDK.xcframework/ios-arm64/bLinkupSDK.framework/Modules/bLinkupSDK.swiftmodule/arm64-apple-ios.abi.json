@@ -3586,6 +3586,16 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -4361,6 +4371,33 @@
             "funcSelfKind": "NonMutating"
           },
           {
+            "kind": "Function",
+            "name": "hash",
+            "printedName": "hash(into:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Hasher",
+                "printedName": "Swift.Hasher",
+                "paramValueOwnership": "InOut",
+                "usr": "s:s6HasherV"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10bLinkupSDK5PlaceV4hash4intoys6HasherVz_tF",
+            "mangledName": "$s10bLinkupSDK5PlaceV4hash4intoys6HasherVz_tF",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
             "kind": "Constructor",
             "name": "init",
             "printedName": "init(id:name:mapURL:geofence:latitude:longitude:radius:blinkpoints:)",
@@ -4580,31 +4617,6 @@
                 "accessorKind": "get"
               }
             ]
-          },
-          {
-            "kind": "Function",
-            "name": "hash",
-            "printedName": "hash(into:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Hasher",
-                "printedName": "Swift.Hasher",
-                "paramValueOwnership": "InOut",
-                "usr": "s:s6HasherV"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:10bLinkupSDK5PlaceV4hash4intoys6HasherVz_tF",
-            "mangledName": "$s10bLinkupSDK5PlaceV4hash4intoys6HasherVz_tF",
-            "moduleName": "bLinkupSDK",
-            "implicit": true,
-            "funcSelfKind": "NonMutating"
           }
         ],
         "declKind": "Struct",
@@ -5588,6 +5600,110 @@
             "declKind": "Func",
             "usr": "s:10bLinkupSDK01bA0C17deleteCurrentUseryyYaKFZ",
             "mangledName": "$s10bLinkupSDK01bA0C17deleteCurrentUseryyYaKFZ",
+            "moduleName": "bLinkupSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPushID",
+            "printedName": "setPushID(_:completion:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeFunc",
+                "name": "Function",
+                "printedName": "(Swift.Result<(), any Swift.Error>) -> ()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Result",
+                    "printedName": "Swift.Result<(), any Swift.Error>",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Error",
+                        "printedName": "any Swift.Error",
+                        "usr": "s:s5ErrorP"
+                      }
+                    ],
+                    "usr": "s:s6ResultO"
+                  }
+                ]
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10bLinkupSDK01bA0C9setPushID_10completionySSSg_ys6ResultOyyts5Error_pGctFZ",
+            "mangledName": "$s10bLinkupSDK01bA0C9setPushID_10completionySSSg_ys6ResultOyyts5Error_pGctFZ",
+            "moduleName": "bLinkupSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setPushID",
+            "printedName": "setPushID(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10bLinkupSDK01bA0C9setPushIDyySSSgYaKFZ",
+            "mangledName": "$s10bLinkupSDK01bA0C9setPushIDyySSSgYaKFZ",
             "moduleName": "bLinkupSDK",
             "static": true,
             "declAttributes": [
@@ -8240,13 +8356,6 @@
         ]
       },
       {
-        "kind": "Import",
-        "name": "Combine",
-        "printedName": "Combine",
-        "declKind": "Import",
-        "moduleName": "bLinkupSDK"
-      },
-      {
         "kind": "TypeDecl",
         "name": "Branding",
         "printedName": "Branding",
@@ -10688,1624 +10797,1708 @@
   },
   "ConstValues": [
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/NavBar2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/NavBar2.swift",
       "kind": "BooleanLiteral",
       "offset": 281,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/NavBar2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/NavBar2.swift",
       "kind": "BooleanLiteral",
       "offset": 1572,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Contact.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Contact.swift",
       "kind": "StringLiteral",
       "offset": 347,
       "length": 9,
       "value": "\"user_id\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Contact.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Contact.swift",
       "kind": "StringLiteral",
       "offset": 396,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Contact.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Contact.swift",
       "kind": "StringLiteral",
       "offset": 347,
       "length": 9,
       "value": "\"user_id\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Contact.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Contact.swift",
       "kind": "StringLiteral",
       "offset": 396,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/LoginButton2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "BooleanLiteral",
       "offset": 234,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/LoginButton2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "BooleanLiteral",
       "offset": 264,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/LoginButton2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "StringLiteral",
       "offset": 1277,
       "length": 8,
       "value": "\"Submit\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/LoginButton2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "StringLiteral",
       "offset": 1315,
       "length": 8,
       "value": "\"Cancel\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/LoginButton2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "BooleanLiteral",
       "offset": 1335,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/OTP2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/OTP2Screen.swift",
       "kind": "StringLiteral",
       "offset": 199,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/OTP2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/OTP2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 312,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/OTP2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/OTP2Screen.swift",
       "kind": "StringLiteral",
       "offset": 2759,
       "length": 14,
       "value": "\"555-555-1234\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/OTP2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/OTP2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 2798,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Text2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Text2.swift",
       "kind": "BooleanLiteral",
       "offset": 220,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Text2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Text2.swift",
       "kind": "BooleanLiteral",
       "offset": 250,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Text2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Text2.swift",
       "kind": "StringLiteral",
       "offset": 1041,
       "length": 4,
       "value": "\"Go\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Presence.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Presence.swift",
       "kind": "StringLiteral",
       "offset": 400,
       "length": 12,
       "value": "\"is_present\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Presence.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Presence.swift",
       "kind": "StringLiteral",
       "offset": 439,
       "length": 13,
       "value": "\"inserted_at\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Presence.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Presence.swift",
       "kind": "StringLiteral",
       "offset": 400,
       "length": 12,
       "value": "\"is_present\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Presence.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Presence.swift",
       "kind": "StringLiteral",
       "offset": 439,
       "length": 13,
       "value": "\"inserted_at\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/ContactResult.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/ContactResult.swift",
       "kind": "StringLiteral",
       "offset": 320,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/ContactResult.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/ContactResult.swift",
       "kind": "StringLiteral",
       "offset": 320,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/LoadingView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/LoadingView.swift",
       "kind": "BooleanLiteral",
       "offset": 1507,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/LoadingView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/LoadingView.swift",
       "kind": "Array",
       "offset": 1558,
       "length": 25,
       "value": "[\"1\", \"2\", \"3\", \"4\", \"5\"]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/LoadingView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/LoadingView.swift",
       "kind": "StringLiteral",
       "offset": 1670,
       "length": 8,
       "value": "\"A List\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "IntegerLiteral",
       "offset": 1821,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "BooleanLiteral",
       "offset": 1852,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "Array",
       "offset": 1884,
       "length": 10,
       "value": "[\"person\"]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
       "offset": 1903,
       "length": 8,
       "value": "\"no any\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
       "offset": 1919,
       "length": 8,
       "value": "\"person\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
       "offset": 1991,
       "length": 7,
       "value": "\"Logo2\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
       "offset": 2006,
       "length": 8,
       "value": "\"Alpine\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK.swift",
+      "kind": "StringLiteral",
+      "offset": 126,
+      "length": 30,
+      "value": "\"https:\/\/blinkup.fly.dev\/api\/\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 5608,
+      "offset": 6273,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ActivityScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ActivityScreen.swift",
       "kind": "Array",
       "offset": 940,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Action2Button.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
       "offset": 259,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Action2Button.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "StringLiteral",
       "offset": 1273,
       "length": 8,
       "value": "\"Submit\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Action2Button.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
       "offset": 1293,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Action2Button.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
       "offset": 1309,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Action2Button.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "StringLiteral",
       "offset": 1345,
       "length": 8,
       "value": "\"Submit\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Action2Button.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
       "offset": 1365,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Action2Button.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
       "offset": 1381,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Action2Button.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "StringLiteral",
       "offset": 1416,
       "length": 8,
       "value": "\"Cancel\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Action2Button.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
       "offset": 1436,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "IntegerLiteral",
       "offset": 386,
       "length": 9,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "IntegerLiteral",
       "offset": 409,
       "length": 9,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "IntegerLiteral",
       "offset": 432,
       "length": 10,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "IntegerLiteral",
       "offset": 386,
       "length": 9,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "IntegerLiteral",
       "offset": 409,
       "length": 9,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "IntegerLiteral",
       "offset": 432,
       "length": 10,
       "value": "3"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "IntegerLiteral",
       "offset": 525,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "IntegerLiteral",
       "offset": 525,
       "length": 6,
       "value": "1"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "IntegerLiteral",
       "offset": 603,
       "length": 1,
       "value": "2"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "FloatLiteral",
       "offset": 1029,
       "length": 3,
       "value": "1.0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "FloatLiteral",
       "offset": 1078,
       "length": 3,
       "value": "3.0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "BooleanLiteral",
       "offset": 1404,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "BooleanLiteral",
       "offset": 1443,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/PublicUI\/ImageScrollView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/PublicUI\/ImageScrollView.swift",
       "kind": "BooleanLiteral",
       "offset": 1486,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlockedScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlockedScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 200,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlockedScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlockedScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 232,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlockedScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlockedScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 265,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlockedScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlockedScreen.swift",
       "kind": "StringLiteral",
       "offset": 301,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlockedScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlockedScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 3222,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlockedScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlockedScreen.swift",
       "kind": "IntegerLiteral",
       "offset": 3653,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlockedScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlockedScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 3684,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlockedScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlockedScreen.swift",
       "kind": "Array",
       "offset": 3730,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 201,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 277,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 328,
+      "offset": 324,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 374,
+      "offset": 375,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
-      "kind": "StringLiteral",
-      "offset": 426,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 464,
+      "offset": 421,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "StringLiteral",
-      "offset": 512,
+      "offset": 473,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 511,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "StringLiteral",
-      "offset": 553,
+      "offset": 559,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "kind": "StringLiteral",
+      "offset": 600,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "IntegerLiteral",
-      "offset": 6415,
+      "offset": 7445,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 6446,
+      "offset": 7476,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 6507,
+      "offset": 7537,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Profile2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 6527,
+      "offset": 7557,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Invite2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Invite2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 356,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Login2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Login2Screen.swift",
       "kind": "StringLiteral",
       "offset": 197,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Login2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Login2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 368,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Login2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Login2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 409,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Login2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Login2Screen.swift",
       "kind": "StringLiteral",
-      "offset": 3690,
+      "offset": 3130,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Login2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Login2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 3718,
+      "offset": 3158,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/OTPDigitView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/OTPDigitView.swift",
       "kind": "StringLiteral",
       "offset": 161,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/OTPDigitView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/OTPDigitView.swift",
       "kind": "StringLiteral",
       "offset": 215,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/OTPDigitView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/OTPDigitView.swift",
       "kind": "StringLiteral",
       "offset": 269,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/OTPDigitView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/OTPDigitView.swift",
       "kind": "StringLiteral",
       "offset": 323,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/OTPDigitView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/OTPDigitView.swift",
       "kind": "StringLiteral",
       "offset": 377,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/OTPDigitView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/OTPDigitView.swift",
       "kind": "StringLiteral",
       "offset": 431,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/ConnectionRequest.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/ConnectionRequest.swift",
       "kind": "StringLiteral",
       "offset": 327,
       "length": 13,
       "value": "\"source_user\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/ConnectionRequest.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/ConnectionRequest.swift",
       "kind": "StringLiteral",
       "offset": 363,
       "length": 13,
       "value": "\"target_user\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/ConnectionRequest.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/ConnectionRequest.swift",
       "kind": "StringLiteral",
       "offset": 327,
       "length": 13,
       "value": "\"source_user\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/ConnectionRequest.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/ConnectionRequest.swift",
       "kind": "StringLiteral",
       "offset": 363,
       "length": 13,
       "value": "\"target_user\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Place.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/RequestsItemView.swift",
+      "kind": "StringLiteral",
+      "offset": 273,
+      "length": 9,
+      "value": "\"decline\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/RequestsItemView.swift",
+      "kind": "StringLiteral",
+      "offset": 325,
+      "length": 8,
+      "value": "\"accept\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/RequestsItemView.swift",
+      "kind": "StringLiteral",
+      "offset": 373,
+      "length": 8,
+      "value": "\"accept\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/RequestsItemView.swift",
+      "kind": "StringLiteral",
+      "offset": 1908,
+      "length": 8,
+      "value": "\"Philip\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/RequestsItemView.swift",
+      "kind": "StringLiteral",
+      "offset": 1924,
+      "length": 9,
+      "value": "\"Will_Ph\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Place.swift",
       "kind": "StringLiteral",
       "offset": 419,
       "length": 9,
       "value": "\"map_url\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Place.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Place.swift",
       "kind": "StringLiteral",
       "offset": 419,
       "length": 9,
       "value": "\"map_url\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/InputView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/InputView.swift",
       "kind": "StringLiteral",
       "offset": 157,
       "length": 11,
       "value": "\"Type here\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/InputView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/InputView.swift",
       "kind": "StringLiteral",
       "offset": 775,
       "length": 11,
       "value": "\"Type here\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/InputView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/InputView.swift",
       "kind": "StringLiteral",
       "offset": 804,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/SegmentControl.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/SegmentControl.swift",
       "kind": "IntegerLiteral",
       "offset": 2155,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/SegmentControl.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/SegmentControl.swift",
       "kind": "StringLiteral",
       "offset": 2201,
       "length": 7,
       "value": "\"item0\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/SegmentControl.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/SegmentControl.swift",
       "kind": "StringLiteral",
       "offset": 2223,
       "length": 7,
       "value": "\"Item1\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/bLinkup.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/bLinkup.swift",
+      "kind": "StringLiteral",
+      "offset": 238,
+      "length": 4,
+      "value": "\"43\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 275,
+      "offset": 268,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/bLinkup.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/bLinkup.swift",
+      "kind": "StringLiteral",
+      "offset": 309,
+      "length": 44,
+      "value": "\"com.blinktech.sdk.geofencingPresenceUpdate\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 10617,
+      "offset": 11699,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/bLinkup.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 10821,
+      "offset": 11903,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/bLinkup.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/bLinkup.swift",
       "kind": "Dictionary",
-      "offset": 16722,
+      "offset": 17853,
       "length": 3,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/LogsManager.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/LogsManager.swift",
       "kind": "IntegerLiteral",
       "offset": 121,
       "length": 3,
       "value": "100"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/LogsManager.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/LogsManager.swift",
       "kind": "StringLiteral",
       "offset": 343,
       "length": 25,
       "value": "\"com.blinkup.logsEnabled\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/LogsManager.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/LogsManager.swift",
       "kind": "StringLiteral",
       "offset": 254,
       "length": 25,
       "value": "\"com.blinkup.logsEnabled\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/LogsManager.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/LogsManager.swift",
       "kind": "IntegerLiteral",
       "offset": 508,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/LogsManager.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/LogsManager.swift",
       "kind": "Array",
       "offset": 591,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/BlinkPoint.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/BlinkPoint.swift",
       "kind": "StringLiteral",
       "offset": 347,
       "length": 16,
       "value": "\"promo_card_url\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/BlinkPoint.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/BlinkPoint.swift",
       "kind": "StringLiteral",
       "offset": 347,
       "length": 16,
       "value": "\"promo_card_url\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/BlinkPoint.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/BlinkPoint.swift",
       "kind": "StringLiteral",
       "offset": 404,
       "length": 3,
       "value": "\"1\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/BlinkPoint.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/BlinkPoint.swift",
       "kind": "StringLiteral",
       "offset": 424,
       "length": 11,
       "value": "\"Test name\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/BlinkPoint.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/BlinkPoint.swift",
       "kind": "IntegerLiteral",
       "offset": 474,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/BlinkPoint.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/BlinkPoint.swift",
       "kind": "IntegerLiteral",
       "offset": 489,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "StringLiteral",
-      "offset": 420,
+      "offset": 496,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "IntegerLiteral",
-      "offset": 448,
+      "offset": 524,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 477,
+      "offset": 553,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 516,
+      "offset": 592,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "StringLiteral",
-      "offset": 560,
+      "offset": 636,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 592,
+      "offset": 668,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "Array",
-      "offset": 1066,
+      "offset": 1189,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "Array",
-      "offset": 1120,
+      "offset": 1243,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1160,
+      "offset": 1283,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1215,
+      "offset": 1338,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 5277,
+      "offset": 5623,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Home2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Home2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 14867,
+      "offset": 15689,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/HomeItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/HomeItemView.swift",
       "kind": "StringLiteral",
       "offset": 827,
       "length": 5,
       "value": "\"map\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/HomeItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/HomeItemView.swift",
       "kind": "StringLiteral",
       "offset": 841,
       "length": 5,
       "value": "\"Map\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Map2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Map2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 352,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Map2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Map2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 446,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Map2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Map2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 487,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Map2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Map2Screen.swift",
       "kind": "StringLiteral",
       "offset": 531,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Geofencing.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Geofencing.swift",
       "kind": "Array",
       "offset": 1077,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Geofencing.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Geofencing.swift",
       "kind": "StringLiteral",
       "offset": 1234,
       "length": 19,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Geofencing.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Geofencing.swift",
       "kind": "StringLiteral",
       "offset": 1245,
       "length": 1,
       "value": "\" \""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Geofencing.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Geofencing.swift",
       "kind": "StringLiteral",
       "offset": 1252,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Branding2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Branding2.swift",
       "kind": "StringLiteral",
-      "offset": 145,
+      "offset": 130,
       "length": 9,
       "value": "\"Connect\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Branding2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Branding2.swift",
       "kind": "IntegerLiteral",
-      "offset": 612,
+      "offset": 597,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Branding2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Branding2.swift",
       "kind": "IntegerLiteral",
-      "offset": 894,
+      "offset": 879,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 176,
       "length": 20,
       "value": "\"mappin.and.ellipse\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 221,
       "length": 29,
       "value": "\"arrowshape.turn.up.backward\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 272,
       "length": 7,
       "value": "\"trash\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 306,
       "length": 19,
       "value": "\"person.badge.plus\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 347,
       "length": 19,
       "value": "\"hand.raised.slash\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 176,
       "length": 20,
       "value": "\"mappin.and.ellipse\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 221,
       "length": 29,
       "value": "\"arrowshape.turn.up.backward\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 272,
       "length": 7,
       "value": "\"trash\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 306,
       "length": 19,
       "value": "\"person.badge.plus\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 347,
       "length": 19,
       "value": "\"hand.raised.slash\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 1396,
       "length": 8,
       "value": "\"Philip\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/ListItemView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
       "offset": 1412,
       "length": 9,
       "value": "\"Will_Ph\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Block.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Block.swift",
       "kind": "StringLiteral",
       "offset": 370,
       "length": 13,
       "value": "\"inserted_at\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Block.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Block.swift",
       "kind": "StringLiteral",
       "offset": 370,
       "length": 13,
       "value": "\"inserted_at\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Connection.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Connection.swift",
       "kind": "StringLiteral",
       "offset": 375,
       "length": 13,
       "value": "\"source_user\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Connection.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Connection.swift",
       "kind": "StringLiteral",
       "offset": 415,
       "length": 13,
       "value": "\"target_user\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Connection.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Connection.swift",
       "kind": "StringLiteral",
       "offset": 375,
       "length": 13,
       "value": "\"source_user\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/Connection.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/Connection.swift",
       "kind": "StringLiteral",
       "offset": 415,
       "length": 13,
       "value": "\"target_user\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/SearchBar2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/SearchBar2.swift",
       "kind": "StringLiteral",
-      "offset": 1060,
+      "offset": 1163,
       "length": 3,
       "value": "\"5\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 151,
+      "length": 44,
+      "value": "\"com.blinktech.sdk.geofencingPresenceUpdate\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 315,
+      "offset": 485,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
       "kind": "StringLiteral",
-      "offset": 359,
+      "offset": 529,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 2936,
-      "length": 3,
-      "value": "\"1\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3007,
-      "length": 3,
-      "value": "\"1\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3166,
-      "length": 3,
-      "value": "\"2\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3243,
-      "length": 3,
-      "value": "\"3\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3328,
-      "length": 3,
-      "value": "\"2\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3339,
-      "length": 4,
-      "value": "\"n1\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3359,
-      "length": 4,
-      "value": "\"e1\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3446,
-      "length": 3,
-      "value": "\"3\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3457,
-      "length": 4,
-      "value": "\"n2\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3529,
-      "length": 3,
-      "value": "\"3\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3540,
-      "length": 4,
-      "value": "\"n2\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "StringLiteral",
-      "offset": 3560,
-      "length": 4,
-      "value": "\"e2\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 3575,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
-      "kind": "BooleanLiteral",
-      "offset": 3617,
+      "offset": 577,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Error2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "Array",
+      "offset": 624,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6144,
+      "length": 3,
+      "value": "\"1\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6215,
+      "length": 3,
+      "value": "\"1\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6374,
+      "length": 3,
+      "value": "\"2\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6451,
+      "length": 3,
+      "value": "\"3\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6536,
+      "length": 3,
+      "value": "\"2\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6547,
+      "length": 4,
+      "value": "\"n1\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6567,
+      "length": 4,
+      "value": "\"e1\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6654,
+      "length": 3,
+      "value": "\"3\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6665,
+      "length": 4,
+      "value": "\"n2\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6737,
+      "length": 3,
+      "value": "\"3\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6748,
+      "length": 4,
+      "value": "\"n2\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "StringLiteral",
+      "offset": 6768,
+      "length": 4,
+      "value": "\"e2\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6783,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionListWithMe2View.swift",
+      "kind": "BooleanLiteral",
+      "offset": 6868,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Error2View.swift",
       "kind": "StringLiteral",
       "offset": 706,
       "length": 12,
       "value": "\"some error\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "BooleanLiteral",
       "offset": 350,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
       "offset": 394,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 3341,
+      "offset": 3324,
       "length": 3,
       "value": "\"1\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 3428,
+      "offset": 3411,
       "length": 3,
       "value": "\"1\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 3619,
+      "offset": 3602,
       "length": 3,
       "value": "\"2\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 3712,
+      "offset": 3695,
       "length": 3,
       "value": "\"3\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 3813,
+      "offset": 3796,
       "length": 3,
       "value": "\"2\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 3824,
+      "offset": 3807,
       "length": 4,
       "value": "\"n1\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 3844,
+      "offset": 3827,
       "length": 4,
       "value": "\"e1\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 3947,
+      "offset": 3930,
       "length": 3,
       "value": "\"3\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 3958,
+      "offset": 3941,
       "length": 4,
       "value": "\"n2\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 4046,
+      "offset": 4029,
       "length": 3,
       "value": "\"3\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 4057,
+      "offset": 4040,
       "length": 4,
       "value": "\"n2\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 4077,
+      "offset": 4060,
       "length": 4,
       "value": "\"e2\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 4092,
+      "offset": 4075,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 4214,
+      "offset": 4197,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Color+Extensions2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Color+Extensions2.swift",
       "kind": "IntegerLiteral",
       "offset": 784,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/Color+Extensions2.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/Color+Extensions2.swift",
       "kind": "IntegerLiteral",
       "offset": 1075,
       "length": 3,
       "value": "255"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/ServerError.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/ServerError.swift",
       "kind": "StringLiteral",
       "offset": 263,
       "length": 11,
       "value": "\"attribute\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/ServerError.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/ServerError.swift",
       "kind": "StringLiteral",
       "offset": 298,
       "length": 8,
       "value": "\"detail\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/ServerError.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/ServerError.swift",
       "kind": "StringLiteral",
       "offset": 263,
       "length": 11,
       "value": "\"attribute\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Internal\/ServerError.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Internal\/ServerError.swift",
       "kind": "StringLiteral",
       "offset": 298,
       "length": 8,
       "value": "\"detail\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 297,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
       "kind": "StringLiteral",
       "offset": 1258,
       "length": 46,
       "value": "\"7x1oDfFEpUj4LVIzz8XSskomH5dINsRZmLY6XZSfPvE=\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
       "kind": "StringLiteral",
       "offset": 1312,
       "length": 6,
       "value": "\"Will\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
       "kind": "StringLiteral",
       "offset": 1479,
       "length": 7,
       "value": "\"Inter\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
       "kind": "StringLiteral",
       "offset": 1532,
       "length": 7,
       "value": "\"Logo2\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Keychain\/Keychain.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Keychain\/Keychain.swift",
       "kind": "StringLiteral",
       "offset": 635,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Keychain\/Keychain.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Keychain\/Keychain.swift",
       "kind": "BooleanLiteral",
       "offset": 1527,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Keychain\/Keychain.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Keychain\/Keychain.swift",
       "kind": "BooleanLiteral",
       "offset": 6693,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Keychain\/Keychain.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Keychain\/Keychain.swift",
       "kind": "BooleanLiteral",
       "offset": 7918,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Matching2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Matching2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 267,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Matching2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Matching2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 306,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Matching2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Matching2Screen.swift",
       "kind": "StringLiteral",
       "offset": 350,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Matching2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Matching2Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 407,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/Matching2Screen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/Matching2Screen.swift",
       "kind": "Array",
       "offset": 4795,
       "length": 2,
       "value": "[]"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/User.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/User.swift",
       "kind": "StringLiteral",
-      "offset": 860,
+      "offset": 940,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/User.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/User.swift",
       "kind": "StringLiteral",
-      "offset": 903,
+      "offset": 983,
       "length": 15,
       "value": "\"email_address\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/User.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/User.swift",
       "kind": "StringLiteral",
-      "offset": 860,
+      "offset": 940,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/Public\/User.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/Public\/User.swift",
       "kind": "StringLiteral",
-      "offset": 903,
+      "offset": 983,
       "length": 15,
       "value": "\"email_address\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 215,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 291,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "StringLiteral",
       "offset": 343,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 381,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "StringLiteral",
       "offset": 429,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "StringLiteral",
       "offset": 470,
       "length": 2,
       "value": "\"\""
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 514,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 565,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "IntegerLiteral",
       "offset": 6632,
       "length": 1,
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 6663,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 6723,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 6743,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/BlinkUp\/SDKApp\/SDK\/SDK-UIElements\/AsyncImageView.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/SDKApp copy\/SDK\/SDK-UIElements\/AsyncImageView.swift",
       "kind": "StringLiteral",
       "offset": 756,
       "length": 2,
