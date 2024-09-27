@@ -11581,7 +11581,7 @@
       "kind": "StringLiteral",
       "offset": 238,
       "length": 4,
-      "value": "\"49\""
+      "value": "\"50\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BU\/SDKApp\/SDK\/bLinkup.swift",
@@ -12489,28 +12489,28 @@
     {
       "filePath": "\/Users\/chas\/Work\/BU\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 7083,
+      "offset": 5426,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BU\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 7114,
+      "offset": 5457,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BU\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 7174,
+      "offset": 5517,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BU\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 7194,
+      "offset": 5537,
       "length": 5,
       "value": "false"
     },
