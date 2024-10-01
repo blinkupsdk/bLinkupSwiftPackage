@@ -360,7 +360,7 @@ public struct VenueMapView : SwiftUI.UIViewControllerRepresentable {
 
 
 public struct BlinkupRootScreen : SwiftUI.View {
-  public init(customer: bLinkupSDK.Customer, branding: bLinkupSDK.Branding, onClose: (() -> Swift.Void)? = nil)
+  public init(customer: bLinkupSDK.Customer, branding: bLinkupSDK.Branding, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }

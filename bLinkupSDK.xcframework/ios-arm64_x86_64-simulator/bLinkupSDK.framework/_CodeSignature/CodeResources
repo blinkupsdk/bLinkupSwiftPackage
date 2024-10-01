@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		gYdYT6xxVmDsANk/A7gw/SLLpjY=
+		xF2klSEpZcK9Xn/FeBF6v9fCBhg=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		bTBnUnZXKSIXv+vT0rnNhnD2pTw=
+		u4vLPNHiwlkyxTwRTMYJw2T1NrQ=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bTBnUnZXKSIXv+vT0rnNhnD2pTw=
+		u4vLPNHiwlkyxTwRTMYJw2T1NrQ=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		lfo3580aI/pzCx/0lykIVxs0hMA=
+		R6/t54DABGJNhttYIi1n8n30sIo=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		gYdYT6xxVmDsANk/A7gw/SLLpjY=
+		xF2klSEpZcK9Xn/FeBF6v9fCBhg=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		DfidkCsk2207Pz1Xf9MPgirTMlc=
+		CFwWhPn/1sKhQuJLQ2RMVHQBZoA=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		DfidkCsk2207Pz1Xf9MPgirTMlc=
+		CFwWhPn/1sKhQuJLQ2RMVHQBZoA=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		PmtlQoIBTnDbfNh0FwI3dp4ahWQ=
+		rM216XdOoIbbRygqJXQ77bovc74=
 		</data>
 		<key>Screens2.storyboardc/Info.plist</key>
 		<data>
@@ -58,7 +58,7 @@
 		</data>
 		<key>Screens2.storyboardc/JKk-fr-82m-view-YZh-JP-DoY.nib</key>
 		<data>
-		Otm0jiFp6avo4sY7iqGtPtqi/+4=
+		yCUN0N24RF+lDXHJyVRBfraPVow=
 		</data>
 		<key>Screens2.storyboardc/Map2VC.nib</key>
 		<data>
@@ -106,14 +106,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			aUPdepoXa3wPyG00OjC36zhE0EMxGptDPvtAMK8BKeY=
+			lA53VtEmM8ldF54aaNBVdMOEMSly54KjSD4YRWOuIlU=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PWrtSVcgira8dzKRKFZMB8/PwqPrNiRvZaP+D/Jnl3c=
+			rgL4jnJiTe7dVkL4pZlAZ98BMmvBb5PlLGrNh7+bCkM=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -127,28 +127,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			PWrtSVcgira8dzKRKFZMB8/PwqPrNiRvZaP+D/Jnl3c=
+			rgL4jnJiTe7dVkL4pZlAZ98BMmvBb5PlLGrNh7+bCkM=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			WwR1XrFcR2X6mTvVBUDkL90RJRtREXn6/XQGcYbfzA8=
+			UyynAbkyBlHq4S8SsFIAzVxMgblaA61ecaPL3b3B7+0=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			aUPdepoXa3wPyG00OjC36zhE0EMxGptDPvtAMK8BKeY=
+			lA53VtEmM8ldF54aaNBVdMOEMSly54KjSD4YRWOuIlU=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			fmxpC0DgNQxe0/SgSQEtAWuC45mMnE5vz3EpRupB/lA=
+			TCH3YKKEk0lRkQIhJclB6pr4mLnbuE+npBXjn1zjqIw=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -162,14 +162,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			fmxpC0DgNQxe0/SgSQEtAWuC45mMnE5vz3EpRupB/lA=
+			TCH3YKKEk0lRkQIhJclB6pr4mLnbuE+npBXjn1zjqIw=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			7IVe9a0cWgE9Q9q448/Mzf3SVSPRfBWdSz6mGGlp85c=
+			le8lDFZdcr9SwlYjf0snf4VD8zTfqp1dkV36aER4mVU=
 			</data>
 		</dict>
 		<key>Screens2.storyboardc/Info.plist</key>
@@ -183,7 +183,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			joRvhtxRqyKLaFlz6q+34+6EN6IXmyhArxV4Y9o0g5c=
+			g8D0SrHgAo8E3wdj3iryjXQxuAQmNePQrMFsDl1TujE=
 			</data>
 		</dict>
 		<key>Screens2.storyboardc/Map2VC.nib</key>
