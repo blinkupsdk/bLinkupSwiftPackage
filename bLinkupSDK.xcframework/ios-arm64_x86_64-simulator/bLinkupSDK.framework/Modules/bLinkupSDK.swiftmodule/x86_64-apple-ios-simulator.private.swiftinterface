@@ -167,6 +167,7 @@ public struct SegmentControl : SwiftUI.View {
 }
 
 @_hasMissingDesignatedInitializers public class bLinkup {
+  public static var onLogout: (() -> Swift.Void)?
   @discardableResult
   public static func configure() -> Swift.String?
   public static var isLoginRequired: Swift.Bool {
