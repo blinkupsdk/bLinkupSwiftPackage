@@ -210,6 +210,14 @@ public struct SegmentControl : SwiftUI.View {
   #if compiler(>=5.3) && $AsyncAwait
   public static func setPushID(_ token: Swift.String?) async throws
   #endif
+  public static func setMetadata(_ value: Swift.String, forKey: Swift.String, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func setMetadata(_ value: Swift.String, forKey: Swift.String) async throws
+  #endif
+  public static func removeMetadata(_ key: Swift.String, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func removeMetadata(_ key: Swift.String) async throws
+  #endif
   public static func findUsers(query: Swift.String?, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.User]>)
   #if compiler(>=5.3) && $AsyncAwait
   public static func findUsers(query: Swift.String?) async throws -> [bLinkupSDK.User]
