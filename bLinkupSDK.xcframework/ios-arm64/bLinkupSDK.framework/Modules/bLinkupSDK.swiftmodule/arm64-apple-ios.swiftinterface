@@ -18,7 +18,8 @@ public struct Contact : Swift.Decodable {
   public let phone: Swift.String
   public let name: Swift.String
   public let userId: Swift.String?
-  public init(phone: Swift.String, name: Swift.String, userId: Swift.String?)
+  public let dbName: Swift.String?
+  public init(phone: Swift.String, name: Swift.String, userId: Swift.String?, dbName: Swift.String? = nil)
   public func asUser() -> bLinkupSDK.User?
   public init(from decoder: any Swift.Decoder) throws
 }
@@ -319,7 +320,7 @@ public struct GeoPoint {
   public init(name: Swift.String, x: Swift.Double, y: Swift.Double, r: Swift.Double)
 }
 public class Branding : Foundation.ObservableObject {
-  public init(primary: UIKit.UIColor = .black, secondary: UIKit.UIColor = .red, fontName: Swift.String? = nil, logo: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil)
+  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil)
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
@@ -382,8 +383,9 @@ public struct User : Swift.Codable, Swift.Hashable, Swift.Identifiable {
   public let name: Swift.String?
   public let phoneNumber: Swift.String?
   public let emailAddress: Swift.String?
+  public let presence: bLinkupSDK.Place?
   public static func == (lhs: bLinkupSDK.User, rhs: bLinkupSDK.User) -> Swift.Bool
-  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String? = nil, emailAddress: Swift.String? = nil)
+  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String? = nil, emailAddress: Swift.String? = nil, presence: bLinkupSDK.Place? = nil)
   public init(id: Swift.String)
   public func hash(into hasher: inout Swift.Hasher)
   public typealias ID = Swift.String

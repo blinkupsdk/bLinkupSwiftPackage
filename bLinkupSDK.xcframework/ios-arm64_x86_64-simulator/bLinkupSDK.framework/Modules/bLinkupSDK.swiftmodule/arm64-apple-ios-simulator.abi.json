@@ -178,9 +178,69 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "dbName",
+            "printedName": "dbName",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10bLinkupSDK7ContactV6dbNameSSSgvp",
+            "mangledName": "$s10bLinkupSDK7ContactV6dbNameSSSgvp",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.String?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK7ContactV6dbNameSSSgvg",
+                "mangledName": "$s10bLinkupSDK7ContactV6dbNameSSSgvg",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(phone:name:userId:)",
+            "printedName": "init(phone:name:userId:dbName:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -213,11 +273,26 @@
                   }
                 ],
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10bLinkupSDK7ContactV5phone4name6userIdACSS_S2SSgtcfc",
-            "mangledName": "$s10bLinkupSDK7ContactV5phone4name6userIdACSS_S2SSgtcfc",
+            "usr": "s:10bLinkupSDK7ContactV5phone4name6userId6dbNameACSS_S2SSgAHtcfc",
+            "mangledName": "$s10bLinkupSDK7ContactV5phone4name6userId6dbNameACSS_S2SSgAHtcfc",
             "moduleName": "bLinkupSDK",
             "declAttributes": [
               "AccessControl"
@@ -8758,17 +8833,33 @@
               },
               {
                 "kind": "TypeNominal",
-                "name": "UIColor",
-                "printedName": "UIKit.UIColor",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "c:objc(cs)UIColor"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
-                "name": "UIColor",
-                "printedName": "UIKit.UIColor",
+                "name": "Optional",
+                "printedName": "UIKit.UIColor?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "UIColor",
+                    "printedName": "UIKit.UIColor",
+                    "usr": "c:objc(cs)UIColor"
+                  }
+                ],
                 "hasDefaultArg": true,
-                "usr": "c:objc(cs)UIColor"
+                "usr": "s:Sq"
               },
               {
                 "kind": "TypeNominal",
@@ -8832,8 +8923,8 @@
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10bLinkupSDK8BrandingC7primary9secondary8fontName4logo4name5titleACSo7UIColorC_AKSSSgA3Ltcfc",
-            "mangledName": "$s10bLinkupSDK8BrandingC7primary9secondary8fontName4logo4name5titleACSo7UIColorC_AKSSSgA3Ltcfc",
+            "usr": "s:10bLinkupSDK8BrandingC7primary9secondary8fontName4logo4name5titleACSo7UIColorCSg_ALSSSgA3Mtcfc",
+            "mangledName": "$s10bLinkupSDK8BrandingC7primary9secondary8fontName4logo4name5titleACSo7UIColorCSg_ALSSSgA3Mtcfc",
             "moduleName": "bLinkupSDK",
             "declAttributes": [
               "AccessControl"
@@ -10739,6 +10830,66 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "presence",
+            "printedName": "presence",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "bLinkupSDK.Place?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Place",
+                    "printedName": "bLinkupSDK.Place",
+                    "usr": "s:10bLinkupSDK5PlaceV"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10bLinkupSDK4UserV8presenceAA5PlaceVSgvp",
+            "mangledName": "$s10bLinkupSDK4UserV8presenceAA5PlaceVSgvp",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "bLinkupSDK.Place?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Place",
+                        "printedName": "bLinkupSDK.Place",
+                        "usr": "s:10bLinkupSDK5PlaceV"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK4UserV8presenceAA5PlaceVSgvg",
+                "mangledName": "$s10bLinkupSDK4UserV8presenceAA5PlaceVSgvg",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "==",
             "printedName": "==(_:_:)",
@@ -10775,7 +10926,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(id:name:phoneNumber:emailAddress:)",
+            "printedName": "init(id:name:phoneNumber:emailAddress:presence:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10832,11 +10983,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "bLinkupSDK.Place?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Place",
+                    "printedName": "bLinkupSDK.Place",
+                    "usr": "s:10bLinkupSDK5PlaceV"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10bLinkupSDK4UserV2id4name11phoneNumber12emailAddressACSS_SSSgA2Htcfc",
-            "mangledName": "$s10bLinkupSDK4UserV2id4name11phoneNumber12emailAddressACSS_SSSgA2Htcfc",
+            "usr": "s:10bLinkupSDK4UserV2id4name11phoneNumber12emailAddress8presenceACSS_SSSgA2iA5PlaceVSgtcfc",
+            "mangledName": "$s10bLinkupSDK4UserV2id4name11phoneNumber12emailAddress8presenceACSS_SSSgA2iA5PlaceVSgtcfc",
             "moduleName": "bLinkupSDK",
             "declAttributes": [
               "AccessControl"
@@ -11215,30 +11381,44 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/Contact.swift",
       "kind": "StringLiteral",
-      "offset": 347,
+      "offset": 378,
       "length": 9,
       "value": "\"user_id\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/Contact.swift",
       "kind": "StringLiteral",
-      "offset": 396,
+      "offset": 427,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/Contact.swift",
       "kind": "StringLiteral",
-      "offset": 347,
+      "offset": 464,
+      "length": 15,
+      "value": "\"email_address\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/Contact.swift",
+      "kind": "StringLiteral",
+      "offset": 378,
       "length": 9,
       "value": "\"user_id\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/Contact.swift",
       "kind": "StringLiteral",
-      "offset": 396,
+      "offset": 427,
       "length": 14,
       "value": "\"phone_number\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/Contact.swift",
+      "kind": "StringLiteral",
+      "offset": 464,
+      "length": 15,
+      "value": "\"email_address\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UIElements\/LoginButton2.swift",
@@ -11390,49 +11570,49 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2177,
+      "offset": 2201,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2208,
+      "offset": 2232,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "Array",
-      "offset": 2240,
+      "offset": 2264,
       "length": 10,
       "value": "[\"person\"]"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
-      "offset": 2259,
+      "offset": 2283,
       "length": 8,
       "value": "\"no any\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
-      "offset": 2275,
+      "offset": 2299,
       "length": 8,
       "value": "\"person\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
-      "offset": 2353,
+      "offset": 2377,
       "length": 7,
       "value": "\"Logo2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
-      "offset": 2368,
+      "offset": 2392,
       "length": 8,
       "value": "\"Alpine\""
     },
@@ -11446,35 +11626,35 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK.swift",
       "kind": "StringLiteral",
-      "offset": 929,
+      "offset": 968,
       "length": 22,
       "value": "\"client_configuration\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK.swift",
       "kind": "StringLiteral",
-      "offset": 929,
+      "offset": 968,
       "length": 22,
       "value": "\"client_configuration\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK.swift",
       "kind": "StringLiteral",
-      "offset": 1103,
+      "offset": 1142,
       "length": 19,
       "value": "\"share_message_ios\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK.swift",
       "kind": "StringLiteral",
-      "offset": 1103,
+      "offset": 1142,
       "length": 19,
       "value": "\"share_message_ios\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 7313,
+      "offset": 7356,
       "length": 5,
       "value": "false"
     },
@@ -12022,7 +12202,7 @@
       "kind": "StringLiteral",
       "offset": 238,
       "length": 4,
-      "value": "\"60\""
+      "value": "\"62\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/bLinkup.swift",
@@ -12650,98 +12830,98 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2177,
+      "offset": 2196,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2264,
+      "offset": 2283,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2455,
+      "offset": 2474,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2548,
+      "offset": 2567,
       "length": 3,
       "value": "\"3\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2649,
+      "offset": 2668,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2660,
+      "offset": 2679,
       "length": 4,
       "value": "\"n1\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2680,
+      "offset": 2699,
       "length": 4,
       "value": "\"e1\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2783,
+      "offset": 2802,
       "length": 3,
       "value": "\"3\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2794,
+      "offset": 2813,
       "length": 4,
       "value": "\"n2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2882,
+      "offset": 2901,
       "length": 3,
       "value": "\"3\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2893,
+      "offset": 2912,
       "length": 4,
       "value": "\"n2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "StringLiteral",
-      "offset": 2913,
+      "offset": 2932,
       "length": 4,
       "value": "\"e2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 2928,
+      "offset": 2947,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/ConnectionList2View.swift",
       "kind": "BooleanLiteral",
-      "offset": 3050,
+      "offset": 3069,
       "length": 5,
       "value": "false"
     },
@@ -12895,37 +13075,51 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/Matching2Screen.swift",
       "kind": "Array",
-      "offset": 6587,
+      "offset": 6672,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/User.swift",
       "kind": "StringLiteral",
-      "offset": 940,
+      "offset": 1150,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/User.swift",
       "kind": "StringLiteral",
-      "offset": 983,
+      "offset": 1193,
       "length": 15,
       "value": "\"email_address\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/User.swift",
       "kind": "StringLiteral",
-      "offset": 940,
+      "offset": 1233,
+      "length": 12,
+      "value": "\"present_at\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/User.swift",
+      "kind": "StringLiteral",
+      "offset": 1150,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/User.swift",
       "kind": "StringLiteral",
-      "offset": 983,
+      "offset": 1193,
       "length": 15,
       "value": "\"email_address\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/Public\/User.swift",
+      "kind": "StringLiteral",
+      "offset": 1233,
+      "length": 12,
+      "value": "\"present_at\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/SDKApp\/SDK\/SDK-UI\/NewUserScreen.swift",
