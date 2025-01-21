@@ -9,6 +9,7 @@ import Security
 import Swift
 import SwiftUI
 import UIKit
+import WebKit
 import _Concurrency
 import _StringProcessing
 import _SwiftConcurrencyShims
@@ -58,6 +59,16 @@ public struct Presence : Swift.Codable, Swift.Hashable {
     get
   }
   public init(from decoder: any Swift.Decoder) throws
+}
+extension bLinkupSDK.Presence {
+  public enum Confidence : Swift.String, Swift.Codable {
+    case weak, strong, manual
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
 }
 
 
@@ -123,6 +134,8 @@ extension bLinkupSDK.ImageScrollView : UIKit.UIScrollViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
   @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
 }
+
+
 
 
 
@@ -383,7 +396,7 @@ public struct User : Swift.Codable, Swift.Hashable, Swift.Identifiable {
   public let name: Swift.String?
   public let phoneNumber: Swift.String?
   public let emailAddress: Swift.String?
-  public let presence: bLinkupSDK.Place?
+  public var presence: bLinkupSDK.Place?
   public static func == (lhs: bLinkupSDK.User, rhs: bLinkupSDK.User) -> Swift.Bool
   public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String? = nil, emailAddress: Swift.String? = nil, presence: bLinkupSDK.Place? = nil)
   public init(id: Swift.String)
@@ -397,6 +410,9 @@ public struct User : Swift.Codable, Swift.Hashable, Swift.Identifiable {
 }
 
 
+extension bLinkupSDK.Presence.Confidence : Swift.Equatable {}
+extension bLinkupSDK.Presence.Confidence : Swift.Hashable {}
+extension bLinkupSDK.Presence.Confidence : Swift.RawRepresentable {}
 extension bLinkupSDK.ImageScrollView.ScaleMode : Swift.Equatable {}
 extension bLinkupSDK.ImageScrollView.ScaleMode : Swift.Hashable {}
 extension bLinkupSDK.ImageScrollView.ScaleMode : Swift.RawRepresentable {}

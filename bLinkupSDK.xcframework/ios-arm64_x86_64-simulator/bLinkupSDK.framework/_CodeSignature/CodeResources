@@ -14,11 +14,11 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		k8+IWgFQbQNqK8hropaUIZ+NKFo=
+		7YgJeDjeOWrX+7xhIugSpT7nAlA=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		TR4XaRCM8fDuPeacRsjwlwhnSUc=
+		fAJ1AP5dTrDgAYVchHXNXCLp4Ao=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -26,19 +26,19 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TR4XaRCM8fDuPeacRsjwlwhnSUc=
+		fAJ1AP5dTrDgAYVchHXNXCLp4Ao=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		3wVKcY0FdSg7Dgh3Y8J3MaiMPAA=
+		eH04deo/kuw16IFOMggfXwsROew=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		k8+IWgFQbQNqK8hropaUIZ+NKFo=
+		7YgJeDjeOWrX+7xhIugSpT7nAlA=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		fQ3iktx5MhkDiZ4MGubfef0RAsY=
+		tqaPFst7poNcn0RpWN5U+feOMag=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -46,11 +46,11 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		fQ3iktx5MhkDiZ4MGubfef0RAsY=
+		tqaPFst7poNcn0RpWN5U+feOMag=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		sL24txPnz3LnpwrpIY00i+XtSS8=
+		jKi1dzCXiy5hCWwOJV7OqC+7O90=
 		</data>
 		<key>Screens2.storyboardc/Info.plist</key>
 		<data>
@@ -106,14 +106,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jzYlwa3DB7eLkd8uhhh3RHVmgoOOPSI7YDifvyvOdM0=
+			7lvBJKNK6pH2l+DRUm3vZXP1Ems9TTjJVqsX+zgGWFU=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			U+pqPJ52/WsnmtGXUDou2PQcpA9udiwCBWVAwg1rjuw=
+			NIF+Icu2bau1xJUQGjlB3BOgMdhHKAs898yed1mcz1Y=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
@@ -127,28 +127,28 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			U+pqPJ52/WsnmtGXUDou2PQcpA9udiwCBWVAwg1rjuw=
+			NIF+Icu2bau1xJUQGjlB3BOgMdhHKAs898yed1mcz1Y=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Tk87lCbQNysPUl3i5dti2R0Bv9UMP75EBTMJpiC+Uuw=
+			V9xuIosOVEZVqFOR+RmCUQPTUVXa93SAjGEqpFG16Ho=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jzYlwa3DB7eLkd8uhhh3RHVmgoOOPSI7YDifvyvOdM0=
+			7lvBJKNK6pH2l+DRUm3vZXP1Ems9TTjJVqsX+zgGWFU=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			38tFIMhWazJdR3KvqVnNgFdq5DhUzubC2+qXPj3H2/c=
+			lc+GYdOZIb5gam/vEhJqQs9BVYHjBMdBXOhjaHdkeGw=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -162,14 +162,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			38tFIMhWazJdR3KvqVnNgFdq5DhUzubC2+qXPj3H2/c=
+			lc+GYdOZIb5gam/vEhJqQs9BVYHjBMdBXOhjaHdkeGw=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lG7ow66E/gKPbqfeX2/tQAdvhoUraXyNPjTwzvVs2SQ=
+			rNE6j/Cq1Zt1hCcqbL3V/4TsYcZ/3yQY5Reo5tM1XUY=
 			</data>
 		</dict>
 		<key>Screens2.storyboardc/Info.plist</key>
