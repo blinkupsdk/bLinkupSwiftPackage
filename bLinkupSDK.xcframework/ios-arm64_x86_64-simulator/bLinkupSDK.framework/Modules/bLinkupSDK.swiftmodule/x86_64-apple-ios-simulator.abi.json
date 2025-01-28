@@ -12187,22 +12187,29 @@
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Tutorial2Screen.swift",
+      "kind": "StringLiteral",
+      "offset": 207,
+      "length": 6,
+      "value": "\"Next\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Tutorial2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 392,
+      "offset": 429,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Tutorial2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 439,
+      "offset": 476,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Tutorial2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 483,
+      "offset": 520,
       "length": 5,
       "value": "false"
     },
@@ -12328,28 +12335,28 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "IntegerLiteral",
-      "offset": 7999,
+      "offset": 8018,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 8030,
+      "offset": 8049,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 8091,
+      "offset": 8110,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Profile2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 8111,
+      "offset": 8130,
       "length": 5,
       "value": "false"
     },
@@ -12652,7 +12659,7 @@
       "kind": "StringLiteral",
       "offset": 238,
       "length": 4,
-      "value": "\"65\""
+      "value": "\"69\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/bLinkup.swift",
@@ -12678,21 +12685,21 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 13567,
+      "offset": 13898,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 13771,
+      "offset": 14102,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/bLinkup.swift",
       "kind": "Dictionary",
-      "offset": 19748,
+      "offset": 20079,
       "length": 3,
       "value": "[]"
     },
@@ -13455,28 +13462,28 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 2126,
+      "offset": 2294,
       "length": 46,
       "value": "\"7x1oDfFEpUj4LVIzz8XSskomH5dINsRZmLY6XZSfPvE=\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 2180,
+      "offset": 2348,
       "length": 6,
       "value": "\"Will\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 2347,
+      "offset": 2515,
       "length": 7,
       "value": "\"Inter\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/BlinkupRootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 2400,
+      "offset": 2568,
       "length": 7,
       "value": "\"Logo2\""
     },
