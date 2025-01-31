@@ -11705,14 +11705,14 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/NavBar2.swift",
       "kind": "BooleanLiteral",
-      "offset": 281,
+      "offset": 280,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/NavBar2.swift",
       "kind": "BooleanLiteral",
-      "offset": 1572,
+      "offset": 1571,
       "length": 4,
       "value": "true"
     },
@@ -11761,35 +11761,35 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "BooleanLiteral",
-      "offset": 234,
+      "offset": 233,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "BooleanLiteral",
-      "offset": 264,
+      "offset": 263,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "StringLiteral",
-      "offset": 1277,
+      "offset": 1276,
       "length": 8,
       "value": "\"Submit\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "StringLiteral",
-      "offset": 1315,
+      "offset": 1314,
       "length": 8,
       "value": "\"Cancel\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/LoginButton2.swift",
       "kind": "BooleanLiteral",
-      "offset": 1335,
+      "offset": 1334,
       "length": 4,
       "value": "true"
     },
@@ -11810,35 +11810,35 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/OTP2Screen.swift",
       "kind": "StringLiteral",
-      "offset": 2782,
+      "offset": 2781,
       "length": 14,
       "value": "\"555-555-1234\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/OTP2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 2821,
+      "offset": 2820,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Text2.swift",
       "kind": "BooleanLiteral",
-      "offset": 220,
+      "offset": 219,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Text2.swift",
       "kind": "BooleanLiteral",
-      "offset": 250,
+      "offset": 249,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Text2.swift",
       "kind": "StringLiteral",
-      "offset": 1041,
+      "offset": 1040,
       "length": 4,
       "value": "\"Go\""
     },
@@ -11908,49 +11908,49 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "IntegerLiteral",
-      "offset": 2201,
+      "offset": 2200,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "BooleanLiteral",
-      "offset": 2232,
+      "offset": 2231,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "Array",
-      "offset": 2264,
+      "offset": 2263,
       "length": 10,
       "value": "[\"person\"]"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
-      "offset": 2283,
+      "offset": 2282,
       "length": 8,
       "value": "\"no any\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
-      "offset": 2299,
+      "offset": 2298,
       "length": 8,
       "value": "\"person\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
-      "offset": 2377,
+      "offset": 2376,
       "length": 7,
       "value": "\"Logo2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/NoDataView.swift",
       "kind": "StringLiteral",
-      "offset": 2392,
+      "offset": 2391,
       "length": 8,
       "value": "\"Alpine\""
     },
@@ -12006,63 +12006,63 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 259,
+      "offset": 258,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "StringLiteral",
-      "offset": 1273,
+      "offset": 1272,
       "length": 8,
       "value": "\"Submit\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1293,
+      "offset": 1292,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1309,
+      "offset": 1308,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "StringLiteral",
-      "offset": 1345,
+      "offset": 1344,
       "length": 8,
       "value": "\"Submit\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1365,
+      "offset": 1364,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1381,
+      "offset": 1380,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "StringLiteral",
-      "offset": 1416,
+      "offset": 1415,
       "length": 8,
       "value": "\"Cancel\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Action2Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1436,
+      "offset": 1435,
       "length": 5,
       "value": "false"
     },
@@ -12195,21 +12195,14 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Tutorial2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 429,
+      "offset": 428,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Tutorial2Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 476,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/Tutorial2Screen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 520,
+      "offset": 472,
       "length": 5,
       "value": "false"
     },
@@ -12566,35 +12559,35 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/RequestsItemView.swift",
       "kind": "StringLiteral",
-      "offset": 273,
+      "offset": 272,
       "length": 9,
       "value": "\"decline\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/RequestsItemView.swift",
       "kind": "StringLiteral",
-      "offset": 325,
+      "offset": 324,
       "length": 8,
       "value": "\"accept\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/RequestsItemView.swift",
       "kind": "StringLiteral",
-      "offset": 373,
+      "offset": 372,
       "length": 8,
       "value": "\"accept\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/RequestsItemView.swift",
       "kind": "StringLiteral",
-      "offset": 1908,
+      "offset": 1907,
       "length": 8,
       "value": "\"Philip\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/RequestsItemView.swift",
       "kind": "StringLiteral",
-      "offset": 1924,
+      "offset": 1923,
       "length": 9,
       "value": "\"Will_Ph\""
     },
@@ -12659,7 +12652,7 @@
       "kind": "StringLiteral",
       "offset": 238,
       "length": 4,
-      "value": "\"69\""
+      "value": "\"70\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/bLinkup.swift",
@@ -12902,14 +12895,14 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/HomeItemView.swift",
       "kind": "StringLiteral",
-      "offset": 1019,
+      "offset": 1018,
       "length": 5,
       "value": "\"map\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/HomeItemView.swift",
       "kind": "StringLiteral",
-      "offset": 1033,
+      "offset": 1032,
       "length": 5,
       "value": "\"Map\""
     },
@@ -12993,7 +12986,7 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UI\/TutorialWebView.swift",
       "kind": "StringLiteral",
-      "offset": 1283,
+      "offset": 1696,
       "length": 10,
       "value": "\"tutorial\""
     },
@@ -13084,14 +13077,14 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
-      "offset": 1433,
+      "offset": 1432,
       "length": 8,
       "value": "\"Philip\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/ListItemView.swift",
       "kind": "StringLiteral",
-      "offset": 1449,
+      "offset": 1448,
       "length": 9,
       "value": "\"Will_Ph\""
     },
@@ -13140,7 +13133,7 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/SearchBar2.swift",
       "kind": "StringLiteral",
-      "offset": 1201,
+      "offset": 1200,
       "length": 3,
       "value": "\"5\""
     },
@@ -13280,7 +13273,7 @@
     {
       "filePath": "\/Users\/chas\/Work\/BL\/BLSDKToPackage\/SDK\/SDK-UIElements\/Error2View.swift",
       "kind": "StringLiteral",
-      "offset": 706,
+      "offset": 705,
       "length": 12,
       "value": "\"some error\""
     },
