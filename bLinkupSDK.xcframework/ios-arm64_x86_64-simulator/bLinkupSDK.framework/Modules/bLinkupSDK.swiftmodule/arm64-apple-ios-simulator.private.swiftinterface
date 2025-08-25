@@ -1,29 +1,45 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
-// swift-module-flags: -target arm64-apple-ios15.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name bLinkupSDK
+// swift-compiler-version: Apple Swift version 6.0.3 effective-5.10 (swiftlang-6.0.3.1.10 clang-1600.0.30.1)
+// swift-module-flags: -target arm64-apple-ios16-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name bLinkupSDK
 import Combine
 import Contacts
 import CoreLocation
+import CoreTelephony
+import CryptoKit
 import Foundation
+import MapKit
+import MessageUI
+import QuartzCore
 import Security
 import Swift
 import SwiftUI
 import UIKit
 import WebKit
 import _Concurrency
+import _MapKit_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
 
 public typealias ContactResult = bLinkupSDK.Contact
-public struct Contact : Swift.Decodable {
+public struct Contact : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
+  public var id: Swift.String {
+    get
+  }
   public let phone: Swift.String
   public let name: Swift.String
   public let userId: Swift.String?
   public let dbName: Swift.String?
   public init(phone: Swift.String, name: Swift.String, userId: Swift.String?, dbName: Swift.String? = nil)
   public func asUser() -> bLinkupSDK.User?
-  public init(from decoder: any Swift.Decoder) throws
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: bLinkupSDK.Contact, b: bLinkupSDK.Contact) -> Swift.Bool
+  public typealias ID = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
 }
+
+
 public struct Customer : Swift.Codable, Swift.Equatable {
   public let id: Swift.String
   public var name: Swift.String?
@@ -33,10 +49,11 @@ public struct Customer : Swift.Codable, Swift.Equatable {
   public init(from decoder: any Swift.Decoder) throws
 }
 
-extension SwiftUI.View {
-  public func addLoadingView(isLoading: SwiftUI.Binding<Swift.Bool>) -> some SwiftUI.View
+
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func addLoadingView(isLoading: SwiftUICore.Binding<Swift.Bool>) -> some SwiftUICore.View
   
-  public func addMenu(@SwiftUI.ViewBuilder content: () -> some View) -> some SwiftUI.View
+  @_Concurrency.MainActor @preconcurrency public func addMenu(@SwiftUICore.ViewBuilder content: () -> some View) -> some SwiftUICore.View
   
 }
 
@@ -44,41 +61,69 @@ public enum NextLoginStep {
   case loginWithCode(_: Swift.String)
   case registerWithCode(_: Swift.String)
 }
+public enum UserType : Swift.Equatable, Swift.Hashable {
+  case unknown, normal, mascot
+  public static func == (a: bLinkupSDK.UserType, b: bLinkupSDK.UserType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 
-public struct Presence : Swift.Codable, Swift.Hashable {
+
+public struct Presence : Swift.Identifiable {
+  public enum Confidence {
+    case unknown, weak, strong, manual
+    public static func == (a: bLinkupSDK.Presence.Confidence, b: bLinkupSDK.Presence.Confidence) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
   public let id: Swift.String
   public let user: bLinkupSDK.User
   public let place: bLinkupSDK.Place?
   public let isPresent: Swift.Bool
   public let insertedAt: Swift.String?
-  public static func == (lhs: bLinkupSDK.Presence, rhs: bLinkupSDK.Presence) -> Swift.Bool
-  public init(id: Swift.String, user: bLinkupSDK.User, place: bLinkupSDK.Place?, isPresent: Swift.Bool, insertedAt: Swift.String?)
+  public init(id: Swift.String, user: bLinkupSDK.User, place: bLinkupSDK.Place?, isPresent: Swift.Bool, insertedAt: Swift.String? = nil)
+  public typealias ID = Swift.String
+}
+extension bLinkupSDK.Presence : Swift.Equatable, Swift.Hashable {
+  public static func == (a: bLinkupSDK.Presence, b: bLinkupSDK.Presence) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+
+
+
+
+
+
+
+public protocol DealInfo {
+  var inviteCount: Swift.Int? { get }
+  var deal: bLinkupSDK.Deal? { get }
+  var dealStats: bLinkupSDK.DealStats? { get }
+}
+
+
+
+public struct DealStats : Swift.Codable, Swift.Hashable {
+  public let current: Swift.Int, goal: Swift.Int
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: bLinkupSDK.DealStats, b: bLinkupSDK.DealStats) -> Swift.Bool
   public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
   public init(from decoder: any Swift.Decoder) throws
 }
-extension bLinkupSDK.Presence {
-  public enum Confidence : Swift.String, Swift.Codable {
-    case weak, strong, manual
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-}
-
-
-
-
-
 @objc public protocol ImageScrollViewDelegate : UIKit.UIScrollViewDelegate {
   @objc func imageScrollViewDidChangeOrientation(imageScrollView: bLinkupSDK.ImageScrollView)
 }
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ImageScrollView : UIKit.UIScrollView {
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class ImageScrollView : UIKit.UIScrollView {
   @objc public enum ScaleMode : Swift.Int {
     case aspectFill
     case aspectFit
@@ -99,87 +144,358 @@ extension bLinkupSDK.Presence {
       get
     }
   }
-  @objc @_Concurrency.MainActor(unsafe) open var imageContentMode: bLinkupSDK.ImageScrollView.ScaleMode
-  @objc @_Concurrency.MainActor(unsafe) open var initialOffset: bLinkupSDK.ImageScrollView.Offset
-  @objc @_Concurrency.MainActor(unsafe) public var zoomView: UIKit.UIImageView? {
+  @objc @_Concurrency.MainActor @preconcurrency open var imageContentMode: bLinkupSDK.ImageScrollView.ScaleMode
+  @objc @_Concurrency.MainActor @preconcurrency open var initialOffset: bLinkupSDK.ImageScrollView.Offset
+  @objc @_Concurrency.MainActor @preconcurrency public var zoomView: UIKit.UIImageView? {
     get
   }
-  @objc @_Concurrency.MainActor(unsafe) weak open var imageScrollViewDelegate: (any bLinkupSDK.ImageScrollViewDelegate)?
-  @_Concurrency.MainActor(unsafe) open var maxScaleFromMinScale: CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var frame: CoreFoundation.CGRect {
+  @objc @_Concurrency.MainActor @preconcurrency weak open var imageScrollViewDelegate: (any bLinkupSDK.ImageScrollViewDelegate)?
+  @_Concurrency.MainActor @preconcurrency open var maxScaleFromMinScale: CoreFoundation.CGFloat
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic open var frame: CoreFoundation.CGRect {
     @objc get
     @objc set
   }
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor @preconcurrency @objc override dynamic public init(frame: CoreFoundation.CGRect)
+  @_Concurrency.MainActor @preconcurrency @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
   @objc deinit
-  @objc @_Concurrency.MainActor(unsafe) public func adjustFrameToCenter()
-  @_Concurrency.MainActor(unsafe) open func setup()
-  @objc @_Concurrency.MainActor(unsafe) open func display(image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) open func refresh()
+  @objc @_Concurrency.MainActor @preconcurrency public func adjustFrameToCenter()
+  @_Concurrency.MainActor @preconcurrency open func setup()
+  @objc @_Concurrency.MainActor @preconcurrency open func display(image: UIKit.UIImage)
+  @_Concurrency.MainActor @preconcurrency open func refresh()
 }
 extension bLinkupSDK.ImageScrollView : UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreFoundation.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGPoint>)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginDecelerating(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndScrollingAnimation(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewShouldScrollToTop(_ scrollView: UIKit.UIScrollView) -> Swift.Bool
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreFoundation.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGPoint>)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewWillBeginDecelerating(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewDidEndScrollingAnimation(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewWillBeginZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewShouldScrollToTop(_ scrollView: UIKit.UIScrollView) -> Swift.Bool
   @available(iOS 11.0, *)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIKit.UIScrollView)
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
+  @_Concurrency.MainActor @preconcurrency @objc dynamic public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
 }
 
 
-
-
-
-
-
-public struct ConnectionRequest : Swift.Decodable, Swift.Identifiable {
+public struct ConnectionRequest : Swift.Identifiable {
   public let id: Swift.String
   public let source: bLinkupSDK.User, target: bLinkupSDK.User
-  public func opponent(of id: Swift.String?) -> bLinkupSDK.User?
+  public let opponent: bLinkupSDK.User
+  public let income: Swift.Bool
   public typealias ID = Swift.String
-  public init(from decoder: any Swift.Decoder) throws
+}
+@_hasMissingDesignatedInitializers final public class GeofenceTrack {
+  final public func cancel()
+  @objc deinit
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func customAnimation(_ animation: SwiftUICore.Animation?) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
 
-public enum ConnectionStatus : Swift.String, Swift.Decodable {
-  case connected, blocked, pending
+
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func enableSwipeToDismiss(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func enableTapToDismiss(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func sheetWidth(_ width: bLinkupSDK.BottomSheetWidth = .platformDefault) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+public enum BottomSheetPosition : Swift.Equatable {
+  case hidden
+  case dynamicBottom
+  case dynamic
+  case dynamicTop
+  case relativeBottom(CoreFoundation.CGFloat)
+  case relative(CoreFoundation.CGFloat)
+  case relativeTop(CoreFoundation.CGFloat)
+  case absoluteBottom(CoreFoundation.CGFloat)
+  case absolute(CoreFoundation.CGFloat)
+  case absoluteTop(CoreFoundation.CGFloat)
+  public static func == (a: bLinkupSDK.BottomSheetPosition, b: bLinkupSDK.BottomSheetPosition) -> Swift.Bool
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func isResizable(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func enableBackgroundBlur(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  @_Concurrency.MainActor @preconcurrency public func backgroundBlurMaterial(_ material: bLinkupSDK.VisualEffect) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func enableAccountingForKeyboardHeight(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func onDismiss(_ perform: @escaping () -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func showCloseButton(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func enableAppleScrollBehavior(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func enableContentDrag(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+public enum BottomSheetWidth : Swift.Equatable {
+  case platformDefault
+  case relative(CoreFoundation.CGFloat)
+  case absolute(CoreFoundation.CGFloat)
+  public static func == (a: bLinkupSDK.BottomSheetWidth, b: bLinkupSDK.BottomSheetWidth) -> Swift.Bool
+}
+@_Concurrency.MainActor @preconcurrency public struct OTPInput : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(text: SwiftUICore.Binding<Swift.String>)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK8OTPInputV4bodyQrvp", 0) __
+}
+
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func showDragIndicator(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  @_Concurrency.MainActor @preconcurrency public func dragIndicatorColor(_ color: SwiftUICore.Color) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  @_Concurrency.MainActor @preconcurrency public func dragIndicatorAction(_ action: @escaping (SwiftUICore.GeometryProxy) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+public enum VisualEffect : Swift.Equatable, Swift.Hashable {
+  public enum Material : Swift.Equatable, Swift.Hashable {
+    case `default`
+    @available(iOS 13.0, *)
+    @available(macOS, unavailable)
+    case ultraThin
+    @available(iOS 13.0, *)
+    @available(macOS, unavailable)
+    case thin
+    @available(iOS 13.0, *)
+    @available(macOS, unavailable)
+    case thick
+    @available(iOS 13.0, *)
+    @available(macOS, unavailable)
+    case chrome
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case titlebar
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case windowBackground
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case headerView(behindWindow: Swift.Bool)
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case contentBackground(behindWindow: Swift.Bool)
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case behindPageBackground(behindWindow: Swift.Bool)
+    public static func == (a: bLinkupSDK.VisualEffect.Material, b: bLinkupSDK.VisualEffect.Material) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  case system
+  case systemLight
+  case systemDark
+  case adaptive(bLinkupSDK.VisualEffect.Material)
+  case light(bLinkupSDK.VisualEffect.Material)
+  case dark(bLinkupSDK.VisualEffect.Material)
+  public static func == (a: bLinkupSDK.VisualEffect, b: bLinkupSDK.VisualEffect) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SpotType : Swift.Hashable {
+  case unknown, bar
+  public static func == (a: bLinkupSDK.SpotType, b: bLinkupSDK.SpotType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Spot : bLinkupSDK.DealInfo, Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String, name: Swift.String
+  public var type: bLinkupSDK.SpotType?
+  public var latitude: Swift.Double?, longitude: Swift.Double?
+  public var address: Swift.String?
+  public var regionId: Swift.String?
+  public var region: bLinkupSDK.SpotRegion?
+  public var promotion: Swift.String?
+  public var invitable: Swift.Bool
+  public var blinkpointId: Swift.String?
+  public var inviteCount: Swift.Int?
+  public var deal: bLinkupSDK.Deal?
+  public var dealStats: bLinkupSDK.DealStats?
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: bLinkupSDK.Spot, b: bLinkupSDK.Spot) -> Swift.Bool
+  public typealias ID = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers public class Deal : Swift.Identifiable, Swift.Hashable {
+  public enum DealStatus : Swift.String {
+    case unknown, available, redeemed, expired
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public enum DealType : Swift.String {
+    case unknown, welcome, incomingInvite, outgoingInvite
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  final public let id: Swift.String
+  final public let type: bLinkupSDK.Deal.DealType
+  final public let status: bLinkupSDK.Deal.DealStatus
+  final public let userId: Swift.String?
+  final public let spotId: Swift.String?
+  final public let spot: bLinkupSDK.Spot?
+  public static func == (lhs: bLinkupSDK.Deal, rhs: bLinkupSDK.Deal) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.String
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+
+@_Concurrency.MainActor @preconcurrency public struct BottomSheet<HContent, MContent, V> : SwiftUICore.View where HContent : SwiftUICore.View, MContent : SwiftUICore.View, V : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK11BottomSheetV4bodyQrvp", 0) __<HContent, MContent, V>
+}
+extension SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public func bottomSheet<HContent, MContent>(bottomSheetPosition: SwiftUICore.Binding<bLinkupSDK.BottomSheetPosition>, switchablePositions: [bLinkupSDK.BottomSheetPosition], @SwiftUICore.ViewBuilder headerContent: () -> HContent? = {
+            return nil
+        }, @SwiftUICore.ViewBuilder mainContent: () -> MContent) -> bLinkupSDK.BottomSheet<HContent, MContent, Self> where HContent : SwiftUICore.View, MContent : SwiftUICore.View
+  public typealias TitleContent = SwiftUICore.ModifiedContent<SwiftUICore.Text, SwiftUICore._EnvironmentKeyWritingModifier<Swift.Int?>>
+  @_Concurrency.MainActor @preconcurrency public func bottomSheet<MContent>(bottomSheetPosition: SwiftUICore.Binding<bLinkupSDK.BottomSheetPosition>, switchablePositions: [bLinkupSDK.BottomSheetPosition], title: Swift.String? = nil, @SwiftUICore.ViewBuilder content: () -> MContent) -> bLinkupSDK.BottomSheet<Self.TitleContent, MContent, Self> where MContent : SwiftUICore.View
+}
+
+@available(iOS 15, macOS 12, *)
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func customBackground(ignoresSafeAreaEdges edges: SwiftUICore.Edge.Set = .all) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  @_Concurrency.MainActor @preconcurrency public func customBackground<S>(in shape: S, fillStyle: SwiftUICore.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUICore.Shape
+  @_Concurrency.MainActor @preconcurrency public func customBackground<S>(in shape: S, fillStyle: SwiftUICore.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUICore.InsettableShape
+}
+public struct BlinkPoint : bLinkupSDK.DealInfo, Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String, name: Swift.String
+  public let promoURL: Swift.String?
+  public let x: Swift.Double, y: Swift.Double
+  public let placeId: Swift.String?
+  public let hasSpot: Swift.Bool?
+  public let spotId: Swift.String?
+  public var promotion: Swift.String?
+  public var invitable: Swift.Bool
+  public var inviteCount: Swift.Int?
+  public var deal: bLinkupSDK.Deal?
+  public var dealStats: bLinkupSDK.DealStats?
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: bLinkupSDK.BlinkPoint, b: bLinkupSDK.BlinkPoint) -> Swift.Bool
+  public typealias ID = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func customBackground<Background>(_ background: Background, alignment: SwiftUICore.Alignment = .center) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where Background : SwiftUICore.View
+  @_Concurrency.MainActor @preconcurrency public func customBackground<Content>(alignment: SwiftUICore.Alignment = .center, @SwiftUICore.ViewBuilder content: () -> Content) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where Content : SwiftUICore.View
+  @_Concurrency.MainActor @preconcurrency public func customBackground<S>(_ style: S, ignoresSafeAreaEdges edges: SwiftUICore.Edge.Set = .all) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUICore.ShapeStyle
+  @_Concurrency.MainActor @preconcurrency public func customBackground<S, T>(_ style: S, in shape: T, fillStyle: SwiftUICore.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUICore.ShapeStyle, T : SwiftUICore.Shape
+  @_Concurrency.MainActor @preconcurrency public func customBackground<S, T>(_ style: S, in shape: T, fillStyle: SwiftUICore.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUICore.ShapeStyle, T : SwiftUICore.InsettableShape
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func enableFlickThrough(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+
+
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func onDragChanged(_ perform: @escaping (SwiftUI.DragGesture.Value) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  @_Concurrency.MainActor @preconcurrency public func onDragEnded(_ perform: @escaping (SwiftUI.DragGesture.Value) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  @_Concurrency.MainActor @preconcurrency public func dragPositionSwitchAction(_ action: @escaping (SwiftUICore.GeometryProxy, SwiftUI.DragGesture.Value) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+
+
+
+
+
+
+public struct SpotInvite : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
+  public var id: Swift.String
+  public let source: bLinkupSDK.User, target: bLinkupSDK.User, opponent: bLinkupSDK.User
+  public let income: Swift.Bool
+  public let spot: bLinkupSDK.Spot
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: bLinkupSDK.SpotInvite, b: bLinkupSDK.SpotInvite) -> Swift.Bool
+  public typealias ID = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func customThreshold(_ threshold: Swift.Double) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+extension bLinkupSDK.BottomSheet {
+  @_Concurrency.MainActor @preconcurrency public func enableFloatingIPadSheet(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+
+
+public struct Place : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
+  public let id: Swift.String, name: Swift.String
+  public let mapURL: Swift.String?, geofence: Swift.String?
+  public let latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double
+  public let blinkpoints: [bLinkupSDK.BlinkPoint]?
+  public init(id: Swift.String, name: Swift.String, mapURL: Swift.String? = nil, geofence: Swift.String? = nil, latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double, blinkpoints: [bLinkupSDK.BlinkPoint]? = nil)
+  public static func == (a: bLinkupSDK.Place, b: bLinkupSDK.Place) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias Completion<E> = (Swift.Result<E, any Swift.Error>) -> Swift.Void
+
+
+@_Concurrency.MainActor @preconcurrency public struct SegmentControl : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK14SegmentControlV4bodyQrvp", 0) __
+}
+
+public enum Direction : Swift.String, Swift.Decodable {
+  case incoming, outgoing
   public init?(rawValue: Swift.String)
   public typealias RawValue = Swift.String
   public var rawValue: Swift.String {
     get
   }
 }
-public struct Place : Swift.Codable, Swift.Hashable, Swift.Equatable {
-  public let id: Swift.String, name: Swift.String
-  public let mapURL: Swift.String?, geofence: Swift.String?
-  public let latitude: Swift.Double?, longitude: Swift.Double?, radius: Swift.Double?
-  public let blinkpoints: [bLinkupSDK.BlinkPoint]?
-  public static func == (lhs: bLinkupSDK.Place, rhs: bLinkupSDK.Place) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public init(id: Swift.String, name: Swift.String, mapURL: Swift.String? = nil, geofence: Swift.String? = nil, latitude: Swift.Double? = nil, longitude: Swift.Double? = nil, radius: Swift.Double? = nil, blinkpoints: [bLinkupSDK.BlinkPoint]? = nil)
-  public func encode(to encoder: any Swift.Encoder) throws
-  public var hashValue: Swift.Int {
-    get
-  }
-  public init(from decoder: any Swift.Decoder) throws
-}
-public typealias Completion<E> = (Swift.Result<E, any Swift.Error>) -> Swift.Void
-
-public struct SegmentControl : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK14SegmentControlV4bodyQrvp", 0) __
-}
-
 @_hasMissingDesignatedInitializers public class bLinkup {
   public static var onLogout: (() -> Swift.Void)?
   @discardableResult
@@ -197,133 +513,90 @@ public struct SegmentControl : SwiftUI.View {
     get
   }
   public static func requestCode(customer: bLinkupSDK.Customer, phoneNumber: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.NextLoginStep>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func requestCode(customer: bLinkupSDK.Customer, phoneNumber: Swift.String) async throws -> bLinkupSDK.NextLoginStep
-  #endif
   public static func confirmCode(phoneNumber: Swift.String, verificationCode: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.User>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func confirmCode(phoneNumber: Swift.String, verificationCode: Swift.String) async throws -> bLinkupSDK.User
-  #endif
   public static func logout(completion: @escaping bLinkupSDK.Completion<Swift.Void>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func logout() async throws -> Swift.Bool
-  #endif
   public static func getCurrentUser(completion: @escaping bLinkupSDK.Completion<bLinkupSDK.User>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func getCurrentUser() async throws -> bLinkupSDK.User
-  #endif
-  public static func updateUser(name: Swift.String, email: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.User>)
-  #if compiler(>=5.3) && $AsyncAwait
-  public static func updateUser(name: Swift.String, email: Swift.String) async throws -> bLinkupSDK.User
-  #endif
+  public static func updateUser(name: Swift.String?, email: Swift.String?, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.User>)
+  public static func updateUser(name: Swift.String?, email: Swift.String?) async throws -> bLinkupSDK.User
   public static func deleteCurrentUser(completion: @escaping bLinkupSDK.Completion<Swift.Void>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func deleteCurrentUser() async throws
-  #endif
   public static func setPushID(_ token: Swift.String?, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func setPushID(_ token: Swift.String?) async throws
-  #endif
   public static func setMetadata(_ value: Swift.String, forKey: Swift.String, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func setMetadata(_ value: Swift.String, forKey: Swift.String) async throws
-  #endif
   public static func removeMetadata(_ key: Swift.String, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func removeMetadata(_ key: Swift.String) async throws
-  #endif
   public static func findUsers(query: Swift.String?, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.User]>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func findUsers(query: Swift.String?) async throws -> [bLinkupSDK.User]
-  #endif
   public static func findContacts(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.ContactResult]>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func findContacts() async throws -> [bLinkupSDK.ContactResult]
-  #endif
   public static func getFriendRequests(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.ConnectionRequest]>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func getFriendRequests() async throws -> [bLinkupSDK.ConnectionRequest]
-  #endif
   public static func sendConnectionRequest(user: bLinkupSDK.User, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.ConnectionRequest>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func sendConnectionRequest(user: bLinkupSDK.User) async throws -> bLinkupSDK.ConnectionRequest
-  #endif
   public static func cancelFriendRequest(_ req: bLinkupSDK.ConnectionRequest, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func cancelFriendRequest(_ req: bLinkupSDK.ConnectionRequest) async throws
-  #endif
   public static func acceptFriendRequest(_ req: bLinkupSDK.ConnectionRequest, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Connection>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func acceptFriendRequest(_ req: bLinkupSDK.ConnectionRequest) async throws -> bLinkupSDK.Connection
-  #endif
   public static func denyFriendRequest(_ req: bLinkupSDK.ConnectionRequest, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func denyFriendRequest(_ req: bLinkupSDK.ConnectionRequest) async throws
-  #endif
   public static func getFriendList(filterWithMe: Swift.Bool = false, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Connection]>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func getFriendList(filterWithMe: Swift.Bool = false) async throws -> [bLinkupSDK.Connection]
-  #endif
-  public static func updateConnection(_ connection: bLinkupSDK.Connection, status: bLinkupSDK.ConnectionStatus, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Connection>)
-  #if compiler(>=5.3) && $AsyncAwait
-  public static func updateConnection(_ connection: bLinkupSDK.Connection, status: bLinkupSDK.ConnectionStatus) async throws -> bLinkupSDK.Connection
-  #endif
+  public static func getFriend(_ id: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Connection>)
+  public static func getFriend(_ id: Swift.String) async throws -> bLinkupSDK.Connection
   public static func deleteConnection(_ connection: bLinkupSDK.Connection, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func deleteConnection(_ connection: bLinkupSDK.Connection) async throws
-  #endif
   public static func getEvents(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Place]>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func getEvents() async throws -> [bLinkupSDK.Place]
-  #endif
+  public static func getRegions(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.SpotRegion]>)
+  public static func getRegions() async throws -> [bLinkupSDK.SpotRegion]
+  public static func getSpots(regionId: Swift.String? = nil, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Spot]>)
+  public static func getSpots(regionId: Swift.String? = nil) async throws -> [bLinkupSDK.Spot]
+  public static func getSpot(_ id: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Spot>)
+  public static func getSpot(_ id: Swift.String) async throws -> bLinkupSDK.Spot
   public static func getFriendsAtPlace(_ place: bLinkupSDK.Place, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Presence]>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func getFriendsAtPlace(_ place: bLinkupSDK.Place) async throws -> [bLinkupSDK.Presence]
-  #endif
   public static func getMyPresences(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Presence]>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func getMyPresences() async throws -> [bLinkupSDK.Presence]
-  #endif
   public static func isUserAtEvent(_ place: bLinkupSDK.Place, completion: @escaping bLinkupSDK.Completion<Swift.Bool>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func isUserAtEvent(_ place: bLinkupSDK.Place) async throws -> Swift.Bool
-  #endif
   public static func setUserAtEvent(_ presence: Swift.Bool, at place: bLinkupSDK.Place, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Presence>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func setUserAtEvent(_ presence: Swift.Bool, at place: bLinkupSDK.Place) async throws -> bLinkupSDK.Presence
-  #endif
+  public static func getInvites(active: Swift.Bool? = nil, direction: bLinkupSDK.Direction? = nil, spotId: Swift.String? = nil, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.SpotInvite]>)
+  public static func getInvites(active: Swift.Bool? = nil, direction: bLinkupSDK.Direction? = nil, spotId: Swift.String? = nil) async throws -> [bLinkupSDK.SpotInvite]
+  public static func sendInvite(spotId: Swift.String, userId: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.SpotInvite>)
+  public static func sendInvite(spotId: Swift.String, userId: Swift.String) async throws -> bLinkupSDK.SpotInvite
+  public static func getRedemables(active: Swift.Bool? = nil, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Deal]>)
+  public static func getRedemables(active: Swift.Bool? = nil) async throws -> [bLinkupSDK.Deal]
+  public static func redeem(_ id: Swift.String, spotId: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Deal>)
+  public static func redeem(_ id: Swift.String, spotId: Swift.String) async throws -> bLinkupSDK.Deal
   public static func getBlocks(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Block]>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func getBlocks() async throws -> [bLinkupSDK.Block]
-  #endif
   public static func blockUser(_ user: bLinkupSDK.User, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Block>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func blockUser(_ user: bLinkupSDK.User) async throws -> bLinkupSDK.Block
-  #endif
   public static func deleteBlock(_ block: bLinkupSDK.Block, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
-  #if compiler(>=5.3) && $AsyncAwait
   public static func deleteBlock(_ block: bLinkupSDK.Block) async throws
-  #endif
   @discardableResult
-  public static func addGeofencingObserver(_ observer: @escaping bLinkupSDK.GeoObserver) -> Swift.String
+  public static func addGeofencingObserver(_ observer: @escaping bLinkupSDK.GeoObserver) -> any Combine.Cancellable
   public static func removeTrackingObserver(id: Swift.String)
   public static func updateTrackingEvents()
   @objc deinit
 }
-public struct BlinkPoint : Swift.Codable, Swift.Hashable {
-  public let id: Swift.String, name: Swift.String
-  public let promoURL: Swift.String?
-  public let x: Swift.Double, y: Swift.Double
-  public init(id: Swift.String = "1", name: Swift.String = "Test name", promoURL: Swift.String? = nil, x: Swift.Double = 0, y: Swift.Double = 0)
+public class Branding : Combine.ObservableObject, Swift.Hashable, Swift.Equatable {
+  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil)
+  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil)
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.BlinkPoint, b: bLinkupSDK.BlinkPoint) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
+  public static func == (lhs: bLinkupSDK.Branding, rhs: bLinkupSDK.Branding) -> Swift.Bool
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
   public var hashValue: Swift.Int {
     get
   }
-  public init(from decoder: any Swift.Decoder) throws
 }
-
 
 
 public typealias GeoObserver = ([bLinkupSDK.Presence]) -> ()
@@ -332,93 +605,99 @@ public struct GeoPoint {
   public let x: Swift.Double, y: Swift.Double, r: Swift.Double
   public init(name: Swift.String, x: Swift.Double, y: Swift.Double, r: Swift.Double)
 }
-public class Branding : Foundation.ObservableObject {
-  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil)
-  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
-  @objc deinit
-}
 
-public struct Block : Swift.Codable, Swift.Hashable, Swift.Identifiable {
+
+
+public struct Block : Swift.Identifiable {
   public let id: Swift.String
   public let blocker: bLinkupSDK.User, blockee: bLinkupSDK.User
-  public let insertedAt: Swift.String?
+  public var insertedAt: Swift.String?
   public init(id: Swift.String, blocker: bLinkupSDK.User, blockee: bLinkupSDK.User, insertedAt: Swift.String? = nil)
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.Block, b: bLinkupSDK.Block) -> Swift.Bool
   public typealias ID = Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
+}
+public struct Connection : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
+  public enum Status : Swift.String, Swift.Equatable, Swift.Hashable {
+    case unknown, connected
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.String
+  public let status: bLinkupSDK.Connection.Status
+  public let sourceUser: bLinkupSDK.User, targetUser: bLinkupSDK.User
+  public let opponent: bLinkupSDK.User
+  public let income: Swift.Bool
+  public static func == (a: bLinkupSDK.Connection, b: bLinkupSDK.Connection) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.String
   public var hashValue: Swift.Int {
     get
   }
-  public init(from decoder: any Swift.Decoder) throws
 }
-public struct Connection : Swift.Decodable, Swift.Equatable, Swift.Identifiable {
-  public let id: Swift.String
-  public let status: bLinkupSDK.ConnectionStatus
-  public let sourceUser: bLinkupSDK.User, targetUser: bLinkupSDK.User
-  public init(id: Swift.String, status: bLinkupSDK.ConnectionStatus, sourceId: Swift.String, targetId: Swift.String, source: bLinkupSDK.User, target: bLinkupSDK.User)
-  public static func == (lhs: bLinkupSDK.Connection, rhs: bLinkupSDK.Connection) -> Swift.Bool
-  public func opponent(of id: Swift.String?) -> bLinkupSDK.User?
-  public typealias ID = Swift.String
-  public init(from decoder: any Swift.Decoder) throws
-}
-
-
-
-public struct VenueMapView : SwiftUI.UIViewControllerRepresentable {
-  public init(place: bLinkupSDK.Place?)
-  @_Concurrency.MainActor(unsafe) public func makeUIViewController(context: bLinkupSDK.VenueMapView.Context) -> bLinkupSDK.VenueMapVC
-  @_Concurrency.MainActor(unsafe) public func updateUIViewController(_ vc: bLinkupSDK.VenueMapVC, context: bLinkupSDK.VenueMapView.Context)
-  public typealias Body = Swift.Never
-  public typealias Coordinator = Swift.Void
-  public typealias UIViewControllerType = bLinkupSDK.VenueMapVC
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) public class VenueMapVC : UIKit.UIViewController, UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewDidLoad()
-  @_Concurrency.MainActor(unsafe) @objc public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
-  @objc deinit
-}
-
-
-public struct BlinkupRootScreen : SwiftUI.View {
-  public init(customer: bLinkupSDK.Customer, branding: bLinkupSDK.Branding, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+public typealias BlinkupRootScreen = bLinkupSDK.Root3Screen
+@_Concurrency.MainActor @preconcurrency public struct Root3Screen : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(customer: bLinkupSDK.Customer, branding: bLinkupSDK.Branding, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK17BlinkupRootScreenV4bodyQrvp", 0) __
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK11Root3ScreenV4bodyQrvp", 0) __
 }
 
 
-public struct User : Swift.Codable, Swift.Hashable, Swift.Identifiable {
+
+public struct SpotRegion {
+  public let id: Swift.String, name: Swift.String
+  public let latitude: Swift.Double?, longitude: Swift.Double?, radius: Swift.Double?
+  public let isDefault: Swift.Bool?
+}
+extension bLinkupSDK.SpotRegion : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
+  public static func == (a: bLinkupSDK.SpotRegion, b: bLinkupSDK.SpotRegion) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+
+
+public struct User : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
   public let id: Swift.String
   public let name: Swift.String?
   public let phoneNumber: Swift.String?
   public let emailAddress: Swift.String?
+  public let type: bLinkupSDK.UserType?
   public var presence: bLinkupSDK.Place?
-  public static func == (lhs: bLinkupSDK.User, rhs: bLinkupSDK.User) -> Swift.Bool
-  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String? = nil, emailAddress: Swift.String? = nil, presence: bLinkupSDK.Place? = nil)
-  public init(id: Swift.String)
+  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String?, emailAddress: Swift.String?, type: bLinkupSDK.UserType? = nil, presence: bLinkupSDK.Place? = nil)
+  public static func == (a: bLinkupSDK.User, b: bLinkupSDK.User) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public typealias ID = Swift.String
-  public func encode(to encoder: any Swift.Encoder) throws
   public var hashValue: Swift.Int {
     get
   }
-  public init(from decoder: any Swift.Decoder) throws
 }
-
 
 extension bLinkupSDK.Presence.Confidence : Swift.Equatable {}
 extension bLinkupSDK.Presence.Confidence : Swift.Hashable {}
-extension bLinkupSDK.Presence.Confidence : Swift.RawRepresentable {}
 extension bLinkupSDK.ImageScrollView.ScaleMode : Swift.Equatable {}
 extension bLinkupSDK.ImageScrollView.ScaleMode : Swift.Hashable {}
 extension bLinkupSDK.ImageScrollView.ScaleMode : Swift.RawRepresentable {}
 extension bLinkupSDK.ImageScrollView.Offset : Swift.Equatable {}
 extension bLinkupSDK.ImageScrollView.Offset : Swift.Hashable {}
 extension bLinkupSDK.ImageScrollView.Offset : Swift.RawRepresentable {}
-extension bLinkupSDK.ConnectionStatus : Swift.Equatable {}
-extension bLinkupSDK.ConnectionStatus : Swift.Hashable {}
-extension bLinkupSDK.ConnectionStatus : Swift.RawRepresentable {}
+extension bLinkupSDK.GeofenceTrack : Combine.Cancellable {}
+extension bLinkupSDK.BottomSheet : Swift.Sendable {}
+extension bLinkupSDK.OTPInput : Swift.Sendable {}
+extension bLinkupSDK.Deal.DealStatus : Swift.Equatable {}
+extension bLinkupSDK.Deal.DealStatus : Swift.Hashable {}
+extension bLinkupSDK.Deal.DealStatus : Swift.RawRepresentable {}
+extension bLinkupSDK.Deal.DealType : Swift.Equatable {}
+extension bLinkupSDK.Deal.DealType : Swift.Hashable {}
+extension bLinkupSDK.Deal.DealType : Swift.RawRepresentable {}
+extension bLinkupSDK.SegmentControl : Swift.Sendable {}
+extension bLinkupSDK.Direction : Swift.Equatable {}
+extension bLinkupSDK.Direction : Swift.Hashable {}
+extension bLinkupSDK.Direction : Swift.RawRepresentable {}
+extension bLinkupSDK.Connection.Status : Swift.RawRepresentable {}
+extension bLinkupSDK.Root3Screen : Swift.Sendable {}
