@@ -22181,14 +22181,14 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Login\/Login3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 6727,
+      "offset": 6922,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Login\/Login3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 6754,
+      "offset": 6949,
       "length": 4,
       "value": "true"
     },
@@ -22383,106 +22383,127 @@
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
+      "kind": "FloatLiteral",
+      "offset": 254,
+      "length": 5,
+      "value": "500.0"
+    },
+    {
+      "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 291,
+      "offset": 336,
       "length": 3,
       "value": "140"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "FloatLiteral",
-      "offset": 311,
+      "offset": 356,
       "length": 3,
       "value": "0.6"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "FloatLiteral",
-      "offset": 334,
+      "offset": 379,
       "length": 4,
       "value": "0.92"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "Array",
-      "offset": 436,
+      "offset": 481,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
-      "kind": "BooleanLiteral",
-      "offset": 809,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "StringLiteral",
-      "offset": 855,
+      "offset": 814,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 969,
+      "offset": 852,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
+      "kind": "BooleanLiteral",
+      "offset": 893,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
+      "kind": "StringLiteral",
+      "offset": 939,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1053,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 9850,
+      "offset": 10807,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 9885,
+      "offset": 10842,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "StringLiteral",
-      "offset": 10007,
+      "offset": 10964,
       "length": 9,
       "value": "\"Profile\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "StringLiteral",
-      "offset": 10031,
+      "offset": 10988,
       "length": 30,
       "value": "\"person.and.background.dotted\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "StringLiteral",
-      "offset": 10086,
+      "offset": 11043,
       "length": 6,
       "value": "\"tab1\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "StringLiteral",
-      "offset": 10167,
+      "offset": 11124,
       "length": 9,
       "value": "\"Profile\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "StringLiteral",
-      "offset": 10191,
+      "offset": 11148,
       "length": 30,
       "value": "\"person.and.background.dotted\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/Map3View.swift",
       "kind": "StringLiteral",
-      "offset": 10254,
+      "offset": 11211,
       "length": 6,
       "value": "\"tab2\""
     },
@@ -23280,21 +23301,21 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/MeetRedeem3Screen.swift",
       "kind": "IntegerLiteral",
-      "offset": 2254,
+      "offset": 2299,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/MeetRedeem3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 2285,
+      "offset": 2330,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/MeetRedeem3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 2418,
+      "offset": 2463,
       "length": 6,
       "value": "\"Exit\""
     },
@@ -23560,28 +23581,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 3717,
+      "offset": 3694,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 3728,
+      "offset": 3705,
       "length": 11,
       "value": "\"Customer1\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 3762,
+      "offset": 3739,
       "length": 12,
       "value": "\"5555551234\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 3794,
+      "offset": 3771,
       "length": 8,
       "value": "\"123456\""
     },
@@ -24400,21 +24421,21 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/Libraries\/OTPInput.swift",
       "kind": "BooleanLiteral",
-      "offset": 5820,
+      "offset": 6328,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/Libraries\/OTPInput.swift",
       "kind": "StringLiteral",
-      "offset": 5676,
+      "offset": 6184,
       "length": 11,
       "value": "\"bLinkupSDK.Coordinator\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/Libraries\/OTPInput.swift",
       "kind": "StringLiteral",
-      "offset": 7928,
+      "offset": 8454,
       "length": 5,
       "value": "\"123\""
     },
@@ -24463,63 +24484,63 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/BarList3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 2331,
+      "offset": 1093,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/BarList3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 2362,
+      "offset": 1124,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/BarList3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 2516,
+      "offset": 1278,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/BarList3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 2555,
+      "offset": 1317,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/BarList3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 2602,
+      "offset": 1364,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/BarList3View.swift",
       "kind": "StringLiteral",
-      "offset": 2680,
+      "offset": 1442,
       "length": 10,
       "value": "\"redeem: \""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/BarList3View.swift",
       "kind": "StringLiteral",
-      "offset": 2801,
+      "offset": 1563,
       "length": 6,
       "value": "\"Exit\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/BarList3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 2848,
+      "offset": 1610,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/MeetNRedeem\/BarList3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 2866,
+      "offset": 1628,
       "length": 5,
       "value": "false"
     },
@@ -24596,35 +24617,35 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 1652,
+      "offset": 1619,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 1690,
+      "offset": 1657,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "StringLiteral",
-      "offset": 1729,
+      "offset": 1696,
       "length": 9,
       "value": "\"Friends\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "StringLiteral",
-      "offset": 1753,
+      "offset": 1720,
       "length": 10,
       "value": "\"figure.2\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "StringLiteral",
-      "offset": 1780,
+      "offset": 1747,
       "length": 6,
       "value": "\"tab0\""
     },
@@ -24857,54 +24878,54 @@
       "kind": "StringLiteral",
       "offset": 253,
       "length": 5,
-      "value": "\"101\""
+      "value": "\"104\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/bLinkup.swift",
       "kind": "StringLiteral",
-      "offset": 274,
+      "offset": 431,
       "length": 30,
       "value": "\"https:\/\/blinkup.fly.dev\/api\/\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 503,
+      "offset": 754,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/bLinkup.swift",
       "kind": "StringLiteral",
-      "offset": 544,
+      "offset": 795,
       "length": 44,
       "value": "\"com.blinktech.sdk.geofencingPresenceUpdate\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/bLinkup.swift",
       "kind": "StringLiteral",
-      "offset": 617,
+      "offset": 868,
       "length": 12,
       "value": "\"push_token\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 13939,
+      "offset": 14247,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 14278,
+      "offset": 14586,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/SDKApp\/SDK\/bLinkup.swift",
       "kind": "Dictionary",
-      "offset": 23923,
+      "offset": 24231,
       "length": 3,
       "value": "[]"
     },
