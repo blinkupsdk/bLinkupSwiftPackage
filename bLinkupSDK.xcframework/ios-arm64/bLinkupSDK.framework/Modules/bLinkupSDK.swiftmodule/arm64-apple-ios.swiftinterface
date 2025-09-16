@@ -32,6 +32,12 @@ extension bLinkupSDK.BottomSheet {
 extension bLinkupSDK.BottomSheet {
   public func enableAccountingForKeyboardHeight(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
+public struct RedeemActionSheet : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK17RedeemActionSheetV4bodyQrvp", 0) __
+}
 
 public typealias Completion<E> = (Swift.Result<E, any Swift.Error>) -> Swift.Void
 
@@ -54,8 +60,8 @@ public enum BottomSheetPosition : Swift.Equatable {
 }
 
 public class Branding : Combine.ObservableObject, Swift.Hashable, Swift.Equatable {
-  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil)
-  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil)
+  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil)
+  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil)
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: bLinkupSDK.Branding, rhs: bLinkupSDK.Branding) -> Swift.Bool
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
