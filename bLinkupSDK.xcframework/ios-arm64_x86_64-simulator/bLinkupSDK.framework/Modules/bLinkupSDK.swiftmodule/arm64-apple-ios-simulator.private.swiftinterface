@@ -32,12 +32,6 @@ extension bLinkupSDK.BottomSheet {
 extension bLinkupSDK.BottomSheet {
   public func enableAccountingForKeyboardHeight(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
-public struct RedeemActionSheet : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK17RedeemActionSheetV4bodyQrvp", 0) __
-}
 
 public typealias Completion<E> = (Swift.Result<E, any Swift.Error>) -> Swift.Void
 
@@ -60,8 +54,8 @@ public enum BottomSheetPosition : Swift.Equatable {
 }
 
 public class Branding : Combine.ObservableObject, Swift.Hashable, Swift.Equatable {
-  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil)
-  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil)
+  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil)
+  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil)
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: bLinkupSDK.Branding, rhs: bLinkupSDK.Branding) -> Swift.Bool
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
@@ -71,6 +65,12 @@ public class Branding : Combine.ObservableObject, Swift.Hashable, Swift.Equatabl
   }
 }
 
+public struct RedeemActionSheet : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK17RedeemActionSheetV4bodyQrvp", 0) __
+}
 
 extension bLinkupSDK.BottomSheet {
   public func enableAppleScrollBehavior(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
@@ -219,7 +219,7 @@ public struct User : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
   public let emailAddress: Swift.String?
   public let type: bLinkupSDK.UserType?
   public var presence: bLinkupSDK.Place?
-  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String?, emailAddress: Swift.String?, type: bLinkupSDK.UserType? = nil, presence: bLinkupSDK.Place? = nil)
+  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String? = nil, emailAddress: Swift.String? = nil, type: bLinkupSDK.UserType? = nil, presence: bLinkupSDK.Place? = nil)
   public static func == (a: bLinkupSDK.User, b: bLinkupSDK.User) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public typealias ID = Swift.String
@@ -271,7 +271,6 @@ public struct Contact : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
 extension bLinkupSDK.BottomSheet {
   public func customAnimation(_ animation: SwiftUI.Animation?) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
-
 extension SwiftUI.View {
   public func addLoadingView(isLoading: SwiftUI.Binding<Swift.Bool>) -> some SwiftUI.View
   
@@ -338,6 +337,7 @@ extension bLinkupSDK.ImageScrollView : UIKit.UIScrollViewDelegate {
   @_Concurrency.MainActor(unsafe) @objc dynamic public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
   @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
 }
+
 
 
 
@@ -461,7 +461,7 @@ public enum SpotType : Swift.Hashable {
     get
   }
 }
-public struct Spot : bLinkupSDK.DealInfo, Swift.Identifiable, Swift.Hashable {
+public struct Spot : Swift.Identifiable, Swift.Hashable {
   public let id: Swift.String, name: Swift.String
   public var type: bLinkupSDK.SpotType?
   public var latitude: Swift.Double?, longitude: Swift.Double?
@@ -662,7 +662,7 @@ public struct ConnectionRequest : Swift.Identifiable {
   public let income: Swift.Bool
   public typealias ID = Swift.String
 }
-public struct BlinkPoint : bLinkupSDK.DealInfo, Swift.Identifiable, Swift.Hashable {
+public struct BlinkPoint : Swift.Identifiable, Swift.Hashable {
   public let id: Swift.String, name: Swift.String
   public let promoURL: Swift.String?
   public let x: Swift.Double, y: Swift.Double
@@ -680,11 +680,6 @@ public struct BlinkPoint : bLinkupSDK.DealInfo, Swift.Identifiable, Swift.Hashab
   public var hashValue: Swift.Int {
     get
   }
-}
-public protocol DealInfo {
-  var inviteCount: Swift.Int? { get }
-  var deal: bLinkupSDK.Deal? { get }
-  var dealStats: bLinkupSDK.DealStats? { get }
 }
 
 
@@ -719,7 +714,6 @@ extension bLinkupSDK.BottomSheet {
 extension bLinkupSDK.BottomSheet {
   public func sheetWidth(_ width: bLinkupSDK.BottomSheetWidth = .platformDefault) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
-
 
 
 
