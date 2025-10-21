@@ -4,57 +4,57 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Headers/bLinkupSDK.h</key>
+		<key>.metadata-version</key>
 		<data>
-		ApVWlvYc092PlfV7rly0BeJnNaI=
+		/p9Euxvuv0214BKbjv8tmCTliDk=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		MCtgBWgFEKZc8BHoDpGXp/5iLMQ=
+		LDQqUoLAWdLOfamyySp+4TJHkrg=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		fpLFIZmxyJsVi7m86fLTlBq5gHI=
+		PdKPyRdhwkS87ZM5rotyQda61Uk=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		cj3NLDPiPoYFnGWLcLV06bZXO9c=
+		+tZcNYsEvuCLOxdhIzpo91Vv8j8=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		KZUEPh+Oi0WRfa1Ff3tevplYAHE=
+		eNMgxjDX9HJz1GD9dWPDMzf8kgM=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		cj3NLDPiPoYFnGWLcLV06bZXO9c=
+		+tZcNYsEvuCLOxdhIzpo91Vv8j8=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		po5n6ZjHaoWmSgQEnOYC+x7IXsI=
+		gWZxWmW8qqrPLe6/kn8mEvXq7rQ=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		fpLFIZmxyJsVi7m86fLTlBq5gHI=
+		PdKPyRdhwkS87ZM5rotyQda61Uk=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
-		IKIbMwU1PDCBw3I84hfWp2X2JfE=
+		/2eGw8etWOsZxdtsj43ZNbw+su8=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
-		wv99CRumj79NNWYqg7lN+YVJ1lQ=
+		MG/PIei1dMn+lcPeNp6C7h+K+hY=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		IKIbMwU1PDCBw3I84hfWp2X2JfE=
+		/2eGw8etWOsZxdtsj43ZNbw+su8=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		iOHaOVLLF9DRBSFuxB4SL9ErcAQ=
+		fZmumpttOwlWLWJiTLEXSImtah0=
 		</data>
-		<key>Modules/module.modulemap</key>
+		<key>PhoneNumberMetadata.json</key>
 		<data>
-		Vx2xtrC4fo/tK04FoBpKLNQ0R18=
+		On763QWdxHKcxQzBy6TXROPafvo=
 		</data>
 		<key>Screens3.storyboardc/ArenaMap2VC.nib</key>
 		<data>
@@ -119,88 +119,88 @@
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Headers/bLinkupSDK.h</key>
+		<key>.metadata-version</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			KvgNyO65VhTVcbslMD6My73u8+CoqeDw26MRJ6b/VsE=
+			xVl0tGqjB3K4mr+GwzwdnrYNBDkjFUQBBoWoEWg7BXg=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u9y3JguQrbD/NuVboBOY3e0zXQC2X3glekrsxPka8MU=
+			u8XngL5MXd92oRiU+5zwQiDxxr02YYPd96uQR1TTM0k=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9SWxfSVjzUL2Z+MOjQ7yqSSxzrtLbDXk7yHcsyHv9rY=
+			cBT1wUevYZDO3slwEkieKEstjjSqNwwwZNTpzT7iBH8=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			Zhra0LSvQSgdxBIz3iWpFNXEcXUmw0ZWmT2O+jW26wE=
+			uTMzMbSUReXDbblB1FR/K85mP9FiCYsRZLF+oLw4EJ8=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			9SWxfSVjzUL2Z+MOjQ7yqSSxzrtLbDXk7yHcsyHv9rY=
+			cBT1wUevYZDO3slwEkieKEstjjSqNwwwZNTpzT7iBH8=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			M5IWlVWKhbN/KvPX+6YYo0cFL14oxj+6GHScbiQP8M8=
+			eeB5a87GiyzkozF9fwhiTwZfPyZw4p4OuKFb6ymUB7A=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			u9y3JguQrbD/NuVboBOY3e0zXQC2X3glekrsxPka8MU=
+			u8XngL5MXd92oRiU+5zwQiDxxr02YYPd96uQR1TTM0k=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PEBwVqrzZKInP083OYViBEeMBSnmKY8hdn54Z1K7Uxc=
+			kJOFmP2eCDRQsYUcKjhOzN7C4+/m1CAm7vHijCKdQyY=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			lM/uivZbduzA06Qy/Mr4hchrFAhGHtjUF+THeA78AOE=
+			IrA2XPcrdllr56+pCrwVQiNH//ztC7SVrpuaQPWm4mE=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			PEBwVqrzZKInP083OYViBEeMBSnmKY8hdn54Z1K7Uxc=
+			kJOFmP2eCDRQsYUcKjhOzN7C4+/m1CAm7vHijCKdQyY=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			ZUj39O45ZXSMh1p6k05nHw+XyZADrXKtHDKDoVHrj+w=
+			DB1DnJWLO4ySg4g7O+qy5MZXPeYAouXqf9KU7UZABC0=
 			</data>
 		</dict>
-		<key>Modules/module.modulemap</key>
+		<key>PhoneNumberMetadata.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			wS8Y/vDNqelDxMtHx7YTuEjCEZhy8mMj9XvaCn6vLbI=
+			tIKZycCZCWvXDPkS8jnMhHscwyzraX3it6ZYYIvuECc=
 			</data>
 		</dict>
 		<key>Screens3.storyboardc/ArenaMap2VC.nib</key>

@@ -2,6 +2,7 @@
 // swift-compiler-version: Apple Swift version 5.10 (swiftlang-5.10.0.13 clang-1500.3.9.4)
 // swift-module-flags: -target x86_64-apple-ios16.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name bLinkupSDK
 import Combine
+import CommonCrypto
 import Contacts
 import CoreLocation
 import CoreTelephony
@@ -19,75 +20,37 @@ import _Concurrency
 import _MapKit_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_exported import bLinkupSDK
-
-
 extension bLinkupSDK.BottomSheet {
-  public func enableBackgroundBlur(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-  public func backgroundBlurMaterial(_ material: bLinkupSDK.VisualEffect) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func onDragChanged(_ perform: @escaping (SwiftUI.DragGesture.Value) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func onDragEnded(_ perform: @escaping (SwiftUI.DragGesture.Value) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func dragPositionSwitchAction(_ action: @escaping (SwiftUI.GeometryProxy, SwiftUI.DragGesture.Value) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
-
-
-
-extension bLinkupSDK.BottomSheet {
-  public func enableAccountingForKeyboardHeight(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-
-public typealias Completion<E> = (Swift.Result<E, any Swift.Error>) -> Swift.Void
-
-extension bLinkupSDK.BottomSheet {
-  public func customThreshold(_ threshold: Swift.Double) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-
-public enum BottomSheetPosition : Swift.Equatable {
-  case hidden
-  case dynamicBottom
-  case dynamic
-  case dynamicTop
-  case relativeBottom(CoreFoundation.CGFloat)
-  case relative(CoreFoundation.CGFloat)
-  case relativeTop(CoreFoundation.CGFloat)
-  case absoluteBottom(CoreFoundation.CGFloat)
-  case absolute(CoreFoundation.CGFloat)
-  case absoluteTop(CoreFoundation.CGFloat)
-  public static func == (a: bLinkupSDK.BottomSheetPosition, b: bLinkupSDK.BottomSheetPosition) -> Swift.Bool
-}
-
-public class Branding : Combine.ObservableObject, Swift.Hashable, Swift.Equatable {
-  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil)
-  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil)
+public typealias ContactResult = bLinkupSDK.Contact
+public struct Contact : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
+  public var id: Swift.String {
+    get
+  }
+  public let phone: Swift.String
+  public let name: Swift.String
+  public let userId: Swift.String?
+  public let dbName: Swift.String?
+  public init(phone: Swift.String, name: Swift.String, userId: Swift.String?, dbName: Swift.String? = nil)
+  public func asUser() -> bLinkupSDK.User?
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (lhs: bLinkupSDK.Branding, rhs: bLinkupSDK.Branding) -> Swift.Bool
-  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
-  @objc deinit
+  public static func == (a: bLinkupSDK.Contact, b: bLinkupSDK.Contact) -> Swift.Bool
+  public typealias ID = Swift.String
   public var hashValue: Swift.Int {
     get
   }
 }
 
-public struct RedeemActionSheet : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK17RedeemActionSheetV4bodyQrvp", 0) __
-}
-
 extension bLinkupSDK.BottomSheet {
-  public func enableAppleScrollBehavior(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func enableFlickThrough(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
-public struct SegmentControl : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK14SegmentControlV4bodyQrvp", 0) __
+extension bLinkupSDK.BottomSheet {
+  public func isResizable(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
 
-public typealias GeoObserver = ([bLinkupSDK.Presence]) -> ()
-public struct GeoPoint {
-  public let name: Swift.String
-  public let x: Swift.Double, y: Swift.Double, r: Swift.Double
-  public init(name: Swift.String, x: Swift.Double, y: Swift.Double, r: Swift.Double)
-}
 public struct Connection : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
   public enum Status : Swift.String, Swift.Equatable, Swift.Hashable {
     case unknown, connected
@@ -109,85 +72,114 @@ public struct Connection : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
     get
   }
 }
-
-public enum VisualEffect : Swift.Equatable, Swift.Hashable {
-  public enum Material : Swift.Equatable, Swift.Hashable {
-    case `default`
-    @available(iOS 13.0, *)
-    @available(macOS, unavailable)
-    case ultraThin
-    @available(iOS 13.0, *)
-    @available(macOS, unavailable)
-    case thin
-    @available(iOS 13.0, *)
-    @available(macOS, unavailable)
-    case thick
-    @available(iOS 13.0, *)
-    @available(macOS, unavailable)
-    case chrome
-    @available(macOS 10.15, *)
-    @available(iOS, unavailable)
-    @available(macCatalyst, unavailable)
-    case titlebar
-    @available(macOS 10.15, *)
-    @available(iOS, unavailable)
-    @available(macCatalyst, unavailable)
-    case windowBackground
-    @available(macOS 10.15, *)
-    @available(iOS, unavailable)
-    @available(macCatalyst, unavailable)
-    case headerView(behindWindow: Swift.Bool)
-    @available(macOS 10.15, *)
-    @available(iOS, unavailable)
-    @available(macCatalyst, unavailable)
-    case contentBackground(behindWindow: Swift.Bool)
-    @available(macOS 10.15, *)
-    @available(iOS, unavailable)
-    @available(macCatalyst, unavailable)
-    case behindPageBackground(behindWindow: Swift.Bool)
-    public static func == (a: bLinkupSDK.VisualEffect.Material, b: bLinkupSDK.VisualEffect.Material) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
+extension bLinkupSDK.BottomSheet {
+  public func customAnimation(_ animation: SwiftUI.Animation?) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+@objc open class PhoneNumberFormatter : Foundation.Formatter {
+  final public let utility: bLinkupSDK.PhoneNumberUtility
+  @objc dynamic public var generatesPhoneNumber: Swift.Bool
+  @objc dynamic public var defaultRegion: Swift.String {
+    @objc get
+    @objc set
   }
-  case system
-  case systemLight
-  case systemDark
-  case adaptive(bLinkupSDK.VisualEffect.Material)
-  case light(bLinkupSDK.VisualEffect.Material)
-  case dark(bLinkupSDK.VisualEffect.Material)
-  public static func == (a: bLinkupSDK.VisualEffect, b: bLinkupSDK.VisualEffect) -> Swift.Bool
+  @objc dynamic public var withPrefix: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc dynamic public var currentRegion: Swift.String {
+    @objc get
+  }
+  public init(utility: bLinkupSDK.PhoneNumberUtility = PhoneNumberUtility(), defaultRegion: Swift.String = PhoneNumberUtility.defaultRegionCode(), withPrefix: Swift.Bool = true)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension bLinkupSDK.PhoneNumberFormatter {
+  @objc override dynamic open func string(for obj: Any?) -> Swift.String?
+  @objc override dynamic open func getObjectValue(_ obj: Swift.AutoreleasingUnsafeMutablePointer<Swift.AnyObject?>?, for string: Swift.String, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+  @objc override dynamic open func isPartialStringValid(_ partialStringPtr: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString>, proposedSelectedRange proposedSelRangePtr: Foundation.NSRangePointer?, originalString origString: Swift.String, originalSelectedRange origSelRange: Foundation.NSRange, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+}
+public enum PhoneNumberError : Swift.Error, Swift.Equatable, Swift.Sendable {
+  case generalError
+  case invalidCountryCode
+  case invalidNumber
+  case tooLong
+  case tooShort
+  case deprecated
+  case metadataNotFound
+  case ambiguousNumber(phoneNumbers: Swift.Set<bLinkupSDK.PhoneNumber>)
+  public static func == (a: bLinkupSDK.PhoneNumberError, b: bLinkupSDK.PhoneNumberError) -> Swift.Bool
+}
+extension bLinkupSDK.PhoneNumberError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum PhoneNumberFormat : Swift.String, Swift.Codable, Swift.Sendable {
+  case e164
+  case international
+  case national
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PhoneNumberType : Swift.String, Swift.Codable, Swift.Sendable {
+  case fixedLine
+  case mobile
+  case fixedOrMobile
+  case pager
+  case personalNumber
+  case premiumRate
+  case sharedCost
+  case tollFree
+  case voicemail
+  case voip
+  case uan
+  case unknown
+  case notParsed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PossibleLengthType : Swift.String, Swift.Codable, Swift.Sendable {
+  case national
+  case localOnly
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+
+extension bLinkupSDK.BottomSheet {
+  public func showCloseButton(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+extension bLinkupSDK.BottomSheet {
+  public func enableAccountingForKeyboardHeight(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+public struct BlinkPoint : Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String, name: Swift.String
+  public let promoURL: Swift.String?
+  public let x: Swift.Double, y: Swift.Double
+  public let placeId: Swift.String?
+  public let hasSpot: Swift.Bool?
+  public let spotId: Swift.String?
+  public var promotion: Swift.String?
+  public var invitable: Swift.Bool
+  public var inviteCount: Swift.Int?
+  public var deal: bLinkupSDK.Deal?
+  public var dealStats: bLinkupSDK.DealStats?
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: bLinkupSDK.BlinkPoint, b: bLinkupSDK.BlinkPoint) -> Swift.Bool
+  public typealias ID = Swift.String
   public var hashValue: Swift.Int {
     get
   }
 }
-
-
-extension bLinkupSDK.BottomSheet {
-  public func enableContentDrag(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-extension bLinkupSDK.BottomSheet {
-  public func enableFlickThrough(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-
-extension bLinkupSDK.BottomSheet {
-  public func enableSwipeToDismiss(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-extension bLinkupSDK.BottomSheet {
-  public func enableFloatingIPadSheet(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-public typealias BlinkupRootScreen = bLinkupSDK.Root3Screen
-@_Concurrency.MainActor(unsafe) public struct Root3Screen : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public init(customer: bLinkupSDK.Customer, branding: bLinkupSDK.Branding, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK11Root3ScreenV4bodyQrvp", 0) __
-}
-
-
 public struct Presence : Swift.Identifiable {
   public enum Confidence {
     case unknown, weak, strong, manual
@@ -212,161 +204,227 @@ extension bLinkupSDK.Presence : Swift.Equatable, Swift.Hashable {
     get
   }
 }
-public struct User : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
-  public let id: Swift.String
-  public let name: Swift.String?
-  public let phoneNumber: Swift.String?
-  public let emailAddress: Swift.String?
-  public let type: bLinkupSDK.UserType?
-  public var presence: bLinkupSDK.Place?
-  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String? = nil, emailAddress: Swift.String? = nil, type: bLinkupSDK.UserType? = nil, presence: bLinkupSDK.Place? = nil)
-  public static func == (a: bLinkupSDK.User, b: bLinkupSDK.User) -> Swift.Bool
+
+
+public enum SpotType : Swift.Hashable {
+  case unknown, bar
+  public static func == (a: bLinkupSDK.SpotType, b: bLinkupSDK.SpotType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Spot : Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String, name: Swift.String
+  public var type: bLinkupSDK.SpotType?
+  public var latitude: Swift.Double?, longitude: Swift.Double?
+  public var address: Swift.String?
+  public var regionId: Swift.String?
+  public var region: bLinkupSDK.SpotRegion?
+  public var promotion: Swift.String?
+  public var invitable: Swift.Bool
+  public var blinkpointId: Swift.String?
+  public var inviteCount: Swift.Int?
+  public var deal: bLinkupSDK.Deal?
+  public var dealStats: bLinkupSDK.DealStats?
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: bLinkupSDK.Spot, b: bLinkupSDK.Spot) -> Swift.Bool
   public typealias ID = Swift.String
   public var hashValue: Swift.Int {
     get
   }
 }
 
+
 extension bLinkupSDK.BottomSheet {
-  public func isResizable(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-@available(iOS 15, macOS 12, *)
-extension bLinkupSDK.BottomSheet {
-  public func customBackground(ignoresSafeAreaEdges edges: SwiftUI.Edge.Set = .all) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-  public func customBackground<S>(in shape: S, fillStyle: SwiftUI.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.Shape
-  public func customBackground<S>(in shape: S, fillStyle: SwiftUI.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.InsettableShape
+  public func enableTapToDismiss(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
 extension bLinkupSDK.BottomSheet {
-  public func onDismiss(_ perform: @escaping () -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func enableSwipeToDismiss(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
 
 
-public typealias ContactResult = bLinkupSDK.Contact
-public struct Contact : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
-  public var id: Swift.String {
+public struct CountryCodePickerOptions : Swift.Sendable {
+  public init()
+  public init(backgroundColor: UIKit.UIColor? = nil, separatorColor: UIKit.UIColor? = nil, textLabelColor: UIKit.UIColor? = nil, textLabelFont: UIKit.UIFont? = nil, detailTextLabelColor: UIKit.UIColor? = nil, detailTextLabelFont: UIKit.UIFont? = nil, tintColor: UIKit.UIColor? = nil, cellBackgroundColor: UIKit.UIColor? = nil, cellBackgroundColorSelection: UIKit.UIColor? = nil)
+  public var backgroundColor: UIKit.UIColor?
+  public var separatorColor: UIKit.UIColor?
+  public var textLabelColor: UIKit.UIColor?
+  public var textLabelFont: UIKit.UIFont?
+  public var detailTextLabelColor: UIKit.UIColor?
+  public var detailTextLabelFont: UIKit.UIFont?
+  public var tintColor: UIKit.UIColor?
+  public var cellBackgroundColor: UIKit.UIColor?
+  public var cellBackgroundColorSelection: UIKit.UIColor?
+}
+
+@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class PhoneNumberTextField : UIKit.UITextField, UIKit.UITextFieldDelegate {
+  @_Concurrency.MainActor(unsafe) final public let utility: bLinkupSDK.PhoneNumberUtility
+  @_Concurrency.MainActor(unsafe) public var flagButton: UIKit.UIButton {
     get
+    set
   }
-  public let phone: Swift.String
-  public let name: Swift.String
-  public let userId: Swift.String?
-  public let dbName: Swift.String?
-  public init(phone: Swift.String, name: Swift.String, userId: Swift.String?, dbName: Swift.String? = nil)
-  public func asUser() -> bLinkupSDK.User?
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.Contact, b: bLinkupSDK.Contact) -> Swift.Bool
-  public typealias ID = Swift.String
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-@_hasMissingDesignatedInitializers final public class GeofenceTrack {
-  final public func cancel()
-  @objc deinit
-}
-
-
-
-
-extension bLinkupSDK.BottomSheet {
-  public func customAnimation(_ animation: SwiftUI.Animation?) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-extension SwiftUI.View {
-  public func addLoadingView(isLoading: SwiftUI.Binding<Swift.Bool>) -> some SwiftUI.View
-  
-  public func addMenu(@SwiftUI.ViewBuilder content: () -> some View) -> some SwiftUI.View
-  
-}
-
-@objc public protocol ImageScrollViewDelegate : UIKit.UIScrollViewDelegate {
-  @objc func imageScrollViewDidChangeOrientation(imageScrollView: bLinkupSDK.ImageScrollView)
-}
-@objc @_inheritsConvenienceInitializers @_Concurrency.MainActor(unsafe) open class ImageScrollView : UIKit.UIScrollView {
-  @objc public enum ScaleMode : Swift.Int {
-    case aspectFill
-    case aspectFit
-    case widthFill
-    case heightFill
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @objc public enum Offset : Swift.Int {
-    case begining
-    case center
-    public init?(rawValue: Swift.Int)
-    public typealias RawValue = Swift.Int
-    public var rawValue: Swift.Int {
-      get
-    }
-  }
-  @objc @_Concurrency.MainActor(unsafe) open var imageContentMode: bLinkupSDK.ImageScrollView.ScaleMode
-  @objc @_Concurrency.MainActor(unsafe) open var initialOffset: bLinkupSDK.ImageScrollView.Offset
-  @objc @_Concurrency.MainActor(unsafe) public var zoomView: UIKit.UIImageView? {
-    get
-  }
-  @objc @_Concurrency.MainActor(unsafe) weak open var imageScrollViewDelegate: (any bLinkupSDK.ImageScrollViewDelegate)?
-  @_Concurrency.MainActor(unsafe) open var maxScaleFromMinScale: CoreFoundation.CGFloat
-  @_Concurrency.MainActor(unsafe) @objc override dynamic open var frame: CoreFoundation.CGRect {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var text: Swift.String? {
     @objc get
     @objc set
   }
+  @_Concurrency.MainActor(unsafe) open func setTextUnformatted(newValue: Swift.String?)
+  @_Concurrency.MainActor(unsafe) open var defaultRegion: Swift.String {
+    get
+    @available(*, deprecated, message: "    The setter of defaultRegion is deprecated,\n    please override defaultRegion in a subclass instead.")
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var withPrefix: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var withPrefixPrefill: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var withFlag: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var withExamplePlaceholder: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var countryCodePlaceholderColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var numberPlaceholderColor: UIKit.UIColor {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var withDefaultPickerUI: Swift.Bool {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var withDefaultPickerUIOptions: bLinkupSDK.CountryCodePickerOptions
+  @_Concurrency.MainActor(unsafe) public var modalPresentationStyle: UIKit.UIModalPresentationStyle?
+  @_Concurrency.MainActor(unsafe) public var isPartialFormatterEnabled: Swift.Bool
+  @_Concurrency.MainActor(unsafe) public var maxDigits: Swift.Int? {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var ofType: bLinkupSDK.PhoneNumberType {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) public var partialFormatter: bLinkupSDK.PartialFormatter {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open var delegate: (any UIKit.UITextFieldDelegate)? {
+    @objc get
+    @objc set
+  }
+  @_Concurrency.MainActor(unsafe) public var currentRegion: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var nationalNumber: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var isValidNumber: Swift.Bool {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var phoneNumber: bLinkupSDK.PhoneNumber? {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func layoutSubviews()
+  @_Concurrency.MainActor(unsafe) convenience public init(utility: bLinkupSDK.PhoneNumberUtility)
+  @_Concurrency.MainActor(unsafe) public init(frame: CoreFoundation.CGRect, utility: bLinkupSDK.PhoneNumberUtility)
   @_Concurrency.MainActor(unsafe) @objc override dynamic public init(frame: CoreFoundation.CGRect)
-  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) public init(insets: UIKit.UIEdgeInsets, clearButtonPadding: CoreFoundation.CGFloat)
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init(coder aDecoder: Foundation.NSCoder)
+  @_Concurrency.MainActor(unsafe) open func updateFlag()
+  @_Concurrency.MainActor(unsafe) open func updatePlaceholder()
+  @_Concurrency.MainActor(unsafe) @objc open func textField(_ textField: UIKit.UITextField, shouldChangeCharactersIn range: Foundation.NSRange, replacementString string: Swift.String) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldShouldBeginEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldDidBeginEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldShouldEndEditing(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldDidEndEditing(_ textField: UIKit.UITextField)
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldDidEndEditing(_ textField: UIKit.UITextField, reason: UIKit.UITextField.DidEndEditingReason)
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldShouldClear(_ textField: UIKit.UITextField) -> Swift.Bool
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldShouldReturn(_ textField: UIKit.UITextField) -> Swift.Bool
+  @available(iOS 13.0, tvOS 13.0, *)
+  @_Concurrency.MainActor(unsafe) @objc open func textFieldDidChangeSelection(_ textField: UIKit.UITextField)
   @objc deinit
-  @objc @_Concurrency.MainActor(unsafe) public func adjustFrameToCenter()
-  @_Concurrency.MainActor(unsafe) open func setup()
-  @objc @_Concurrency.MainActor(unsafe) open func display(image: UIKit.UIImage)
-  @_Concurrency.MainActor(unsafe) open func refresh()
 }
-extension bLinkupSDK.ImageScrollView : UIKit.UIScrollViewDelegate {
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidScroll(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginDragging(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillEndDragging(_ scrollView: UIKit.UIScrollView, withVelocity velocity: CoreFoundation.CGPoint, targetContentOffset: Swift.UnsafeMutablePointer<CoreFoundation.CGPoint>)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDragging(_ scrollView: UIKit.UIScrollView, willDecelerate decelerate: Swift.Bool)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginDecelerating(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndDecelerating(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndScrollingAnimation(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewWillBeginZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidEndZooming(_ scrollView: UIKit.UIScrollView, with view: UIKit.UIView?, atScale scale: CoreFoundation.CGFloat)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewShouldScrollToTop(_ scrollView: UIKit.UIScrollView) -> Swift.Bool
-  @available(iOS 11.0, *)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidChangeAdjustedContentInset(_ scrollView: UIKit.UIScrollView)
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func viewForZooming(in scrollView: UIKit.UIScrollView) -> UIKit.UIView?
-  @_Concurrency.MainActor(unsafe) @objc dynamic public func scrollViewDidZoom(_ scrollView: UIKit.UIScrollView)
+extension bLinkupSDK.PhoneNumberTextField : bLinkupSDK.CountryCodePickerDelegate {
+  @_Concurrency.MainActor public func countryCodePickerViewControllerDidPickCountry(_ country: bLinkupSDK.CountryCodePickerViewController.Country)
+}
+extension bLinkupSDK.PhoneNumberTextField {
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func textRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func clearButtonRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
 }
 
-
-
-
-
-public struct SpotInvite : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
-  public var id: Swift.String
-  public let source: bLinkupSDK.User, target: bLinkupSDK.User, opponent: bLinkupSDK.User
-  public let income: Swift.Bool
-  public let spot: bLinkupSDK.Spot
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.SpotInvite, b: bLinkupSDK.SpotInvite) -> Swift.Bool
-  public typealias ID = Swift.String
-  public var hashValue: Swift.Int {
+public typealias GeoObserver = ([bLinkupSDK.Presence]) -> ()
+public struct GeoPoint {
+  public let name: Swift.String
+  public let x: Swift.Double, y: Swift.Double, r: Swift.Double
+  public init(name: Swift.String, x: Swift.Double, y: Swift.Double, r: Swift.Double)
+}
+public typealias BlinkupRootScreen = bLinkupSDK.Root3Screen
+@_Concurrency.MainActor(unsafe) public struct Root3Screen : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init(customer: bLinkupSDK.Customer, branding: bLinkupSDK.Branding, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK11Root3ScreenV4bodyQrvp", 0) __
 }
-public struct Place : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
+
+extension bLinkupSDK.BottomSheet {
+  public func enableContentDrag(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+public enum BottomSheetWidth : Swift.Equatable {
+  case platformDefault
+  case relative(CoreFoundation.CGFloat)
+  case absolute(CoreFoundation.CGFloat)
+  public static func == (a: bLinkupSDK.BottomSheetWidth, b: bLinkupSDK.BottomSheetWidth) -> Swift.Bool
+}
+public struct SpotRegion {
   public let id: Swift.String, name: Swift.String
-  public let mapURL: Swift.String?, geofence: Swift.String?
-  public let latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double
-  public let blinkpoints: [bLinkupSDK.BlinkPoint]?
-  public init(id: Swift.String, name: Swift.String, mapURL: Swift.String? = nil, geofence: Swift.String? = nil, latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double, blinkpoints: [bLinkupSDK.BlinkPoint]? = nil)
-  public static func == (a: bLinkupSDK.Place, b: bLinkupSDK.Place) -> Swift.Bool
+  public let latitude: Swift.Double?, longitude: Swift.Double?, radius: Swift.Double?
+  public let isDefault: Swift.Bool?
+}
+extension bLinkupSDK.SpotRegion : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
+  public static func == (a: bLinkupSDK.SpotRegion, b: bLinkupSDK.SpotRegion) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public typealias ID = Swift.String
   public var hashValue: Swift.Int {
     get
   }
 }
+
+
+extension bLinkupSDK.PhoneNumber {
+  public func adjustedNationalNumber() -> Swift.String
+}
+@_hasMissingDesignatedInitializers final public class PartialFormatter {
+  convenience public init(utility: bLinkupSDK.PhoneNumberUtility = PhoneNumberUtility(), defaultRegion: Swift.String = PhoneNumberUtility.defaultRegionCode(), withPrefix: Swift.Bool = true, maxDigits: Swift.Int? = nil, ignoreIntlNumbers: Swift.Bool = false)
+  final public var defaultRegion: Swift.String {
+    get
+    set
+  }
+  final public var maxDigits: Swift.Int?
+  final public var currentRegion: Swift.String {
+    get
+  }
+  final public func nationalNumber(from rawNumber: Swift.String) -> Swift.String
+  final public func formatPartial(_ rawNumber: Swift.String) -> Swift.String
+  @objc deinit
+}
+public struct OTPInput : SwiftUI.View {
+  public init(text: SwiftUI.Binding<Swift.String>)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK8OTPInputV4bodyQrvp", 0) __
+}
+
+
+
+
 @_hasMissingDesignatedInitializers public class Deal : Swift.Identifiable, Swift.Hashable {
   public enum DealStatus : Swift.String {
     case unknown, available, redeemed, expired
@@ -399,96 +457,11 @@ public struct Place : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
   }
 }
 
-public struct BottomSheet<HContent, MContent, V> : SwiftUI.View where HContent : SwiftUI.View, MContent : SwiftUI.View, V : SwiftUI.View {
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK11BottomSheetV4bodyQrvp", 0) __<HContent, MContent, V>
-}
-extension SwiftUI.View {
-  public func bottomSheet<HContent, MContent>(bottomSheetPosition: SwiftUI.Binding<bLinkupSDK.BottomSheetPosition>, switchablePositions: [bLinkupSDK.BottomSheetPosition], @SwiftUI.ViewBuilder headerContent: () -> HContent? = {
-            return nil
-        }, @SwiftUI.ViewBuilder mainContent: () -> MContent) -> bLinkupSDK.BottomSheet<HContent, MContent, Self> where HContent : SwiftUI.View, MContent : SwiftUI.View
-  public typealias TitleContent = SwiftUI.ModifiedContent<SwiftUI.Text, SwiftUI._EnvironmentKeyWritingModifier<Swift.Int?>>
-  public func bottomSheet<MContent>(bottomSheetPosition: SwiftUI.Binding<bLinkupSDK.BottomSheetPosition>, switchablePositions: [bLinkupSDK.BottomSheetPosition], title: Swift.String? = nil, @SwiftUI.ViewBuilder content: () -> MContent) -> bLinkupSDK.BottomSheet<Self.TitleContent, MContent, Self> where MContent : SwiftUI.View
-}
-public enum UserType : Swift.Equatable, Swift.Hashable {
-  case unknown, normal, mascot
-  public static func == (a: bLinkupSDK.UserType, b: bLinkupSDK.UserType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public struct Customer : Swift.Codable, Swift.Equatable {
-  public let id: Swift.String
-  public var name: Swift.String?
-  public init(id: Swift.String, name: Swift.String? = nil)
-  public static func == (lhs: bLinkupSDK.Customer, rhs: bLinkupSDK.Customer) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-
-public struct OTPInput : SwiftUI.View {
-  public init(text: SwiftUI.Binding<Swift.String>)
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK8OTPInputV4bodyQrvp", 0) __
-}
-
-extension bLinkupSDK.BottomSheet {
-  public func showDragIndicator(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-  public func dragIndicatorColor(_ color: SwiftUI.Color) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-  public func dragIndicatorAction(_ action: @escaping (SwiftUI.GeometryProxy) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-
-
 
 
 extension bLinkupSDK.BottomSheet {
-  public func showCloseButton(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func enableAppleScrollBehavior(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
-extension bLinkupSDK.BottomSheet {
-  public func enableTapToDismiss(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-}
-
-public enum SpotType : Swift.Hashable {
-  case unknown, bar
-  public static func == (a: bLinkupSDK.SpotType, b: bLinkupSDK.SpotType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public struct Spot : Swift.Identifiable, Swift.Hashable {
-  public let id: Swift.String, name: Swift.String
-  public var type: bLinkupSDK.SpotType?
-  public var latitude: Swift.Double?, longitude: Swift.Double?
-  public var address: Swift.String?
-  public var regionId: Swift.String?
-  public var region: bLinkupSDK.SpotRegion?
-  public var promotion: Swift.String?
-  public var invitable: Swift.Bool
-  public var blinkpointId: Swift.String?
-  public var inviteCount: Swift.Int?
-  public var deal: bLinkupSDK.Deal?
-  public var dealStats: bLinkupSDK.DealStats?
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.Spot, b: bLinkupSDK.Spot) -> Swift.Bool
-  public typealias ID = Swift.String
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-
-public enum NextLoginStep {
-  case loginWithCode(_: Swift.String)
-  case registerWithCode(_: Swift.String)
-}
-
-
-
 public enum Direction : Swift.String, Swift.Decodable {
   case incoming, outgoing
   public init?(rawValue: Swift.String)
@@ -629,6 +602,10 @@ public enum Direction : Swift.String, Swift.Decodable {
   #if compiler(>=5.3) && $AsyncAwait
   public static func sendInvite(spotId: Swift.String, userId: Swift.String) async throws -> bLinkupSDK.SpotInvite
   #endif
+  public static func sendInvite(spotId: Swift.String, phoneNumbers: [Swift.String], completion: @escaping bLinkupSDK.Completion<bLinkupSDK.SpotInvite>)
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func sendInvite(spotId: Swift.String, phoneNumbers: [Swift.String]) async throws -> bLinkupSDK.SpotInvite
+  #endif
   public static func getRedemables(active: Swift.Bool? = nil, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Deal]>)
   #if compiler(>=5.3) && $AsyncAwait
   public static func getRedemables(active: Swift.Bool? = nil) async throws -> [bLinkupSDK.Deal]
@@ -655,6 +632,274 @@ public enum Direction : Swift.String, Swift.Decodable {
   public static func updateTrackingEvents()
   @objc deinit
 }
+
+
+
+extension bLinkupSDK.MetadataTerritory {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case codeID
+    case countryCode
+    case internationalPrefix
+    case mainCountryForCode
+    case nationalPrefix
+    case nationalPrefixFormattingRule
+    case nationalPrefixForParsing
+    case nationalPrefixTransformRule
+    case preferredExtnPrefix
+    case emergency
+    case fixedLine
+    case generalDesc
+    case mobile
+    case pager
+    case personalNumber
+    case premiumRate
+    case sharedCost
+    case tollFree
+    case voicemail
+    case voip
+    case uan
+    case numberFormats
+    case leadingDigits
+    case availableFormats
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension bLinkupSDK.MetadataPhoneNumberFormat {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case pattern
+    case format
+    case intlFormat
+    case leadingDigitsPatterns
+    case nationalPrefixFormattingRule
+    case nationalPrefixOptionalWhenFormatting
+    case domesticCarrierCodeFormattingRule
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+
+public enum VisualEffect : Swift.Equatable, Swift.Hashable {
+  public enum Material : Swift.Equatable, Swift.Hashable {
+    case `default`
+    @available(iOS 13.0, *)
+    @available(macOS, unavailable)
+    case ultraThin
+    @available(iOS 13.0, *)
+    @available(macOS, unavailable)
+    case thin
+    @available(iOS 13.0, *)
+    @available(macOS, unavailable)
+    case thick
+    @available(iOS 13.0, *)
+    @available(macOS, unavailable)
+    case chrome
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case titlebar
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case windowBackground
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case headerView(behindWindow: Swift.Bool)
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case contentBackground(behindWindow: Swift.Bool)
+    @available(macOS 10.15, *)
+    @available(iOS, unavailable)
+    @available(macCatalyst, unavailable)
+    case behindPageBackground(behindWindow: Swift.Bool)
+    public static func == (a: bLinkupSDK.VisualEffect.Material, b: bLinkupSDK.VisualEffect.Material) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  case system
+  case systemLight
+  case systemDark
+  case adaptive(bLinkupSDK.VisualEffect.Material)
+  case light(bLinkupSDK.VisualEffect.Material)
+  case dark(bLinkupSDK.VisualEffect.Material)
+  public static func == (a: bLinkupSDK.VisualEffect, b: bLinkupSDK.VisualEffect) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+
+public struct SpotInvite : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
+  public var id: Swift.String
+  public let source: bLinkupSDK.User, target: bLinkupSDK.User, opponent: bLinkupSDK.User
+  public let income: Swift.Bool
+  public let spot: bLinkupSDK.Spot
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: bLinkupSDK.SpotInvite, b: bLinkupSDK.SpotInvite) -> Swift.Bool
+  public typealias ID = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PhoneNumberDecodingStrategy {
+  case properties
+  case e164
+  public static var `default`: bLinkupSDK.PhoneNumberDecodingStrategy
+  public static func == (a: bLinkupSDK.PhoneNumberDecodingStrategy, b: bLinkupSDK.PhoneNumberDecodingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PhoneNumberEncodingStrategy {
+  case properties
+  case e164
+  public static var `default`: bLinkupSDK.PhoneNumberEncodingStrategy
+  public static func == (a: bLinkupSDK.PhoneNumberEncodingStrategy, b: bLinkupSDK.PhoneNumberEncodingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias PhoneNumberUtilityProvider = () -> bLinkupSDK.PhoneNumberUtility
+public enum PhoneNumberDecodingUtils {
+  public static var defaultUtility: () -> bLinkupSDK.PhoneNumberUtility
+}
+public enum PhoneNumberEncodingUtils {
+  public static var defaultUtility: () -> bLinkupSDK.PhoneNumberUtility
+}
+extension Foundation.JSONDecoder {
+  public var phoneNumberDecodingStrategy: bLinkupSDK.PhoneNumberDecodingStrategy {
+    get
+    set
+  }
+  public var phoneNumberUtility: bLinkupSDK.PhoneNumberUtilityProvider {
+    get
+    set
+  }
+}
+extension Foundation.JSONEncoder {
+  public var phoneNumberEncodingStrategy: bLinkupSDK.PhoneNumberEncodingStrategy {
+    get
+    set
+  }
+  public var phoneNumberUtility: bLinkupSDK.PhoneNumberUtilityProvider {
+    get
+    set
+  }
+}
+extension bLinkupSDK.PhoneNumber : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension Swift.CodingUserInfoKey {
+  public static let phoneNumberDecodingStrategy: Swift.CodingUserInfoKey
+  public static let phoneNumberEncodingStrategy: Swift.CodingUserInfoKey
+  public static let phoneNumberUtility: Swift.CodingUserInfoKey
+}
+
+extension bLinkupSDK.BottomSheet {
+  public func showDragIndicator(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func dragIndicatorColor(_ color: SwiftUI.Color) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func dragIndicatorAction(_ action: @escaping (SwiftUI.GeometryProxy) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+extension bLinkupSDK.BottomSheet {
+  public func onDismiss(_ perform: @escaping () -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+public struct Customer : Swift.Codable, Swift.Equatable {
+  public let id: Swift.String
+  public var name: Swift.String?
+  public init(id: Swift.String, name: Swift.String? = nil)
+  public static func == (lhs: bLinkupSDK.Customer, rhs: bLinkupSDK.Customer) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
+}
+
+
+
+extension bLinkupSDK.BottomSheet {
+  public func customBackground<Background>(_ background: Background, alignment: SwiftUI.Alignment = .center) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where Background : SwiftUI.View
+  public func customBackground<Content>(alignment: SwiftUI.Alignment = .center, @SwiftUI.ViewBuilder content: () -> Content) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where Content : SwiftUI.View
+  public func customBackground<S>(_ style: S, ignoresSafeAreaEdges edges: SwiftUI.Edge.Set = .all) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.ShapeStyle
+  public func customBackground<S, T>(_ style: S, in shape: T, fillStyle: SwiftUI.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.ShapeStyle, T : SwiftUI.Shape
+  public func customBackground<S, T>(_ style: S, in shape: T, fillStyle: SwiftUI.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.ShapeStyle, T : SwiftUI.InsettableShape
+}
+public struct PhoneNumber : Swift.Sendable {
+  public let numberString: Swift.String
+  public let countryCode: Swift.UInt64
+  public let leadingZero: Swift.Bool
+  public let nationalNumber: Swift.UInt64
+  public let numberExtension: Swift.String?
+  public let type: bLinkupSDK.PhoneNumberType
+  public let regionID: Swift.String?
+}
+extension bLinkupSDK.PhoneNumber : Swift.Equatable {
+  public static func == (lhs: bLinkupSDK.PhoneNumber, rhs: bLinkupSDK.PhoneNumber) -> Swift.Bool
+}
+extension bLinkupSDK.PhoneNumber : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension bLinkupSDK.PhoneNumber {
+  public static func notPhoneNumber() -> bLinkupSDK.PhoneNumber
+  public func notParsed() -> Swift.Bool
+  public var url: Foundation.URL? {
+    get
+  }
+}
+extension bLinkupSDK.PhoneNumber {
+  @available(*, unavailable, message: "use PhoneNumberUtility instead to produce PhoneNumbers")
+  public init(rawNumber: Swift.String) throws
+  @available(*, unavailable, message: "use PhoneNumberUtility instead to produce PhoneNumbers")
+  public init(rawNumber: Swift.String, region: Swift.String) throws
+}
+
+public struct User : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
+  public let id: Swift.String
+  public let name: Swift.String?
+  public let phoneNumber: Swift.String?
+  public let emailAddress: Swift.String?
+  public let type: bLinkupSDK.UserType?
+  public var presence: bLinkupSDK.Place?
+  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String? = nil, emailAddress: Swift.String? = nil, type: bLinkupSDK.UserType? = nil, presence: bLinkupSDK.Place? = nil)
+  public static func == (a: bLinkupSDK.User, b: bLinkupSDK.User) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+
 public struct ConnectionRequest : Swift.Identifiable {
   public let id: Swift.String
   public let source: bLinkupSDK.User, target: bLinkupSDK.User
@@ -662,30 +907,144 @@ public struct ConnectionRequest : Swift.Identifiable {
   public let income: Swift.Bool
   public typealias ID = Swift.String
 }
-public struct BlinkPoint : Swift.Identifiable, Swift.Hashable {
-  public let id: Swift.String, name: Swift.String
-  public let promoURL: Swift.String?
-  public let x: Swift.Double, y: Swift.Double
-  public let placeId: Swift.String?
-  public let hasSpot: Swift.Bool?
-  public let spotId: Swift.String?
-  public var promotion: Swift.String?
-  public var invitable: Swift.Bool
-  public var inviteCount: Swift.Int?
-  public var deal: bLinkupSDK.Deal?
-  public var dealStats: bLinkupSDK.DealStats?
+
+
+public struct Redeem3ActionSheet : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK18Redeem3ActionSheetV4bodyQrvp", 0) __
+}
+
+public struct BottomSheet<HContent, MContent, V> : SwiftUI.View where HContent : SwiftUI.View, MContent : SwiftUI.View, V : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK11BottomSheetV4bodyQrvp", 0) __<HContent, MContent, V>
+}
+extension SwiftUI.View {
+  public func bottomSheet<HContent, MContent>(bottomSheetPosition: SwiftUI.Binding<bLinkupSDK.BottomSheetPosition>, switchablePositions: [bLinkupSDK.BottomSheetPosition], @SwiftUI.ViewBuilder headerContent: () -> HContent? = {
+            return nil
+        }, @SwiftUI.ViewBuilder mainContent: () -> MContent) -> bLinkupSDK.BottomSheet<HContent, MContent, Self> where HContent : SwiftUI.View, MContent : SwiftUI.View
+  public typealias TitleContent = SwiftUI.ModifiedContent<SwiftUI.Text, SwiftUI._EnvironmentKeyWritingModifier<Swift.Int?>>
+  public func bottomSheet<MContent>(bottomSheetPosition: SwiftUI.Binding<bLinkupSDK.BottomSheetPosition>, switchablePositions: [bLinkupSDK.BottomSheetPosition], title: Swift.String? = nil, @SwiftUI.ViewBuilder content: () -> MContent) -> bLinkupSDK.BottomSheet<Self.TitleContent, MContent, Self> where MContent : SwiftUI.View
+}
+public enum UserType : Swift.Equatable, Swift.Hashable {
+  case unknown, normal, mascot
+  public static func == (a: bLinkupSDK.UserType, b: bLinkupSDK.UserType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.BlinkPoint, b: bLinkupSDK.BlinkPoint) -> Swift.Bool
-  public typealias ID = Swift.String
   public var hashValue: Swift.Int {
     get
   }
 }
 
 
+@_hasMissingDesignatedInitializers final public class GeofenceTrack {
+  final public func cancel()
+  @objc deinit
+}
 
 
+public typealias MetadataCallback = () throws -> Foundation.Data?
+final public class PhoneNumberUtility {
+  public init(metadataCallback: @escaping bLinkupSDK.MetadataCallback = defaultMetadataCallback)
+  final public func parse(_ numberString: Swift.String, withRegion region: Swift.String = defaultRegionCode(), ignoreType: Swift.Bool = false) throws -> bLinkupSDK.PhoneNumber
+  final public func parse(_ numberStrings: [Swift.String], withRegion region: Swift.String = defaultRegionCode(), ignoreType: Swift.Bool = false, shouldReturnFailedEmptyNumbers: Swift.Bool = false) -> [bLinkupSDK.PhoneNumber]
+  final public func isValidPhoneNumber(_ numberString: Swift.String, withRegion region: Swift.String = defaultRegionCode(), ignoreType: Swift.Bool = false) -> Swift.Bool
+  final public func format(_ phoneNumber: bLinkupSDK.PhoneNumber, toType formatType: bLinkupSDK.PhoneNumberFormat, withPrefix prefix: Swift.Bool = true) -> Swift.String
+  final public func allCountries() -> [Swift.String]
+  final public func countries(withCode countryCode: Swift.UInt64) -> [Swift.String]?
+  final public func mainCountry(forCode countryCode: Swift.UInt64) -> Swift.String?
+  final public func countryCode(for country: Swift.String) -> Swift.UInt64?
+  final public func leadingDigits(for country: Swift.String) -> Swift.String?
+  final public func getRegionCode(of phoneNumber: bLinkupSDK.PhoneNumber) -> Swift.String?
+  final public func getExampleNumber(forCountry countryCode: Swift.String, ofType type: bLinkupSDK.PhoneNumberType = .mobile) -> bLinkupSDK.PhoneNumber?
+  final public func getFormattedExampleNumber(forCountry countryCode: Swift.String, ofType type: bLinkupSDK.PhoneNumberType = .mobile, withFormat format: bLinkupSDK.PhoneNumberFormat = .international, withPrefix prefix: Swift.Bool = true) -> Swift.String?
+  final public func metadata(for country: Swift.String) -> bLinkupSDK.MetadataTerritory?
+  final public func metadata(forCode countryCode: Swift.UInt64) -> [bLinkupSDK.MetadataTerritory]?
+  final public func possiblePhoneNumberLengths(forCountry country: Swift.String, phoneNumberType: bLinkupSDK.PhoneNumberType, lengthType: bLinkupSDK.PossibleLengthType) -> [Swift.Int]
+  final public class func defaultRegionCode() -> Swift.String
+  public static func defaultMetadataCallback() throws -> Foundation.Data?
+  @objc deinit
+}
+public enum CountryCodePicker {
+  public static var commonCountryCodes: [Swift.String]
+  public static var forceModalPresentation: Swift.Bool
+  public static var alwaysShowsSearchBar: Swift.Bool
+}
 
+
+@available(iOS 15, macOS 12, *)
+extension bLinkupSDK.BottomSheet {
+  public func customBackground(ignoresSafeAreaEdges edges: SwiftUI.Edge.Set = .all) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func customBackground<S>(in shape: S, fillStyle: SwiftUI.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.Shape
+  public func customBackground<S>(in shape: S, fillStyle: SwiftUI.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.InsettableShape
+}
+extension SwiftUI.View {
+  public func addLoadingView(isLoading: SwiftUI.Binding<Swift.Bool>) -> some SwiftUI.View
+  
+  public func addMenu(@SwiftUI.ViewBuilder content: () -> some View) -> some SwiftUI.View
+  
+}
+extension bLinkupSDK.BottomSheet {
+  public func sheetWidth(_ width: bLinkupSDK.BottomSheetWidth = .platformDefault) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+}
+
+public struct Block : Swift.Identifiable {
+  public let id: Swift.String
+  public let blocker: bLinkupSDK.User, blockee: bLinkupSDK.User
+  public var insertedAt: Swift.String?
+  public init(id: Swift.String, blocker: bLinkupSDK.User, blockee: bLinkupSDK.User, insertedAt: Swift.String? = nil)
+  public typealias ID = Swift.String
+}
+
+@_Concurrency.MainActor public protocol CountryCodePickerDelegate : AnyObject {
+  @_Concurrency.MainActor func countryCodePickerViewControllerDidPickCountry(_ country: bLinkupSDK.CountryCodePickerViewController.Country)
+}
+@objc @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class CountryCodePickerViewController : UIKit.UITableViewController {
+  @_Concurrency.MainActor(unsafe) final public let utility: bLinkupSDK.PhoneNumberUtility
+  @_Concurrency.MainActor(unsafe) final public let options: bLinkupSDK.CountryCodePickerOptions
+  @_Concurrency.MainActor(unsafe) weak public var delegate: (any bLinkupSDK.CountryCodePickerDelegate)?
+  @_Concurrency.MainActor(unsafe) public init(utility: bLinkupSDK.PhoneNumberUtility, options: bLinkupSDK.CountryCodePickerOptions?, commonCountryCodes: [Swift.String] = CountryCodePicker.commonCountryCodes)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillAppear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillDisappear(_ animated: Swift.Bool)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func numberOfSections(in tableView: UIKit.UITableView) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, numberOfRowsInSection section: Swift.Int) -> Swift.Int
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, cellForRowAt indexPath: Foundation.IndexPath) -> UIKit.UITableViewCell
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, titleForHeaderInSection section: Swift.Int) -> Swift.String?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func sectionIndexTitles(for tableView: UIKit.UITableView) -> [Swift.String]?
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func tableView(_ tableView: UIKit.UITableView, didSelectRowAt indexPath: Foundation.IndexPath)
+  @objc deinit
+}
+extension bLinkupSDK.CountryCodePickerViewController : UIKit.UISearchResultsUpdating {
+  @_Concurrency.MainActor(unsafe) @objc dynamic public func updateSearchResults(for searchController: UIKit.UISearchController)
+}
+extension bLinkupSDK.CountryCodePickerViewController {
+  public struct Country {
+    public var code: Swift.String
+    public var flag: Swift.String
+    public var name: Swift.String
+    public var prefix: Swift.String
+    public init?(for countryCode: Swift.String, with utility: bLinkupSDK.PhoneNumberUtility)
+  }
+  @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class Cell : UIKit.UITableViewCell {
+    @objc deinit
+  }
+}
+
+public struct Place : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
+  public let id: Swift.String, name: Swift.String
+  public let mapURL: Swift.String?, geofence: Swift.String?
+  public let latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double
+  public let blinkpoints: [bLinkupSDK.BlinkPoint]?
+  public init(id: Swift.String, name: Swift.String, mapURL: Swift.String? = nil, geofence: Swift.String? = nil, latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double, blinkpoints: [bLinkupSDK.BlinkPoint]? = nil)
+  public static func == (a: bLinkupSDK.Place, b: bLinkupSDK.Place) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public typealias ID = Swift.String
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct DealStats : Swift.Codable, Swift.Hashable {
   public let current: Swift.Int, goal: Swift.Int
   public func hash(into hasher: inout Swift.Hasher)
@@ -697,66 +1056,102 @@ public struct DealStats : Swift.Codable, Swift.Hashable {
   public init(from decoder: any Swift.Decoder) throws
 }
 
+public enum BottomSheetPosition : Swift.Equatable {
+  case hidden
+  case dynamicBottom
+  case dynamic
+  case dynamicTop
+  case relativeBottom(CoreFoundation.CGFloat)
+  case relative(CoreFoundation.CGFloat)
+  case relativeTop(CoreFoundation.CGFloat)
+  case absoluteBottom(CoreFoundation.CGFloat)
+  case absolute(CoreFoundation.CGFloat)
+  case absoluteTop(CoreFoundation.CGFloat)
+  public static func == (a: bLinkupSDK.BottomSheetPosition, b: bLinkupSDK.BottomSheetPosition) -> Swift.Bool
+}
 extension bLinkupSDK.BottomSheet {
-  public func customBackground<Background>(_ background: Background, alignment: SwiftUI.Alignment = .center) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where Background : SwiftUI.View
-  public func customBackground<Content>(alignment: SwiftUI.Alignment = .center, @SwiftUI.ViewBuilder content: () -> Content) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where Content : SwiftUI.View
-  public func customBackground<S>(_ style: S, ignoresSafeAreaEdges edges: SwiftUI.Edge.Set = .all) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.ShapeStyle
-  public func customBackground<S, T>(_ style: S, in shape: T, fillStyle: SwiftUI.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.ShapeStyle, T : SwiftUI.Shape
-  public func customBackground<S, T>(_ style: S, in shape: T, fillStyle: SwiftUI.FillStyle = FillStyle()) -> bLinkupSDK.BottomSheet<HContent, MContent, V> where S : SwiftUI.ShapeStyle, T : SwiftUI.InsettableShape
+  public func customThreshold(_ threshold: Swift.Double) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
 
 extension bLinkupSDK.BottomSheet {
-  public func onDragChanged(_ perform: @escaping (SwiftUI.DragGesture.Value) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-  public func onDragEnded(_ perform: @escaping (SwiftUI.DragGesture.Value) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
-  public func dragPositionSwitchAction(_ action: @escaping (SwiftUI.GeometryProxy, SwiftUI.DragGesture.Value) -> Swift.Void) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func enableBackgroundBlur(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func backgroundBlurMaterial(_ material: bLinkupSDK.VisualEffect) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
-
 extension bLinkupSDK.BottomSheet {
-  public func sheetWidth(_ width: bLinkupSDK.BottomSheetWidth = .platformDefault) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
+  public func enableFloatingIPadSheet(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
-
-
-
-public struct Block : Swift.Identifiable {
-  public let id: Swift.String
-  public let blocker: bLinkupSDK.User, blockee: bLinkupSDK.User
-  public var insertedAt: Swift.String?
-  public init(id: Swift.String, blocker: bLinkupSDK.User, blockee: bLinkupSDK.User, insertedAt: Swift.String? = nil)
-  public typealias ID = Swift.String
-}
-
-
-public struct SpotRegion {
-  public let id: Swift.String, name: Swift.String
-  public let latitude: Swift.Double?, longitude: Swift.Double?, radius: Swift.Double?
-  public let isDefault: Swift.Bool?
-}
-extension bLinkupSDK.SpotRegion : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
-  public static func == (a: bLinkupSDK.SpotRegion, b: bLinkupSDK.SpotRegion) -> Swift.Bool
+public class Branding : Combine.ObservableObject, Swift.Hashable, Swift.Equatable {
+  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil)
+  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil)
   public func hash(into hasher: inout Swift.Hasher)
-  public typealias ID = Swift.String
+  public static func == (lhs: bLinkupSDK.Branding, rhs: bLinkupSDK.Branding) -> Swift.Bool
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
   public var hashValue: Swift.Int {
     get
   }
 }
-public enum BottomSheetWidth : Swift.Equatable {
-  case platformDefault
-  case relative(CoreFoundation.CGFloat)
-  case absolute(CoreFoundation.CGFloat)
-  public static func == (a: bLinkupSDK.BottomSheetWidth, b: bLinkupSDK.BottomSheetWidth) -> Swift.Bool
+public struct MetadataTerritory : Swift.Decodable {
+  public let codeID: Swift.String
+  public let countryCode: Swift.UInt64
+  public let internationalPrefix: Swift.String?
+  public let mainCountryForCode: Swift.Bool
+  public let nationalPrefix: Swift.String?
+  public let nationalPrefixFormattingRule: Swift.String?
+  public let nationalPrefixForParsing: Swift.String?
+  public let nationalPrefixTransformRule: Swift.String?
+  public let preferredExtnPrefix: Swift.String?
+  public let emergency: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let fixedLine: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let generalDesc: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let mobile: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let pager: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let personalNumber: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let premiumRate: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let sharedCost: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let tollFree: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let voicemail: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let voip: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let uan: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let numberFormats: [bLinkupSDK.MetadataPhoneNumberFormat]
+  public let leadingDigits: Swift.String?
 }
-
-
+public struct MetadataPhoneNumberDesc : Swift.Decodable {
+  public let exampleNumber: Swift.String?
+  public let nationalNumberPattern: Swift.String?
+  public let possibleNumberPattern: Swift.String?
+  public let possibleLengths: bLinkupSDK.MetadataPossibleLengths?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MetadataPossibleLengths : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MetadataPhoneNumberFormat : Swift.Decodable {
+  public let pattern: Swift.String?
+  public let format: Swift.String?
+  public let intlFormat: Swift.String?
+  public let leadingDigitsPatterns: [Swift.String]?
+  public var nationalPrefixFormattingRule: Swift.String?
+  public let nationalPrefixOptionalWhenFormatting: Swift.Bool?
+  public let domesticCarrierCodeFormattingRule: Swift.String?
+}
+public typealias Completion<E> = (Swift.Result<E, any Swift.Error>) -> Swift.Void
+public enum NextLoginStep {
+  case loginWithCode(_: Swift.String)
+  case registerWithCode(_: Swift.String)
+}
+extension bLinkupSDK.Connection.Status : Swift.RawRepresentable {}
+extension bLinkupSDK.PhoneNumberFormat : Swift.Equatable {}
+extension bLinkupSDK.PhoneNumberFormat : Swift.Hashable {}
+extension bLinkupSDK.PhoneNumberFormat : Swift.RawRepresentable {}
+extension bLinkupSDK.PhoneNumberType : Swift.Equatable {}
+extension bLinkupSDK.PhoneNumberType : Swift.Hashable {}
+extension bLinkupSDK.PhoneNumberType : Swift.RawRepresentable {}
+extension bLinkupSDK.PossibleLengthType : Swift.Equatable {}
+extension bLinkupSDK.PossibleLengthType : Swift.Hashable {}
+extension bLinkupSDK.PossibleLengthType : Swift.RawRepresentable {}
 extension bLinkupSDK.Presence.Confidence : Swift.Equatable {}
 extension bLinkupSDK.Presence.Confidence : Swift.Hashable {}
-extension bLinkupSDK.Connection.Status : Swift.RawRepresentable {}
-extension bLinkupSDK.GeofenceTrack : Combine.Cancellable {}
-extension bLinkupSDK.ImageScrollView.ScaleMode : Swift.Equatable {}
-extension bLinkupSDK.ImageScrollView.ScaleMode : Swift.Hashable {}
-extension bLinkupSDK.ImageScrollView.ScaleMode : Swift.RawRepresentable {}
-extension bLinkupSDK.ImageScrollView.Offset : Swift.Equatable {}
-extension bLinkupSDK.ImageScrollView.Offset : Swift.Hashable {}
-extension bLinkupSDK.ImageScrollView.Offset : Swift.RawRepresentable {}
 extension bLinkupSDK.Deal.DealStatus : Swift.Equatable {}
 extension bLinkupSDK.Deal.DealStatus : Swift.Hashable {}
 extension bLinkupSDK.Deal.DealStatus : Swift.RawRepresentable {}
@@ -766,3 +1161,14 @@ extension bLinkupSDK.Deal.DealType : Swift.RawRepresentable {}
 extension bLinkupSDK.Direction : Swift.Equatable {}
 extension bLinkupSDK.Direction : Swift.Hashable {}
 extension bLinkupSDK.Direction : Swift.RawRepresentable {}
+extension bLinkupSDK.MetadataTerritory.CodingKeys : Swift.Equatable {}
+extension bLinkupSDK.MetadataTerritory.CodingKeys : Swift.Hashable {}
+extension bLinkupSDK.MetadataTerritory.CodingKeys : Swift.RawRepresentable {}
+extension bLinkupSDK.MetadataPhoneNumberFormat.CodingKeys : Swift.Equatable {}
+extension bLinkupSDK.MetadataPhoneNumberFormat.CodingKeys : Swift.Hashable {}
+extension bLinkupSDK.MetadataPhoneNumberFormat.CodingKeys : Swift.RawRepresentable {}
+extension bLinkupSDK.PhoneNumberDecodingStrategy : Swift.Equatable {}
+extension bLinkupSDK.PhoneNumberDecodingStrategy : Swift.Hashable {}
+extension bLinkupSDK.PhoneNumberEncodingStrategy : Swift.Equatable {}
+extension bLinkupSDK.PhoneNumberEncodingStrategy : Swift.Hashable {}
+extension bLinkupSDK.GeofenceTrack : Combine.Cancellable {}
