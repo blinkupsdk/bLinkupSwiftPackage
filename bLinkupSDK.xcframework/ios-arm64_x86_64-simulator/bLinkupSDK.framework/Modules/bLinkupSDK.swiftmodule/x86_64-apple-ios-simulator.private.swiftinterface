@@ -51,8 +51,8 @@ extension bLinkupSDK.BottomSheet {
   public func isResizable(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
 
-public struct Connection : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
-  public enum Status : Swift.String, Swift.Equatable, Swift.Hashable {
+public struct Connection : Swift.Identifiable, Swift.Hashable {
+  public enum Status : Swift.String, Swift.Hashable {
     case unknown, connected
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
@@ -65,8 +65,8 @@ public struct Connection : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
   public let sourceUser: bLinkupSDK.User, targetUser: bLinkupSDK.User
   public let opponent: bLinkupSDK.User
   public let income: Swift.Bool
-  public static func == (a: bLinkupSDK.Connection, b: bLinkupSDK.Connection) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
+  public static func == (a: bLinkupSDK.Connection, b: bLinkupSDK.Connection) -> Swift.Bool
   public typealias ID = Swift.String
   public var hashValue: Swift.Int {
     get
@@ -204,6 +204,7 @@ extension bLinkupSDK.Presence : Swift.Equatable, Swift.Hashable {
     get
   }
 }
+
 
 
 public enum SpotType : Swift.Hashable {
@@ -414,14 +415,6 @@ extension bLinkupSDK.PhoneNumber {
   final public func formatPartial(_ rawNumber: Swift.String) -> Swift.String
   @objc deinit
 }
-public struct OTPInput : SwiftUI.View {
-  public init(text: SwiftUI.Binding<Swift.String>)
-  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
-    get
-  }
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK8OTPInputV4bodyQrvp", 0) __
-}
-
 
 
 
@@ -462,6 +455,8 @@ public struct OTPInput : SwiftUI.View {
 extension bLinkupSDK.BottomSheet {
   public func enableAppleScrollBehavior(_ bool: Swift.Bool = true) -> bLinkupSDK.BottomSheet<HContent, MContent, V>
 }
+@available(iOS 16.0.0, *)
+public let kBUILD: Swift.String
 public enum Direction : Swift.String, Swift.Decodable {
   case incoming, outgoing
   public init?(rawValue: Swift.String)
@@ -762,6 +757,7 @@ public struct SpotInvite : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
   public let source: bLinkupSDK.User, target: bLinkupSDK.User, opponent: bLinkupSDK.User
   public let income: Swift.Bool
   public let spot: bLinkupSDK.Spot
+  public var redemptionUrl: Swift.String?
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (a: bLinkupSDK.SpotInvite, b: bLinkupSDK.SpotInvite) -> Swift.Bool
   public typealias ID = Swift.String
@@ -929,11 +925,11 @@ extension SwiftUI.View {
   public typealias TitleContent = SwiftUI.ModifiedContent<SwiftUI.Text, SwiftUI._EnvironmentKeyWritingModifier<Swift.Int?>>
   public func bottomSheet<MContent>(bottomSheetPosition: SwiftUI.Binding<bLinkupSDK.BottomSheetPosition>, switchablePositions: [bLinkupSDK.BottomSheetPosition], title: Swift.String? = nil, @SwiftUI.ViewBuilder content: () -> MContent) -> bLinkupSDK.BottomSheet<Self.TitleContent, MContent, Self> where MContent : SwiftUI.View
 }
-public enum UserType : Swift.Equatable, Swift.Hashable {
+public enum UserType : Swift.String, Swift.Hashable {
   case unknown, normal, mascot
-  public static func == (a: bLinkupSDK.UserType, b: bLinkupSDK.UserType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
     get
   }
 }
@@ -1171,4 +1167,5 @@ extension bLinkupSDK.PhoneNumberDecodingStrategy : Swift.Equatable {}
 extension bLinkupSDK.PhoneNumberDecodingStrategy : Swift.Hashable {}
 extension bLinkupSDK.PhoneNumberEncodingStrategy : Swift.Equatable {}
 extension bLinkupSDK.PhoneNumberEncodingStrategy : Swift.Hashable {}
+extension bLinkupSDK.UserType : Swift.RawRepresentable {}
 extension bLinkupSDK.GeofenceTrack : Combine.Cancellable {}
