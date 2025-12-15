@@ -367,6 +367,7 @@ public struct GeoPoint {
 }
 public typealias BlinkupRootScreen = bLinkupSDK.Root3Screen
 @_Concurrency.MainActor(unsafe) public struct Root3Screen : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public init(token: Swift.String, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) public init(customer: bLinkupSDK.Customer, branding: bLinkupSDK.Branding, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get

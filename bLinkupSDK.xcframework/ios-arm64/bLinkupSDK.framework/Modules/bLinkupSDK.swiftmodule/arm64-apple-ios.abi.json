@@ -11779,6 +11779,67 @@
           {
             "kind": "Constructor",
             "name": "init",
+            "printedName": "init(token:autoClose:onClose:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Root3Screen",
+                "printedName": "bLinkupSDK.Root3Screen",
+                "usr": "s:10bLinkupSDK11Root3ScreenV"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "(() -> ())?",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "() -> ()",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Void",
+                        "printedName": "()"
+                      }
+                    ]
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10bLinkupSDK11Root3ScreenV5token9autoClose02onG0ACSS_SbyycSgtcfc",
+            "mangledName": "$s10bLinkupSDK11Root3ScreenV5token9autoClose02onG0ACSS_SbyycSgtcfc",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "Custom",
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
             "printedName": "init(customer:branding:autoClose:onClose:)",
             "children": [
               {
@@ -36398,826 +36459,826 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 1885,
+      "offset": 1872,
       "length": 5,
       "value": "\"234\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 1898,
+      "offset": 1885,
       "length": 11,
       "value": "\"Vlad Matv\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 1946,
+      "offset": 1920,
       "length": 5,
       "value": "\"345\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 1959,
+      "offset": 1933,
       "length": 11,
       "value": "\"Will Bott\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 2007,
+      "offset": 1968,
       "length": 5,
       "value": "\"745\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 2020,
+      "offset": 1981,
       "length": 12,
       "value": "\"Will Bott7\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 2069,
+      "offset": 2017,
       "length": 5,
       "value": "\"845\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 2082,
+      "offset": 2030,
       "length": 12,
       "value": "\"Will Bott8\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 2131,
+      "offset": 2066,
       "length": 5,
       "value": "\"945\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 2144,
+      "offset": 2079,
       "length": 12,
       "value": "\"Will Bott9\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2347,
+      "offset": 2269,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2353,
+      "offset": 2275,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2471,
+      "offset": 2393,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2507,
+      "offset": 2429,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2545,
+      "offset": 2467,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "BooleanLiteral",
-      "offset": 2571,
+      "offset": 2493,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2608,
+      "offset": 2530,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2645,
+      "offset": 2567,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2681,
+      "offset": 2603,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2719,
+      "offset": 2641,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "BooleanLiteral",
-      "offset": 2745,
+      "offset": 2667,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2782,
+      "offset": 2704,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2819,
+      "offset": 2741,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2855,
+      "offset": 2777,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2893,
+      "offset": 2815,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "BooleanLiteral",
-      "offset": 2919,
+      "offset": 2841,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 2955,
+      "offset": 2877,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3041,
+      "offset": 2963,
       "length": 14,
       "value": "\"Emily Carter\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3064,
+      "offset": 2986,
       "length": 9,
       "value": "\"Emily94\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3099,
+      "offset": 3021,
       "length": 16,
       "value": "\"James Mitchell\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3124,
+      "offset": 3046,
       "length": 7,
       "value": "\"James\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3157,
+      "offset": 3079,
       "length": 17,
       "value": "\"Olivia Thompson\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3183,
+      "offset": 3105,
       "length": 6,
       "value": "\"Oliv\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3215,
+      "offset": 3137,
       "length": 18,
       "value": "\"Michael Reynolds\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3242,
+      "offset": 3164,
       "length": 8,
       "value": "\"Donald\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3276,
+      "offset": 3198,
       "length": 12,
       "value": "\"Ava Brooks\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3297,
+      "offset": 3219,
       "length": 5,
       "value": "\"Eva\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3403,
+      "offset": 3325,
       "length": 15,
       "value": "\"New Brunswick\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 3442,
+      "offset": 3364,
       "length": 10,
       "value": "40.4968426"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 3477,
+      "offset": 3399,
       "length": 11,
       "value": "-74.4461934"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3511,
+      "offset": 3433,
       "length": 41,
       "value": "\"525 E Menomonee St, Milwaukee, WI 53202\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3576,
+      "offset": 3498,
       "length": 38,
       "value": "\"e589a7b6-d226-45e1-b069-f1ca00b238f6\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3639,
+      "offset": 3561,
       "length": 20,
       "value": "\"20% off first beer\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 3686,
+      "offset": 3608,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 3726,
+      "offset": 3648,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3774,
+      "offset": 3696,
       "length": 16,
       "value": "\"New Brunswick2\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 3814,
+      "offset": 3736,
       "length": 7,
       "value": "40.4969"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 3846,
+      "offset": 3768,
       "length": 8,
       "value": "-74.4462"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3877,
+      "offset": 3799,
       "length": 41,
       "value": "\"525 E Menomonee St, Milwaukee, WI 53202\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 3942,
+      "offset": 3864,
       "length": 38,
       "value": "\"e589a7b6-d226-45e1-b069-f1ca00b238f6\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4005,
+      "offset": 3927,
       "length": 20,
       "value": "\"99% off first beer\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4052,
+      "offset": 3974,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4093,
+      "offset": 4015,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4141,
+      "offset": 4063,
       "length": 16,
       "value": "\"New Brunswick3\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 4181,
+      "offset": 4103,
       "length": 7,
       "value": "40.4970"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 4213,
+      "offset": 4135,
       "length": 8,
       "value": "-74.4462"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4244,
+      "offset": 4166,
       "length": 41,
       "value": "\"525 E Menomonee St, Milwaukee, WI 53202\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4309,
+      "offset": 4231,
       "length": 38,
       "value": "\"e589a7b6-d226-45e1-b069-f1ca00b238f6\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4482,
+      "offset": 4404,
       "length": 15,
       "value": "\"New Brunswick\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 4521,
+      "offset": 4443,
       "length": 10,
       "value": "40.4968426"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 4556,
+      "offset": 4478,
       "length": 11,
       "value": "-74.4461934"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4590,
+      "offset": 4512,
       "length": 41,
       "value": "\"525 E Menomonee St, Milwaukee, WI 53202\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4655,
+      "offset": 4577,
       "length": 38,
       "value": "\"e589a7b6-d226-45e1-b069-f1ca00b238f6\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4718,
+      "offset": 4640,
       "length": 20,
       "value": "\"20% off first beer\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "BooleanLiteral",
-      "offset": 4763,
+      "offset": 4685,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 4794,
+      "offset": 4716,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4873,
+      "offset": 4795,
       "length": 16,
       "value": "\"New Brunswick2\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 4913,
+      "offset": 4835,
       "length": 7,
       "value": "40.4969"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 4945,
+      "offset": 4867,
       "length": 8,
       "value": "-74.4462"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 4976,
+      "offset": 4898,
       "length": 41,
       "value": "\"525 E Menomonee St, Milwaukee, WI 53202\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5041,
+      "offset": 4963,
       "length": 38,
       "value": "\"e589a7b6-d226-45e1-b069-f1ca00b238f6\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5104,
+      "offset": 5026,
       "length": 20,
       "value": "\"99% off first beer\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "BooleanLiteral",
-      "offset": 5149,
+      "offset": 5071,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5180,
+      "offset": 5102,
       "length": 2,
       "value": "12"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5260,
+      "offset": 5182,
       "length": 16,
       "value": "\"New Brunswick3\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 5300,
+      "offset": 5222,
       "length": 7,
       "value": "40.4970"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "FloatLiteral",
-      "offset": 5332,
+      "offset": 5254,
       "length": 8,
       "value": "-74.4462"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5363,
+      "offset": 5285,
       "length": 41,
       "value": "\"525 E Menomonee St, Milwaukee, WI 53202\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5428,
+      "offset": 5350,
       "length": 38,
       "value": "\"e589a7b6-d226-45e1-b069-f1ca00b238f6\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "BooleanLiteral",
-      "offset": 5491,
+      "offset": 5413,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5610,
+      "offset": 5532,
       "length": 9,
       "value": "\"Blink 1\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5640,
+      "offset": 5562,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5655,
+      "offset": 5577,
       "length": 10,
       "value": "\"one beer\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "BooleanLiteral",
-      "offset": 5678,
+      "offset": 5600,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5716,
+      "offset": 5638,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 5725,
+      "offset": 5647,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5758,
+      "offset": 5680,
       "length": 9,
       "value": "\"Blink 2\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5798,
+      "offset": 5720,
       "length": 9,
       "value": "\"Blink 3\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 5820,
+      "offset": 5742,
       "length": 12,
       "value": "\"two pizzas\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6095,
+      "offset": 6017,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6136,
+      "offset": 6058,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6293,
+      "offset": 6215,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6334,
+      "offset": 6256,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6491,
+      "offset": 6413,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6532,
+      "offset": 6454,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6809,
+      "offset": 6731,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6847,
+      "offset": 6769,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 6883,
+      "offset": 6805,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7024,
+      "offset": 6946,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7062,
+      "offset": 6984,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7098,
+      "offset": 7020,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7239,
+      "offset": 7161,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7277,
+      "offset": 7199,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7313,
+      "offset": 7235,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7448,
+      "offset": 7370,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7485,
+      "offset": 7407,
       "length": 1,
       "value": "1"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7591,
+      "offset": 7513,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7628,
+      "offset": 7550,
       "length": 1,
       "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7734,
+      "offset": 7656,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7771,
+      "offset": 7693,
       "length": 1,
       "value": "3"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7877,
+      "offset": 7799,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "IntegerLiteral",
-      "offset": 7914,
+      "offset": 7836,
       "length": 1,
       "value": "4"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 8047,
+      "offset": 7969,
       "length": 9,
       "value": "\"place 1\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 8066,
+      "offset": 7988,
       "length": 33,
       "value": "\"https:\/\/i.imgur.com\/gNWTYPe.png\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 8133,
+      "offset": 8055,
       "length": 9,
       "value": "\"place 2\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 8152,
+      "offset": 8074,
       "length": 89,
       "value": "\"https:\/\/uwm.edu\/campus-planning\/wp-content\/uploads\/sites\/406\/2016\/07\/Art-Map-9-8-15.jpg\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 8275,
+      "offset": 8197,
       "length": 9,
       "value": "\"place 3\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/Fakes.swift",
       "kind": "StringLiteral",
-      "offset": 8294,
+      "offset": 8216,
       "length": 33,
       "value": "\"https:\/\/i.imgur.com\/gNWTYPe.png\""
     },
@@ -38337,35 +38398,42 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 536,
+      "offset": 544,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/SDK-UI3\/RootScreen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1333,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 2147,
+      "offset": 3007,
       "length": 46,
       "value": "\"TkPnD3_yP3j6dUEAksgRjJ-auYijyUECLxVEnFqHJVE=\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 2228,
+      "offset": 3088,
       "length": 9,
       "value": "\"Staging\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 2356,
+      "offset": 3216,
       "length": 7,
       "value": "\"Inter\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 2395,
+      "offset": 3255,
       "length": 7,
       "value": "\"Logo2\""
     },
@@ -38708,21 +38776,21 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/ContactResult.swift",
       "kind": "StringLiteral",
-      "offset": 564,
+      "offset": 563,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/ContactResult.swift",
       "kind": "StringLiteral",
-      "offset": 564,
+      "offset": 563,
       "length": 14,
       "value": "\"phone_number\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/Internal\/ContactResult.swift",
       "kind": "IntegerLiteral",
-      "offset": 661,
+      "offset": 642,
       "length": 1,
       "value": "0"
     },
@@ -38906,7 +38974,7 @@
       "kind": "StringLiteral",
       "offset": 260,
       "length": 5,
-      "value": "\"127\""
+      "value": "\"130\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/BLSDKToPackage\/SDK\/bLinkup.swift",
