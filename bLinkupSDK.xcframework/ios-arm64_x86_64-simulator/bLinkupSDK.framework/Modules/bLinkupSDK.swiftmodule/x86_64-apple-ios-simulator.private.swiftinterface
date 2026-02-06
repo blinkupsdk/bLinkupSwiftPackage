@@ -837,8 +837,8 @@ public enum Direction : Swift.String, Swift.Decodable {
   @objc deinit
 }
 public class Branding : Combine.ObservableObject, Swift.Hashable, Swift.Equatable {
-  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil)
-  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil)
+  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil, background: Swift.String? = nil)
+  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil, background: Swift.String? = nil)
   public func hash(into hasher: inout Swift.Hasher)
   public static func == (lhs: bLinkupSDK.Branding, rhs: bLinkupSDK.Branding) -> Swift.Bool
   @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)

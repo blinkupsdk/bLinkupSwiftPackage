@@ -9703,6 +9703,16 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Foundation",
         "printedName": "Foundation",
         "declKind": "Import",
@@ -28601,7 +28611,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(primary:secondary:fontName:logo:logoURL:name:title:mapTabTitle:arenaTabTitle:shareMessage:inviteMessage:appUrl:)",
+            "printedName": "init(primary:secondary:fontName:logo:logoURL:name:title:mapTabTitle:arenaTabTitle:shareMessage:inviteMessage:appUrl:background:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -28788,11 +28798,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10bLinkupSDK8BrandingC7primary9secondary8fontName4logo0H3URL4name5title11mapTabTitle05arenamN012shareMessage06inviteQ06appUrlACSo7UIColorCSg_ARSSSgA9Stcfc",
-            "mangledName": "$s10bLinkupSDK8BrandingC7primary9secondary8fontName4logo0H3URL4name5title11mapTabTitle05arenamN012shareMessage06inviteQ06appUrlACSo7UIColorCSg_ARSSSgA9Stcfc",
+            "usr": "s:10bLinkupSDK8BrandingC7primary9secondary8fontName4logo0H3URL4name5title11mapTabTitle05arenamN012shareMessage06inviteQ06appUrl10backgroundACSo7UIColorCSg_ASSSSgA10Ttcfc",
+            "mangledName": "$s10bLinkupSDK8BrandingC7primary9secondary8fontName4logo0H3URL4name5title11mapTabTitle05arenamN012shareMessage06inviteQ06appUrl10backgroundACSo7UIColorCSg_ASSSSgA10Ttcfc",
             "moduleName": "bLinkupSDK",
             "declAttributes": [
               "AccessControl"
@@ -28802,7 +28827,7 @@
           {
             "kind": "Constructor",
             "name": "init",
-            "printedName": "init(primaryHEX:secondaryHEX:fontName:logo:logoURL:name:title:mapTabTitle:arenaTabTitle:shareMessage:inviteMessage:appUrl:)",
+            "printedName": "init(primaryHEX:secondaryHEX:fontName:logo:logoURL:name:title:mapTabTitle:arenaTabTitle:shareMessage:inviteMessage:appUrl:background:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -28989,11 +29014,26 @@
                 ],
                 "hasDefaultArg": true,
                 "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
               }
             ],
             "declKind": "Constructor",
-            "usr": "s:10bLinkupSDK8BrandingC10primaryHEX09secondaryE08fontName4logo0I3URL4name5title11mapTabTitle05arenanO012shareMessage06inviteR06appUrlACSSSg_A11Ptcfc",
-            "mangledName": "$s10bLinkupSDK8BrandingC10primaryHEX09secondaryE08fontName4logo0I3URL4name5title11mapTabTitle05arenanO012shareMessage06inviteR06appUrlACSSSg_A11Ptcfc",
+            "usr": "s:10bLinkupSDK8BrandingC10primaryHEX09secondaryE08fontName4logo0I3URL4name5title11mapTabTitle05arenanO012shareMessage06inviteR06appUrl10backgroundACSSSg_A12Qtcfc",
+            "mangledName": "$s10bLinkupSDK8BrandingC10primaryHEX09secondaryE08fontName4logo0I3URL4name5title11mapTabTitle05arenanO012shareMessage06inviteR06appUrl10backgroundACSSSg_A12Qtcfc",
             "moduleName": "bLinkupSDK",
             "declAttributes": [
               "AccessControl"
@@ -33076,14 +33116,14 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/NavBar3.swift",
       "kind": "BooleanLiteral",
-      "offset": 1631,
+      "offset": 1704,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/NavBar3.swift",
       "kind": "StringLiteral",
-      "offset": 1669,
+      "offset": 1742,
       "length": 8,
       "value": "\"Closed\""
     },
@@ -34371,126 +34411,126 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 921,
+      "offset": 933,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1312,
+      "offset": 1324,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1359,
+      "offset": 1371,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1410,
+      "offset": 1422,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 1462,
+      "offset": 1474,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1500,
+      "offset": 1512,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1549,
+      "offset": 1561,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1596,
+      "offset": 1608,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1639,
+      "offset": 1651,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1687,
+      "offset": 1699,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1731,
+      "offset": 1743,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1779,
+      "offset": 1791,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1825,
+      "offset": 1837,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1876,
+      "offset": 1888,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "Array",
-      "offset": 1923,
+      "offset": 1935,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "IntegerLiteral",
-      "offset": 7993,
+      "offset": 8175,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 10929,
+      "offset": 11111,
       "length": 10,
       "value": "\"John Doe\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/Profile3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 10948,
+      "offset": 11130,
       "length": 13,
       "value": "\"john.doe123\""
     },
@@ -34532,14 +34572,14 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Internal\/View+Extensions2.swift",
       "kind": "FloatLiteral",
-      "offset": 2567,
+      "offset": 2574,
       "length": 4,
       "value": "0.75"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Internal\/View+Extensions2.swift",
       "kind": "BooleanLiteral",
-      "offset": 2764,
+      "offset": 2771,
       "length": 5,
       "value": "false"
     },
@@ -34595,14 +34635,14 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/Login3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 6896,
+      "offset": 6990,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/Login3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 6923,
+      "offset": 7017,
       "length": 4,
       "value": "true"
     },
@@ -34945,14 +34985,14 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Internal\/RemoteBranding.swift",
       "kind": "StringLiteral",
-      "offset": 614,
+      "offset": 642,
       "length": 14,
       "value": "\"featureTitle\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Internal\/RemoteBranding.swift",
       "kind": "StringLiteral",
-      "offset": 800,
+      "offset": 828,
       "length": 33,
       "value": "\"defaultSpotPromotionInviteCount\""
     },
@@ -35505,7 +35545,7 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/NewUser3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 3587,
+      "offset": 3920,
       "length": 5,
       "value": "false"
     },
@@ -36373,28 +36413,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/PointDetails3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 11832,
+      "offset": 11944,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/PointDetails3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 11863,
+      "offset": 11975,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/PointDetails3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 11935,
+      "offset": 12047,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/PointDetails3View.swift",
       "kind": "BooleanLiteral",
-      "offset": 11964,
+      "offset": 12076,
       "length": 4,
       "value": "true"
     },
@@ -36653,49 +36693,49 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "BooleanLiteral",
-      "offset": 762,
+      "offset": 791,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "BooleanLiteral",
-      "offset": 959,
+      "offset": 988,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "BooleanLiteral",
-      "offset": 1160,
+      "offset": 1189,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "IntegerLiteral",
-      "offset": 5198,
+      "offset": 5628,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "StringLiteral",
-      "offset": 5289,
+      "offset": 5719,
       "length": 8,
       "value": "\"redeem\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "IntegerLiteral",
-      "offset": 5388,
+      "offset": 5818,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "BooleanLiteral",
-      "offset": 5463,
+      "offset": 5893,
       "length": 4,
       "value": "true"
     },
@@ -37486,84 +37526,84 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 10160,
+      "offset": 9470,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 10306,
+      "offset": 9616,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 15375,
+      "offset": 14685,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 15396,
+      "offset": 14706,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 15566,
+      "offset": 14876,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 16178,
+      "offset": 15488,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 16226,
+      "offset": 15536,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 16297,
+      "offset": 15607,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 16635,
+      "offset": 15945,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 16691,
+      "offset": 16001,
       "length": 9,
       "value": "\"Profile\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 16715,
+      "offset": 16025,
       "length": 30,
       "value": "\"person.and.background.dotted\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/Home3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 16762,
+      "offset": 16072,
       "length": 6,
       "value": "\"tab2\""
     },
@@ -37591,42 +37631,42 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 593,
+      "offset": 558,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 685,
+      "offset": 650,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 3796,
+      "offset": 4313,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 3807,
+      "offset": 4324,
       "length": 11,
       "value": "\"Customer1\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 3841,
+      "offset": 4358,
       "length": 12,
       "value": "\"5555551234\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 3873,
+      "offset": 4390,
       "length": 8,
       "value": "\"123456\""
     },
@@ -37649,7 +37689,7 @@
       "kind": "StringLiteral",
       "offset": 260,
       "length": 5,
-      "value": "\"135\""
+      "value": "\"140\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/bLinkup.swift",
@@ -37766,28 +37806,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "StringLiteral",
-      "offset": 975,
+      "offset": 1003,
       "length": 9,
       "value": "\"#00449C\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "StringLiteral",
-      "offset": 1044,
+      "offset": 1072,
       "length": 9,
       "value": "\"#004020\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "IntegerLiteral",
-      "offset": 5169,
+      "offset": 5436,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "IntegerLiteral",
-      "offset": 5438,
+      "offset": 5705,
       "length": 2,
       "value": "16"
     },
@@ -37960,6 +38000,20 @@
       "value": "\"tab0\""
     },
     {
+      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/SpotMark.swift",
+      "kind": "IntegerLiteral",
+      "offset": 162,
+      "length": 2,
+      "value": "-1"
+    },
+    {
+      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/SpotMark.swift",
+      "kind": "Array",
+      "offset": 255,
+      "length": 547,
+      "value": "[\"Meet up here\", \"Bring the crew\", \"Game night, squad up\", \"Friends + drinks + game\", \"Roll in together\", \"Invite your people\", \"Cheer as one\", \"Squad time\", \"Link up here\", \"Group chat, assemble\", \"Bring the hype\", \"Watch together\", \"Grab your friends\", \"Pack the table\", \"Friends make it better\", \"Pull up together\", \"Share the moment\", \"Bring your people\", \"Game’s on—come through\"]"
+    },
+    {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 187,
@@ -37983,28 +38037,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3007,
+      "offset": 3049,
       "length": 46,
       "value": "\"TkPnD3_yP3j6dUEAksgRjJ-auYijyUECLxVEnFqHJVE=\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3088,
+      "offset": 3130,
       "length": 9,
       "value": "\"Staging\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3216,
+      "offset": 3258,
       "length": 7,
       "value": "\"Inter\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3255,
+      "offset": 3297,
       "length": 7,
       "value": "\"Logo2\""
     },
@@ -38228,7 +38282,7 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/AsyncImageView.swift",
       "kind": "StringLiteral",
-      "offset": 638,
+      "offset": 707,
       "length": 2,
       "value": "\"\""
     }
