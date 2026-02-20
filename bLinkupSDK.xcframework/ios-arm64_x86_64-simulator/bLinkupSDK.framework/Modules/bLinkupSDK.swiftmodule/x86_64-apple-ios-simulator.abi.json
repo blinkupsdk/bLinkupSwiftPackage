@@ -34535,39 +34535,39 @@
       "value": "\"john.doe123\""
     },
     {
-      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/LoginButton2.swift",
+      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/StyledButton.swift",
+      "kind": "IntegerLiteral",
+      "offset": 212,
+      "length": 2,
+      "value": "16"
+    },
+    {
+      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/StyledButton.swift",
+      "kind": "IntegerLiteral",
+      "offset": 347,
+      "length": 2,
+      "value": "55"
+    },
+    {
+      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/StyledButton.swift",
       "kind": "BooleanLiteral",
-      "offset": 233,
+      "offset": 1347,
       "length": 4,
       "value": "true"
     },
     {
-      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/LoginButton2.swift",
+      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/StyledButton.swift",
       "kind": "StringLiteral",
-      "offset": 1170,
+      "offset": 2135,
       "length": 8,
       "value": "\"Submit\""
     },
     {
-      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/LoginButton2.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1190,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/LoginButton2.swift",
+      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/StyledButton.swift",
       "kind": "StringLiteral",
-      "offset": 1224,
+      "offset": 2206,
       "length": 8,
       "value": "\"Cancel\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/LoginButton2.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1244,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Internal\/View+Extensions2.swift",
@@ -34635,14 +34635,14 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/Login3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 6990,
+      "offset": 7034,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/Login3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 7017,
+      "offset": 7061,
       "length": 4,
       "value": "true"
     },
@@ -34845,28 +34845,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/TabBar3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 230,
+      "offset": 232,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/TabBar3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 279,
+      "offset": 281,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/TabBar3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 456,
+      "offset": 458,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/TabBar3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 547,
+      "offset": 549,
       "length": 5,
       "value": "false"
     },
@@ -35545,7 +35545,7 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/NewUser3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 3920,
+      "offset": 3917,
       "length": 5,
       "value": "false"
     },
@@ -36594,17 +36594,17 @@
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Libraries\/ActionSheet\/CustomActionSheet.swift",
-      "kind": "IntegerLiteral",
-      "offset": 570,
-      "length": 4,
-      "value": "1000"
+      "kind": "StringLiteral",
+      "offset": 366,
+      "length": 8,
+      "value": "\"Cancel\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Libraries\/ActionSheet\/CustomActionSheet.swift",
-      "kind": "StringLiteral",
-      "offset": 829,
-      "length": 8,
-      "value": "\"Cancel\""
+      "kind": "IntegerLiteral",
+      "offset": 628,
+      "length": 4,
+      "value": "1000"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Profile\/ActiveInvites3Screen.swift",
@@ -36714,28 +36714,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "IntegerLiteral",
-      "offset": 5628,
+      "offset": 5767,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "StringLiteral",
-      "offset": 5719,
+      "offset": 5858,
       "length": 8,
       "value": "\"redeem\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "IntegerLiteral",
-      "offset": 5818,
+      "offset": 5957,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "BooleanLiteral",
-      "offset": 5893,
+      "offset": 6032,
       "length": 4,
       "value": "true"
     },
@@ -37323,42 +37323,42 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Arena3Screen.swift",
       "kind": "IntegerLiteral",
-      "offset": 9200,
+      "offset": 7349,
       "length": 11,
       "value": "500000000"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Arena3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 9319,
+      "offset": 7468,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Arena3Screen.swift",
       "kind": "IntegerLiteral",
-      "offset": 9361,
+      "offset": 7510,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Arena3Screen.swift",
       "kind": "IntegerLiteral",
-      "offset": 9405,
+      "offset": 7554,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Arena3Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 9442,
+      "offset": 7591,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Arena3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 9497,
+      "offset": 7646,
       "length": 6,
       "value": "\"Main\""
     },
@@ -37645,28 +37645,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 4313,
+      "offset": 4306,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 4324,
+      "offset": 4317,
       "length": 11,
       "value": "\"Customer1\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 4358,
+      "offset": 4351,
       "length": 12,
       "value": "\"5555551234\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Login\/OTP3Screen.swift",
       "kind": "StringLiteral",
-      "offset": 4390,
+      "offset": 4383,
       "length": 8,
       "value": "\"123456\""
     },
@@ -37689,7 +37689,7 @@
       "kind": "StringLiteral",
       "offset": 260,
       "length": 5,
-      "value": "\"140\""
+      "value": "\"144\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/bLinkup.swift",
