@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios.abi.json</key>
 		<data>
-		IzxH8m+lRd4NEk16bG8Bc2+t8qQ=
+		t85zmEJ9tsQPPm6lKPO2uM4f2V0=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<data>
-		HJTw0P2ITLxXDnKtm6kWWKYs3qw=
+		v8+UD0IFcqwmbl6Yi8El2eieEbQ=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios.swiftinterface</key>
 		<data>
-		HJTw0P2ITLxXDnKtm6kWWKYs3qw=
+		v8+UD0IFcqwmbl6Yi8El2eieEbQ=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<data>
-		P2+w5wpAIsjKzsnnIZ8P3Z8S0vQ=
+		NUonjXRzY0umiZqhAuwh5Plm0GE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -72,16 +72,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			MBFyP4upe2J7w1GCZ9DuN/pJE60=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/Localizable_hocr.strings</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			zDlbKc0fL3R4z2gKHNxs27b/kSQ=
+			3tYtsWWppTbQMu9LZL/yMMeoGyc=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -90,16 +81,7 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0Ivw5TKqLr++e81LfUjffPrl5AE=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/Plurals_hocr.stringsdict</key>
-		<dict>
-			<key>hash</key>
-			<data>
-			sTCXX3I9vOUkhoA2tIn/IgnPnYE=
+			/l5ShN8Le6BTdyL5NK8JaS1TSC0=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -125,14 +107,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jx9WGTiz74Xr6/cSzHq3qvs6GvR+ZWj0bJPDsThctzg=
+			D9kk3MZttkpnyqk7hU6oaAWMfIlFuCxXO2EKZzAmTv4=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios.private.swiftinterface</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			0i/mleirl2LsET8z187oM27MjS//QEQsfGIM9Bf1t/I=
+			EVubDkH+jwBnMsqT1aCStK1CBwO2Ers72mS3y8NfxME=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios.swiftdoc</key>
@@ -146,14 +128,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0i/mleirl2LsET8z187oM27MjS//QEQsfGIM9Bf1t/I=
+			EVubDkH+jwBnMsqT1aCStK1CBwO2Ers72mS3y8NfxME=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios.swiftmodule</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			xXOyzOLsaR8nn0mu8HBf8w2FdjKKTgXU+OXy+NpP2X8=
+			TcqFfkdr3IwckPrY56I5ttRRoXuA+jGXWX1JzbRlvdI=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -216,16 +198,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qj+1sIhogkOl0c4Gov7005Q2R/2iK0jRc+vMBmPz9IQ=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/Localizable_hocr.strings</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			tAluYVi66n3sArlw6P0/VisZWMMTv780ujm97jYe7ik=
+			sfGiQRJAZRd8BEyjaxPUFBLg9UjhRVmYtkHtR3MSkko=
 			</data>
 			<key>optional</key>
 			<true/>
@@ -234,16 +207,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gDfIbYbQQQM6AEoa3/fucmdbdGki8DgLaADwVQvMNFk=
-			</data>
-			<key>optional</key>
-			<true/>
-		</dict>
-		<key>en.lproj/Plurals_hocr.stringsdict</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			vMJBS7QmIfseBm1Vli6ktxScAZDV7du9XKG68hT+cRg=
+			D67x3e/5CWfleVu4mr2oDNdEqzO+FFz7AxsTnjD8iIQ=
 			</data>
 			<key>optional</key>
 			<true/>

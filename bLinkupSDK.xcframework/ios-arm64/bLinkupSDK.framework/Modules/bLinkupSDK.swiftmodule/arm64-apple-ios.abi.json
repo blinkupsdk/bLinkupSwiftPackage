@@ -24047,6 +24047,538 @@
         ]
       },
       {
+        "kind": "TypeDecl",
+        "name": "Localization",
+        "printedName": "Localization",
+        "children": [
+          {
+            "kind": "Var",
+            "name": "shared",
+            "printedName": "shared",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Localization",
+                "printedName": "bLinkupSDK.Localization",
+                "usr": "s:10bLinkupSDK12LocalizationC"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10bLinkupSDK12LocalizationC6sharedACvpZ",
+            "mangledName": "$s10bLinkupSDK12LocalizationC6sharedACvpZ",
+            "moduleName": "bLinkupSDK",
+            "static": true,
+            "declAttributes": [
+              "HasInitialValue",
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Localization",
+                    "printedName": "bLinkupSDK.Localization",
+                    "usr": "s:10bLinkupSDK12LocalizationC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK12LocalizationC6sharedACvgZ",
+                "mangledName": "$s10bLinkupSDK12LocalizationC6sharedACvgZ",
+                "moduleName": "bLinkupSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Localization",
+                    "printedName": "bLinkupSDK.Localization",
+                    "usr": "s:10bLinkupSDK12LocalizationC"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK12LocalizationC6sharedACvsZ",
+                "mangledName": "$s10bLinkupSDK12LocalizationC6sharedACvsZ",
+                "moduleName": "bLinkupSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK12LocalizationC6sharedACvMZ",
+                "mangledName": "$s10bLinkupSDK12LocalizationC6sharedACvMZ",
+                "moduleName": "bLinkupSDK",
+                "static": true,
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "simple",
+            "printedName": "simple",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10bLinkupSDK12LocalizationC6simpleSDyS2SGvp",
+            "mangledName": "$s10bLinkupSDK12LocalizationC6simpleSDyS2SGvp",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK12LocalizationC6simpleSDyS2SGvg",
+                "mangledName": "$s10bLinkupSDK12LocalizationC6simpleSDyS2SGvg",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "plural",
+            "printedName": "plural",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : [Swift.String : Swift.String]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10bLinkupSDK12LocalizationC6pluralSDySSSDyS2SGGvp",
+            "mangledName": "$s10bLinkupSDK12LocalizationC6pluralSDySSSDyS2SGGvp",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : [Swift.String : Swift.String]]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Dictionary",
+                        "printedName": "[Swift.String : Swift.String]",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          },
+                          {
+                            "kind": "TypeNominal",
+                            "name": "String",
+                            "printedName": "Swift.String",
+                            "usr": "s:SS"
+                          }
+                        ],
+                        "usr": "s:SD"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK12LocalizationC6pluralSDySSSDyS2SGGvg",
+                "mangledName": "$s10bLinkupSDK12LocalizationC6pluralSDySSSDyS2SGGvg",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(simple:plural:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Localization",
+                "printedName": "bLinkupSDK.Localization",
+                "usr": "s:10bLinkupSDK12LocalizationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : Swift.String]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Dictionary",
+                "printedName": "[Swift.String : [Swift.String : Swift.String]]",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Dictionary",
+                    "printedName": "[Swift.String : Swift.String]",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "String",
+                        "printedName": "Swift.String",
+                        "usr": "s:SS"
+                      }
+                    ],
+                    "usr": "s:SD"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:SD"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10bLinkupSDK12LocalizationC6simple6pluralACSDyS2SG_SDySSAFGtcfc",
+            "mangledName": "$s10bLinkupSDK12LocalizationC6simple6pluralACSDyS2SG_SDySSAFGtcfc",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10bLinkupSDK12LocalizationC5valueySSSgSSF",
+            "mangledName": "$s10bLinkupSDK12LocalizationC5valueySSSgSSF",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "value",
+            "printedName": "value(_:n:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.String?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "String",
+                    "printedName": "Swift.String",
+                    "usr": "s:SS"
+                  }
+                ],
+                "usr": "s:Sq"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "String",
+                "printedName": "Swift.String",
+                "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10bLinkupSDK12LocalizationC5value_1nSSSgSS_SitF",
+            "mangledName": "$s10bLinkupSDK12LocalizationC5value_1nSSSgSS_SitF",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init(from:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Localization",
+                "printedName": "bLinkupSDK.Localization",
+                "usr": "s:10bLinkupSDK12LocalizationC"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Decoder",
+                "printedName": "any Swift.Decoder",
+                "usr": "s:s7DecoderP"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:10bLinkupSDK12LocalizationC4fromACs7Decoder_p_tKcfc",
+            "mangledName": "$s10bLinkupSDK12LocalizationC4fromACs7Decoder_p_tKcfc",
+            "moduleName": "bLinkupSDK",
+            "implicit": true,
+            "declAttributes": [
+              "Required"
+            ],
+            "throwing": true,
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "encode",
+            "printedName": "encode(to:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Encoder",
+                "printedName": "any Swift.Encoder",
+                "usr": "s:s7EncoderP"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:10bLinkupSDK12LocalizationC6encode2toys7Encoder_p_tKF",
+            "mangledName": "$s10bLinkupSDK12LocalizationC6encode2toys7Encoder_p_tKF",
+            "moduleName": "bLinkupSDK",
+            "implicit": true,
+            "throwing": true,
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:10bLinkupSDK12LocalizationC",
+        "mangledName": "$s10bLinkupSDK12LocalizationC",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "AccessControl",
+          "RawDocComment"
+        ],
+        "conformances": [
+          {
+            "kind": "Conformance",
+            "name": "Copyable",
+            "printedName": "Copyable",
+            "usr": "s:s8CopyableP",
+            "mangledName": "$ss8CopyableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Escapable",
+            "printedName": "Escapable",
+            "usr": "s:s9EscapableP",
+            "mangledName": "$ss9EscapableP"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Decodable",
+            "printedName": "Decodable",
+            "usr": "s:Se",
+            "mangledName": "$sSe"
+          },
+          {
+            "kind": "Conformance",
+            "name": "Encodable",
+            "printedName": "Encodable",
+            "usr": "s:SE",
+            "mangledName": "$sSE"
+          }
+        ]
+      },
+      {
         "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
@@ -34943,35 +35475,35 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Network\/SDK.swift",
       "kind": "StringLiteral",
-      "offset": 5394,
+      "offset": 5547,
       "length": 29,
       "value": "\"v2\/contacts?local_user=true\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Network\/SDK.swift",
       "kind": "Array",
-      "offset": 5459,
+      "offset": 5612,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Network\/SDK.swift",
       "kind": "StringLiteral",
-      "offset": 5778,
+      "offset": 5931,
       "length": 10,
       "value": "\"contacts\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Network\/SDK.swift",
       "kind": "BooleanLiteral",
-      "offset": 8202,
+      "offset": 8355,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Network\/SDK.swift",
       "kind": "StringLiteral",
-      "offset": 12544,
+      "offset": 12697,
       "length": 9,
       "value": "\"invites\""
     },
@@ -34985,14 +35517,14 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Internal\/RemoteBranding.swift",
       "kind": "StringLiteral",
-      "offset": 642,
+      "offset": 678,
       "length": 14,
       "value": "\"featureTitle\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Internal\/RemoteBranding.swift",
       "kind": "StringLiteral",
-      "offset": 828,
+      "offset": 864,
       "length": 33,
       "value": "\"defaultSpotPromotionInviteCount\""
     },
@@ -36714,28 +37246,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "IntegerLiteral",
-      "offset": 5767,
+      "offset": 5797,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "StringLiteral",
-      "offset": 5858,
+      "offset": 5888,
       "length": 8,
       "value": "\"redeem\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "IntegerLiteral",
-      "offset": 5957,
+      "offset": 5987,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/MeetNRedeem\/Spot3Cell.swift",
       "kind": "BooleanLiteral",
-      "offset": 6032,
+      "offset": 6062,
       "length": 4,
       "value": "true"
     },
@@ -37671,6 +38203,20 @@
       "value": "\"123456\""
     },
     {
+      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Public\/Localization.swift",
+      "kind": "Dictionary",
+      "offset": 639,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Public\/Localization.swift",
+      "kind": "Dictionary",
+      "offset": 681,
+      "length": 3,
+      "value": "[]"
+    },
+    {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI-Elements\/Redeem3ActionSheet.swift",
       "kind": "StringLiteral",
       "offset": 140,
@@ -37689,7 +38235,7 @@
       "kind": "StringLiteral",
       "offset": 260,
       "length": 5,
-      "value": "\"144\""
+      "value": "\"147\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/bLinkup.swift",
@@ -37743,21 +38289,21 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 14554,
+      "offset": 14475,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 14893,
+      "offset": 14814,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/bLinkup.swift",
       "kind": "Dictionary",
-      "offset": 25154,
+      "offset": 25075,
       "length": 3,
       "value": "[]"
     },
@@ -37967,35 +38513,35 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 1593,
+      "offset": 1611,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "IntegerLiteral",
-      "offset": 1631,
+      "offset": 1649,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "StringLiteral",
-      "offset": 1670,
+      "offset": 1688,
       "length": 9,
       "value": "\"Friends\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "StringLiteral",
-      "offset": 1694,
+      "offset": 1712,
       "length": 10,
       "value": "\"figure.2\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/Home\/SignupNeeded3View.swift",
       "kind": "StringLiteral",
-      "offset": 1721,
+      "offset": 1739,
       "length": 6,
       "value": "\"tab0\""
     },
@@ -38037,28 +38583,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3049,
+      "offset": 3120,
       "length": 46,
       "value": "\"TkPnD3_yP3j6dUEAksgRjJ-auYijyUECLxVEnFqHJVE=\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3130,
+      "offset": 3201,
       "length": 9,
       "value": "\"Staging\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3258,
+      "offset": 3329,
       "length": 7,
       "value": "\"Inter\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/SDK-UI3\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3297,
+      "offset": 3368,
       "length": 7,
       "value": "\"Logo2\""
     },
@@ -38219,28 +38765,28 @@
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Libraries\/Keychain.swift",
       "kind": "StringLiteral",
-      "offset": 664,
+      "offset": 635,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Libraries\/Keychain.swift",
       "kind": "BooleanLiteral",
-      "offset": 1556,
+      "offset": 1527,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Libraries\/Keychain.swift",
       "kind": "BooleanLiteral",
-      "offset": 6722,
+      "offset": 6693,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Documents\/BL\/_SDK\/SDK\/Libraries\/Keychain.swift",
       "kind": "BooleanLiteral",
-      "offset": 7947,
+      "offset": 7918,
       "length": 5,
       "value": "false"
     },

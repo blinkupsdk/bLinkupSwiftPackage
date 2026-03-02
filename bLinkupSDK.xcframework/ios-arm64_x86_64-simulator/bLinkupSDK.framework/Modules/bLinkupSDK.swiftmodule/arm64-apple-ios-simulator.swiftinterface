@@ -727,6 +727,20 @@ public struct Place : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
 }
 public typealias Completion<E> = (Swift.Result<E, any Swift.Error>) -> Swift.Void
 
+public class Localization : Swift.Codable {
+  public static var shared: bLinkupSDK.Localization {
+    get
+    set
+  }
+  final public let simple: [Swift.String : Swift.String]
+  final public let plural: [Swift.String : [Swift.String : Swift.String]]
+  public init(simple: [Swift.String : Swift.String] = [:], plural: [Swift.String : [Swift.String : Swift.String]] = [:])
+  public func value(_ key: Swift.String) -> Swift.String?
+  public func value(_ key: Swift.String, n: Swift.Int) -> Swift.String?
+  @objc deinit
+  public func encode(to encoder: any Swift.Encoder) throws
+  required public init(from decoder: any Swift.Decoder) throws
+}
 @_Concurrency.MainActor @preconcurrency public struct Redeem3ActionSheet : SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
