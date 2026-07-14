@@ -1,12 +1,13 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 6.0 effective-5.10 (swiftlang-6.0.0.9.10 clang-1600.0.26.2)
-// swift-module-flags: -target x86_64-apple-ios16.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name bLinkupSDK
+// swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
+// swift-module-flags: -target x86_64-apple-ios17.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name bLinkupSDK
+// swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
 import Combine
 import CommonCrypto
 import Contacts
 import CoreLocation
-import CoreTelephony
 import CryptoKit
+import DeveloperToolsSupport
 import Foundation
 import MapKit
 import MessageUI
@@ -14,127 +15,18 @@ import Security
 import Swift
 import SwiftUI
 import UIKit
-import WebKit
+@preconcurrency import WebKit
 import _Concurrency
 import _MapKit_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
-@_exported import bLinkupSDK
-
-public typealias ContactResult = bLinkupSDK.Contact
-public struct Contact : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
-  public var id: Swift.String {
-    get
-  }
-  public let phone: Swift.String
-  public let name: Swift.String
-  public let userId: Swift.String?
-  public let dbName: Swift.String?
-  public init(phone: Swift.String, name: Swift.String, userId: Swift.String?, dbName: Swift.String? = nil)
-  public func asUser() -> bLinkupSDK.User?
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.Contact, b: bLinkupSDK.Contact) -> Swift.Bool
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-
-
-
-public struct Customer : Swift.Codable, Swift.Equatable {
-  public let id: Swift.String
-  public var name: Swift.String?
-  public init(id: Swift.String, name: Swift.String? = nil)
-  public static func == (lhs: bLinkupSDK.Customer, rhs: bLinkupSDK.Customer) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public init(from decoder: any Swift.Decoder) throws
-}
-
-
+import _WebKit_SwiftUI
 extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public func addLoadingView(isLoading: SwiftUICore.Binding<Swift.Bool>) -> some SwiftUICore.View
   
   @_Concurrency.MainActor @preconcurrency public func addMenu(@SwiftUICore.ViewBuilder content: () -> some View) -> some SwiftUICore.View
   
 }
-
-public enum NextLoginStep {
-  case loginWithCode(_: Swift.String)
-  case registerWithCode(_: Swift.String)
-}
-public enum UserType : Swift.String, Swift.Hashable {
-  case unknown, normal, mascot
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-
-public struct Presence : Swift.Identifiable {
-  public enum Confidence {
-    case unknown, weak, strong, manual
-    public static func == (a: bLinkupSDK.Presence.Confidence, b: bLinkupSDK.Presence.Confidence) -> Swift.Bool
-    public func hash(into hasher: inout Swift.Hasher)
-    public var hashValue: Swift.Int {
-      get
-    }
-  }
-  public let id: Swift.String
-  public let user: bLinkupSDK.User
-  public let place: bLinkupSDK.Place?
-  public let isPresent: Swift.Bool
-  public let insertedAt: Swift.String?
-  public init(id: Swift.String, user: bLinkupSDK.User, place: bLinkupSDK.Place?, isPresent: Swift.Bool, insertedAt: Swift.String? = nil)
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
-}
-extension bLinkupSDK.Presence : Swift.Equatable, Swift.Hashable {
-  public static func == (a: bLinkupSDK.Presence, b: bLinkupSDK.Presence) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-
-
-
-
-
-
-
-
-public struct DealStats : Swift.Codable, Swift.Hashable {
-  public let current: Swift.Int, goal: Swift.Int
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.DealStats, b: bLinkupSDK.DealStats) -> Swift.Bool
-  public func encode(to encoder: any Swift.Encoder) throws
-  public var hashValue: Swift.Int {
-    get
-  }
-  public init(from decoder: any Swift.Decoder) throws
-}
-
-public struct ConnectionRequest : Swift.Identifiable {
-  public let id: Swift.String
-  public let source: bLinkupSDK.User, target: bLinkupSDK.User
-  public let opponent: bLinkupSDK.User
-  public let income: Swift.Bool
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
-}
-@_hasMissingDesignatedInitializers final public class GeofenceTrack {
-  final public func cancel()
-  @objc deinit
-}
-
-
-
-
-
-
 public struct CountryCodePickerOptions : Swift.Sendable {
   public init()
   public init(backgroundColor: UIKit.UIColor? = nil, separatorColor: UIKit.UIColor? = nil, textLabelColor: UIKit.UIColor? = nil, textLabelFont: UIKit.UIFont? = nil, detailTextLabelColor: UIKit.UIColor? = nil, detailTextLabelFont: UIKit.UIFont? = nil, tintColor: UIKit.UIColor? = nil, cellBackgroundColor: UIKit.UIColor? = nil, cellBackgroundColorSelection: UIKit.UIColor? = nil)
@@ -147,76 +39,6 @@ public struct CountryCodePickerOptions : Swift.Sendable {
   public var tintColor: UIKit.UIColor?
   public var cellBackgroundColor: UIKit.UIColor?
   public var cellBackgroundColorSelection: UIKit.UIColor?
-}
-public enum PhoneNumberDecodingStrategy {
-  case properties
-  case e164
-  public static var `default`: bLinkupSDK.PhoneNumberDecodingStrategy
-  public static func == (a: bLinkupSDK.PhoneNumberDecodingStrategy, b: bLinkupSDK.PhoneNumberDecodingStrategy) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public enum PhoneNumberEncodingStrategy {
-  case properties
-  case e164
-  public static var `default`: bLinkupSDK.PhoneNumberEncodingStrategy
-  public static func == (a: bLinkupSDK.PhoneNumberEncodingStrategy, b: bLinkupSDK.PhoneNumberEncodingStrategy) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public typealias PhoneNumberUtilityProvider = () -> bLinkupSDK.PhoneNumberUtility
-public enum PhoneNumberDecodingUtils {
-  public static var defaultUtility: () -> bLinkupSDK.PhoneNumberUtility
-}
-public enum PhoneNumberEncodingUtils {
-  public static var defaultUtility: () -> bLinkupSDK.PhoneNumberUtility
-}
-extension Foundation.JSONDecoder {
-  public var phoneNumberDecodingStrategy: bLinkupSDK.PhoneNumberDecodingStrategy {
-    get
-    set
-  }
-  public var phoneNumberUtility: bLinkupSDK.PhoneNumberUtilityProvider {
-    get
-    set
-  }
-}
-extension Foundation.JSONEncoder {
-  public var phoneNumberEncodingStrategy: bLinkupSDK.PhoneNumberEncodingStrategy {
-    get
-    set
-  }
-  public var phoneNumberUtility: bLinkupSDK.PhoneNumberUtilityProvider {
-    get
-    set
-  }
-}
-extension bLinkupSDK.PhoneNumber : Swift.Codable {
-  public init(from decoder: any Swift.Decoder) throws
-  public func encode(to encoder: any Swift.Encoder) throws
-}
-extension Swift.CodingUserInfoKey {
-  public static let phoneNumberDecodingStrategy: Swift.CodingUserInfoKey
-  public static let phoneNumberEncodingStrategy: Swift.CodingUserInfoKey
-  public static let phoneNumberUtility: Swift.CodingUserInfoKey
-}
-@_hasMissingDesignatedInitializers final public class PartialFormatter {
-  convenience public init(utility: bLinkupSDK.PhoneNumberUtility = PhoneNumberUtility(), defaultRegion: Swift.String = PhoneNumberUtility.defaultRegionCode(), withPrefix: Swift.Bool = true, maxDigits: Swift.Int? = nil, ignoreIntlNumbers: Swift.Bool = false)
-  final public var defaultRegion: Swift.String {
-    get
-    set
-  }
-  final public var maxDigits: Swift.Int?
-  final public var currentRegion: Swift.String {
-    get
-  }
-  final public func nationalNumber(from rawNumber: Swift.String) -> Swift.String
-  final public func formatPartial(_ rawNumber: Swift.String) -> Swift.String
-  @objc deinit
 }
 @_Concurrency.MainActor public protocol CountryCodePickerDelegate : AnyObject {
   @_Concurrency.MainActor func countryCodePickerViewControllerDidPickCountry(_ country: bLinkupSDK.CountryCodePickerViewController.Country)
@@ -250,206 +72,6 @@ extension bLinkupSDK.CountryCodePickerViewController {
   @objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor @preconcurrency public class Cell : UIKit.UITableViewCell {
     @objc deinit
   }
-}
-public enum PhoneNumberError : Swift.Error, Swift.Equatable, Swift.Sendable {
-  case generalError
-  case invalidCountryCode
-  case invalidNumber
-  case tooLong
-  case tooShort
-  case deprecated
-  case metadataNotFound
-  case ambiguousNumber(phoneNumbers: Swift.Set<bLinkupSDK.PhoneNumber>)
-  public static func == (a: bLinkupSDK.PhoneNumberError, b: bLinkupSDK.PhoneNumberError) -> Swift.Bool
-}
-extension bLinkupSDK.PhoneNumberError : Foundation.LocalizedError {
-  public var errorDescription: Swift.String? {
-    get
-  }
-}
-public enum PhoneNumberFormat : Swift.String, Swift.Codable, Swift.Sendable {
-  case e164
-  case international
-  case national
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum PhoneNumberType : Swift.String, Swift.Codable, Swift.Sendable {
-  case fixedLine
-  case mobile
-  case fixedOrMobile
-  case pager
-  case personalNumber
-  case premiumRate
-  case sharedCost
-  case tollFree
-  case voicemail
-  case voip
-  case uan
-  case unknown
-  case notParsed
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public enum PossibleLengthType : Swift.String, Swift.Codable, Swift.Sendable {
-  case national
-  case localOnly
-  public init?(rawValue: Swift.String)
-  public typealias RawValue = Swift.String
-  public var rawValue: Swift.String {
-    get
-  }
-}
-public struct PhoneNumber : Swift.Sendable {
-  public let numberString: Swift.String
-  public let countryCode: Swift.UInt64
-  public let leadingZero: Swift.Bool
-  public let nationalNumber: Swift.UInt64
-  public let numberExtension: Swift.String?
-  public let type: bLinkupSDK.PhoneNumberType
-  public let regionID: Swift.String?
-}
-extension bLinkupSDK.PhoneNumber : Swift.Equatable {
-  public static func == (lhs: bLinkupSDK.PhoneNumber, rhs: bLinkupSDK.PhoneNumber) -> Swift.Bool
-}
-extension bLinkupSDK.PhoneNumber : Swift.Hashable {
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-extension bLinkupSDK.PhoneNumber {
-  public static func notPhoneNumber() -> bLinkupSDK.PhoneNumber
-  public func notParsed() -> Swift.Bool
-  public var url: Foundation.URL? {
-    get
-  }
-}
-extension bLinkupSDK.PhoneNumber {
-  @available(*, unavailable, message: "use PhoneNumberUtility instead to produce PhoneNumbers")
-  public init(rawNumber: Swift.String) throws
-  @available(*, unavailable, message: "use PhoneNumberUtility instead to produce PhoneNumbers")
-  public init(rawNumber: Swift.String, region: Swift.String) throws
-}
-extension bLinkupSDK.PhoneNumber {
-  public func adjustedNationalNumber() -> Swift.String
-}
-public struct MetadataTerritory : Swift.Decodable {
-  public let codeID: Swift.String
-  public let countryCode: Swift.UInt64
-  public let internationalPrefix: Swift.String?
-  public let mainCountryForCode: Swift.Bool
-  public let nationalPrefix: Swift.String?
-  public let nationalPrefixFormattingRule: Swift.String?
-  public let nationalPrefixForParsing: Swift.String?
-  public let nationalPrefixTransformRule: Swift.String?
-  public let preferredExtnPrefix: Swift.String?
-  public let emergency: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let fixedLine: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let generalDesc: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let mobile: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let pager: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let personalNumber: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let premiumRate: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let sharedCost: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let tollFree: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let voicemail: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let voip: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let uan: bLinkupSDK.MetadataPhoneNumberDesc?
-  public let numberFormats: [bLinkupSDK.MetadataPhoneNumberFormat]
-  public let leadingDigits: Swift.String?
-}
-public struct MetadataPhoneNumberDesc : Swift.Decodable {
-  public let exampleNumber: Swift.String?
-  public let nationalNumberPattern: Swift.String?
-  public let possibleNumberPattern: Swift.String?
-  public let possibleLengths: bLinkupSDK.MetadataPossibleLengths?
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct MetadataPossibleLengths : Swift.Decodable {
-  public init(from decoder: any Swift.Decoder) throws
-}
-public struct MetadataPhoneNumberFormat : Swift.Decodable {
-  public let pattern: Swift.String?
-  public let format: Swift.String?
-  public let intlFormat: Swift.String?
-  public let leadingDigitsPatterns: [Swift.String]?
-  public var nationalPrefixFormattingRule: Swift.String?
-  public let nationalPrefixOptionalWhenFormatting: Swift.Bool?
-  public let domesticCarrierCodeFormattingRule: Swift.String?
-}
-extension bLinkupSDK.MetadataTerritory {
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case codeID
-    case countryCode
-    case internationalPrefix
-    case mainCountryForCode
-    case nationalPrefix
-    case nationalPrefixFormattingRule
-    case nationalPrefixForParsing
-    case nationalPrefixTransformRule
-    case preferredExtnPrefix
-    case emergency
-    case fixedLine
-    case generalDesc
-    case mobile
-    case pager
-    case personalNumber
-    case premiumRate
-    case sharedCost
-    case tollFree
-    case voicemail
-    case voip
-    case uan
-    case numberFormats
-    case leadingDigits
-    case availableFormats
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public init(from decoder: any Swift.Decoder) throws
-}
-extension bLinkupSDK.MetadataPhoneNumberFormat {
-  public enum CodingKeys : Swift.String, Swift.CodingKey {
-    case pattern
-    case format
-    case intlFormat
-    case leadingDigitsPatterns
-    case nationalPrefixFormattingRule
-    case nationalPrefixOptionalWhenFormatting
-    case domesticCarrierCodeFormattingRule
-    public init?(rawValue: Swift.String)
-    public init?(stringValue: Swift.String)
-    public init?(intValue: Swift.Int)
-    public typealias RawValue = Swift.String
-    public var intValue: Swift.Int? {
-      get
-    }
-    public var rawValue: Swift.String {
-      get
-    }
-    public var stringValue: Swift.String {
-      get
-    }
-  }
-  public init(from decoder: any Swift.Decoder) throws
 }
 @objc @_inheritsConvenienceInitializers @_Concurrency.MainActor @preconcurrency open class PhoneNumberTextField : UIKit.UITextField, UIKit.UITextFieldDelegate {
   @_Concurrency.MainActor @preconcurrency final public let utility: bLinkupSDK.PhoneNumberUtility
@@ -550,6 +172,299 @@ extension bLinkupSDK.PhoneNumberTextField {
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func editingRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
   @_Concurrency.MainActor @preconcurrency @objc override dynamic open func clearButtonRect(forBounds bounds: CoreFoundation.CGRect) -> CoreFoundation.CGRect
 }
+public enum PhoneNumberError : Swift.Error, Swift.Equatable, Swift.Sendable {
+  case generalError
+  case invalidCountryCode
+  case invalidNumber
+  case tooLong
+  case tooShort
+  case deprecated
+  case metadataNotFound
+  case ambiguousNumber(phoneNumbers: Swift.Set<bLinkupSDK.PhoneNumber>)
+  public static func == (a: bLinkupSDK.PhoneNumberError, b: bLinkupSDK.PhoneNumberError) -> Swift.Bool
+}
+extension bLinkupSDK.PhoneNumberError : Foundation.LocalizedError {
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
+public enum PhoneNumberFormat : Swift.String, Swift.Codable, Swift.Sendable {
+  case e164
+  case international
+  case national
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PhoneNumberType : Swift.String, Swift.Codable, Swift.Sendable {
+  case fixedLine
+  case mobile
+  case fixedOrMobile
+  case pager
+  case personalNumber
+  case premiumRate
+  case sharedCost
+  case tollFree
+  case voicemail
+  case voip
+  case uan
+  case unknown
+  case notParsed
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum PossibleLengthType : Swift.String, Swift.Codable, Swift.Sendable {
+  case national
+  case localOnly
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+extension bLinkupSDK.PhoneNumber {
+  public func adjustedNationalNumber() -> Swift.String
+}
+extension bLinkupSDK.MetadataTerritory {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case codeID
+    case countryCode
+    case internationalPrefix
+    case mainCountryForCode
+    case nationalPrefix
+    case nationalPrefixFormattingRule
+    case nationalPrefixForParsing
+    case nationalPrefixTransformRule
+    case preferredExtnPrefix
+    case emergency
+    case fixedLine
+    case generalDesc
+    case mobile
+    case pager
+    case personalNumber
+    case premiumRate
+    case sharedCost
+    case tollFree
+    case voicemail
+    case voip
+    case uan
+    case numberFormats
+    case leadingDigits
+    case availableFormats
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+extension bLinkupSDK.MetadataPhoneNumberFormat {
+  public enum CodingKeys : Swift.String, Swift.CodingKey {
+    case pattern
+    case format
+    case intlFormat
+    case leadingDigitsPatterns
+    case nationalPrefixFormattingRule
+    case nationalPrefixOptionalWhenFormatting
+    case domesticCarrierCodeFormattingRule
+    public init?(rawValue: Swift.String)
+    public init?(stringValue: Swift.String)
+    public init?(intValue: Swift.Int)
+    public typealias RawValue = Swift.String
+    public var intValue: Swift.Int? {
+      get
+    }
+    public var rawValue: Swift.String {
+      get
+    }
+    public var stringValue: Swift.String {
+      get
+    }
+  }
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MetadataTerritory : Swift.Decodable {
+  public let codeID: Swift.String
+  public let countryCode: Swift.UInt64
+  public let internationalPrefix: Swift.String?
+  public let mainCountryForCode: Swift.Bool
+  public let nationalPrefix: Swift.String?
+  public let nationalPrefixFormattingRule: Swift.String?
+  public let nationalPrefixForParsing: Swift.String?
+  public let nationalPrefixTransformRule: Swift.String?
+  public let preferredExtnPrefix: Swift.String?
+  public let emergency: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let fixedLine: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let generalDesc: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let mobile: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let pager: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let personalNumber: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let premiumRate: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let sharedCost: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let tollFree: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let voicemail: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let voip: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let uan: bLinkupSDK.MetadataPhoneNumberDesc?
+  public let numberFormats: [bLinkupSDK.MetadataPhoneNumberFormat]
+  public let leadingDigits: Swift.String?
+}
+public struct MetadataPhoneNumberDesc : Swift.Decodable {
+  public let exampleNumber: Swift.String?
+  public let nationalNumberPattern: Swift.String?
+  public let possibleNumberPattern: Swift.String?
+  public let possibleLengths: bLinkupSDK.MetadataPossibleLengths?
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MetadataPossibleLengths : Swift.Decodable {
+  public init(from decoder: any Swift.Decoder) throws
+}
+public struct MetadataPhoneNumberFormat : Swift.Decodable {
+  public let pattern: Swift.String?
+  public let format: Swift.String?
+  public let intlFormat: Swift.String?
+  public let leadingDigitsPatterns: [Swift.String]?
+  public var nationalPrefixFormattingRule: Swift.String?
+  public let nationalPrefixOptionalWhenFormatting: Swift.Bool?
+  public let domesticCarrierCodeFormattingRule: Swift.String?
+}
+@_hasMissingDesignatedInitializers final public class PartialFormatter {
+  convenience public init(utility: bLinkupSDK.PhoneNumberUtility = PhoneNumberUtility(), defaultRegion: Swift.String = PhoneNumberUtility.defaultRegionCode(), withPrefix: Swift.Bool = true, maxDigits: Swift.Int? = nil, ignoreIntlNumbers: Swift.Bool = false)
+  final public var defaultRegion: Swift.String {
+    get
+    set
+  }
+  final public var maxDigits: Swift.Int?
+  final public var currentRegion: Swift.String {
+    get
+  }
+  final public func nationalNumber(from rawNumber: Swift.String) -> Swift.String
+  final public func formatPartial(_ rawNumber: Swift.String) -> Swift.String
+  @objc deinit
+}
+public struct PhoneNumber : Swift.Sendable {
+  public let numberString: Swift.String
+  public let countryCode: Swift.UInt64
+  public let leadingZero: Swift.Bool
+  public let nationalNumber: Swift.UInt64
+  public let numberExtension: Swift.String?
+  public let type: bLinkupSDK.PhoneNumberType
+  public let regionID: Swift.String?
+}
+extension bLinkupSDK.PhoneNumber : Swift.Equatable {
+  public static func == (lhs: bLinkupSDK.PhoneNumber, rhs: bLinkupSDK.PhoneNumber) -> Swift.Bool
+}
+extension bLinkupSDK.PhoneNumber : Swift.Hashable {
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension bLinkupSDK.PhoneNumber {
+  public static func notPhoneNumber() -> bLinkupSDK.PhoneNumber
+  public func notParsed() -> Swift.Bool
+  public var url: Foundation.URL? {
+    get
+  }
+}
+extension bLinkupSDK.PhoneNumber {
+  @available(*, unavailable, message: "use PhoneNumberUtility instead to produce PhoneNumbers")
+  public init(rawNumber: Swift.String) throws
+  @available(*, unavailable, message: "use PhoneNumberUtility instead to produce PhoneNumbers")
+  public init(rawNumber: Swift.String, region: Swift.String) throws
+}
+public enum PhoneNumberDecodingStrategy {
+  case properties
+  case e164
+  public static var `default`: bLinkupSDK.PhoneNumberDecodingStrategy
+  public static func == (a: bLinkupSDK.PhoneNumberDecodingStrategy, b: bLinkupSDK.PhoneNumberDecodingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PhoneNumberEncodingStrategy {
+  case properties
+  case e164
+  public static var `default`: bLinkupSDK.PhoneNumberEncodingStrategy
+  public static func == (a: bLinkupSDK.PhoneNumberEncodingStrategy, b: bLinkupSDK.PhoneNumberEncodingStrategy) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public typealias PhoneNumberUtilityProvider = () -> bLinkupSDK.PhoneNumberUtility
+public enum PhoneNumberDecodingUtils {
+  public static var defaultUtility: () -> bLinkupSDK.PhoneNumberUtility
+}
+public enum PhoneNumberEncodingUtils {
+  public static var defaultUtility: () -> bLinkupSDK.PhoneNumberUtility
+}
+extension Foundation.JSONDecoder {
+  public var phoneNumberDecodingStrategy: bLinkupSDK.PhoneNumberDecodingStrategy {
+    get
+    set
+  }
+  public var phoneNumberUtility: bLinkupSDK.PhoneNumberUtilityProvider {
+    get
+    set
+  }
+}
+extension Foundation.JSONEncoder {
+  public var phoneNumberEncodingStrategy: bLinkupSDK.PhoneNumberEncodingStrategy {
+    get
+    set
+  }
+  public var phoneNumberUtility: bLinkupSDK.PhoneNumberUtilityProvider {
+    get
+    set
+  }
+}
+extension bLinkupSDK.PhoneNumber : Swift.Codable {
+  public init(from decoder: any Swift.Decoder) throws
+  public func encode(to encoder: any Swift.Encoder) throws
+}
+extension Swift.CodingUserInfoKey {
+  public static let phoneNumberDecodingStrategy: Swift.CodingUserInfoKey
+  public static let phoneNumberEncodingStrategy: Swift.CodingUserInfoKey
+  public static let phoneNumberUtility: Swift.CodingUserInfoKey
+}
+@objc open class PhoneNumberFormatter : Foundation.Formatter {
+  final public let utility: bLinkupSDK.PhoneNumberUtility
+  @objc dynamic public var generatesPhoneNumber: Swift.Bool
+  @objc dynamic public var defaultRegion: Swift.String {
+    @objc get
+    @objc set
+  }
+  @objc dynamic public var withPrefix: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc dynamic public var currentRegion: Swift.String {
+    @objc get
+  }
+  public init(utility: bLinkupSDK.PhoneNumberUtility = PhoneNumberUtility(), defaultRegion: Swift.String = PhoneNumberUtility.defaultRegionCode(), withPrefix: Swift.Bool = true)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc deinit
+}
+extension bLinkupSDK.PhoneNumberFormatter {
+  @objc override dynamic open func string(for obj: Any?) -> Swift.String?
+  @objc override dynamic open func getObjectValue(_ obj: Swift.AutoreleasingUnsafeMutablePointer<Swift.AnyObject?>?, for string: Swift.String, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+  @objc override dynamic open func isPartialStringValid(_ partialStringPtr: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString>, proposedSelectedRange proposedSelRangePtr: Foundation.NSRangePointer?, originalString origString: Swift.String, originalSelectedRange origSelRange: Foundation.NSRange, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
+}
 public typealias MetadataCallback = () throws -> Foundation.Data?
 final public class PhoneNumberUtility {
   public init(metadataCallback: @escaping bLinkupSDK.MetadataCallback = defaultMetadataCallback)
@@ -577,60 +492,97 @@ public enum CountryCodePicker {
   public static var forceModalPresentation: Swift.Bool
   public static var alwaysShowsSearchBar: Swift.Bool
 }
-@objc open class PhoneNumberFormatter : Foundation.Formatter {
-  final public let utility: bLinkupSDK.PhoneNumberUtility
-  @objc dynamic public var generatesPhoneNumber: Swift.Bool
-  @objc dynamic public var defaultRegion: Swift.String {
-    @objc get
-    @objc set
-  }
-  @objc dynamic public var withPrefix: Swift.Bool {
-    @objc get
-    @objc set
-  }
-  @objc dynamic public var currentRegion: Swift.String {
-    @objc get
-  }
-  public init(utility: bLinkupSDK.PhoneNumberUtility = PhoneNumberUtility(), defaultRegion: Swift.String = PhoneNumberUtility.defaultRegionCode(), withPrefix: Swift.Bool = true)
-  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
-  @objc deinit
-}
-extension bLinkupSDK.PhoneNumberFormatter {
-  @objc override dynamic open func string(for obj: Any?) -> Swift.String?
-  @objc override dynamic open func getObjectValue(_ obj: Swift.AutoreleasingUnsafeMutablePointer<Swift.AnyObject?>?, for string: Swift.String, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
-  @objc override dynamic open func isPartialStringValid(_ partialStringPtr: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString>, proposedSelectedRange proposedSelRangePtr: Foundation.NSRangePointer?, originalString origString: Swift.String, originalSelectedRange origSelRange: Foundation.NSRange, errorDescription error: Swift.AutoreleasingUnsafeMutablePointer<Foundation.NSString?>?) -> Swift.Bool
-}
-
-
-
-public enum SpotType : Swift.Hashable {
-  case unknown, bar
-  public static func == (a: bLinkupSDK.SpotType, b: bLinkupSDK.SpotType) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public struct Spot : Swift.Identifiable, Swift.Hashable {
+public struct BlinkPoint : Swift.Identifiable, Swift.Hashable {
   public let id: Swift.String, name: Swift.String
-  public var type: bLinkupSDK.SpotType?
-  public var latitude: Swift.Double?, longitude: Swift.Double?
-  public var address: Swift.String?
-  public var regionId: Swift.String?
-  public var region: bLinkupSDK.SpotRegion?
+  public let promoURL: Swift.String?
+  public let x: Swift.Double, y: Swift.Double
+  public let placeId: Swift.String?
+  public let hasSpot: Swift.Bool?
+  public let spotId: Swift.String?
   public var promotion: Swift.String?
+  public var location: Swift.String?
   public var invitable: Swift.Bool
-  public var blinkpointId: Swift.String?
   public var inviteCount: Swift.Int?
   public var deal: bLinkupSDK.Deal?
   public var dealStats: bLinkupSDK.DealStats?
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.Spot, b: bLinkupSDK.Spot) -> Swift.Bool
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
+  public static func == (a: bLinkupSDK.BlinkPoint, b: bLinkupSDK.BlinkPoint) -> Swift.Bool
   public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
+}
+public struct Block : Swift.Identifiable {
+  public let id: Swift.String
+  public let blocker: bLinkupSDK.User, blockee: bLinkupSDK.User
+  public var insertedAt: Swift.String?
+  public init(id: Swift.String, blocker: bLinkupSDK.User, blockee: bLinkupSDK.User, insertedAt: Swift.String? = nil)
+  public typealias ID = Swift.String
+}
+public class Branding : Combine.ObservableObject, Swift.Hashable, Swift.Equatable {
+  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil, background: Swift.String? = nil)
+  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil, background: Swift.String? = nil)
+  public func hash(into hasher: inout Swift.Hasher)
+  public static func == (lhs: bLinkupSDK.Branding, rhs: bLinkupSDK.Branding) -> Swift.Bool
+  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
+  @objc deinit
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Connection : Swift.Identifiable, Swift.Hashable {
+  public enum Status : Swift.String, Swift.Hashable {
+    case unknown, connected
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public let id: Swift.String
+  public let status: bLinkupSDK.Connection.Status
+  public let sourceUser: bLinkupSDK.User, targetUser: bLinkupSDK.User
+  public let opponent: bLinkupSDK.User
+  public let income: Swift.Bool
+  public static func == (a: bLinkupSDK.Connection, b: bLinkupSDK.Connection) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ConnectionRequest : Swift.Identifiable {
+  public let id: Swift.String
+  public let source: bLinkupSDK.User, target: bLinkupSDK.User
+  public let opponent: bLinkupSDK.User
+  public let income: Swift.Bool
+  public typealias ID = Swift.String
+}
+public typealias ContactResult = bLinkupSDK.Contact
+public struct Contact : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
+  public var id: Swift.String {
+    get
+  }
+  public let phone: Swift.String
+  public let name: Swift.String
+  public let userId: Swift.String?
+  public let dbName: Swift.String?
+  public init(phone: Swift.String, name: Swift.String, userId: Swift.String?, dbName: Swift.String? = nil)
+  public func asUser() -> bLinkupSDK.User?
+  public static func == (a: bLinkupSDK.Contact, b: bLinkupSDK.Contact) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Customer : Swift.Codable, Swift.Equatable {
+  public let id: Swift.String
+  public var name: Swift.String?
+  public init(id: Swift.String, name: Swift.String? = nil)
+  public static func == (lhs: bLinkupSDK.Customer, rhs: bLinkupSDK.Customer) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
+  public init(from decoder: any Swift.Decoder) throws
 }
 @_hasMissingDesignatedInitializers public class Deal : Swift.Identifiable, Swift.Hashable {
   public enum DealStatus : Swift.String {
@@ -657,76 +609,145 @@ public struct Spot : Swift.Identifiable, Swift.Hashable {
   final public let spot: bLinkupSDK.Spot?
   public static func == (lhs: bLinkupSDK.Deal, rhs: bLinkupSDK.Deal) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
   public typealias ID = Swift.String
   @objc deinit
   public var hashValue: Swift.Int {
     get
   }
 }
-
-
-public struct BlinkPoint : Swift.Identifiable, Swift.Hashable {
-  public let id: Swift.String, name: Swift.String
-  public let promoURL: Swift.String?
-  public let x: Swift.Double, y: Swift.Double
-  public let placeId: Swift.String?
-  public let hasSpot: Swift.Bool?
-  public let spotId: Swift.String?
-  public var promotion: Swift.String?
-  public var invitable: Swift.Bool
-  public var inviteCount: Swift.Int?
-  public var deal: bLinkupSDK.Deal?
-  public var dealStats: bLinkupSDK.DealStats?
+public struct DealStats : Swift.Codable, Swift.Hashable {
+  public let current: Swift.Int, goal: Swift.Int
+  public static func == (a: bLinkupSDK.DealStats, b: bLinkupSDK.DealStats) -> Swift.Bool
+  public func encode(to encoder: any Swift.Encoder) throws
   public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.BlinkPoint, b: bLinkupSDK.BlinkPoint) -> Swift.Bool
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
   public var hashValue: Swift.Int {
     get
   }
-}
-
-
-
-
-
-
-
-
-
-public struct SpotInvite : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
-  public var id: Swift.String
-  public let source: bLinkupSDK.User, target: bLinkupSDK.User, opponent: bLinkupSDK.User
-  public let income: Swift.Bool
-  public let spot: bLinkupSDK.Spot
-  public var redemptionUrl: Swift.String?
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.SpotInvite, b: bLinkupSDK.SpotInvite) -> Swift.Bool
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-
-
-public struct Place : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
-  public let id: Swift.String, name: Swift.String
-  public let mapURL: Swift.String?, geofence: Swift.String?
-  public let latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double
-  public let blinkpoints: [bLinkupSDK.BlinkPoint]?
-  public init(id: Swift.String, name: Swift.String, mapURL: Swift.String? = nil, geofence: Swift.String? = nil, latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double, blinkpoints: [bLinkupSDK.BlinkPoint]? = nil)
-  public static func == (a: bLinkupSDK.Place, b: bLinkupSDK.Place) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
-  public var hashValue: Swift.Int {
-    get
-  }
+  public init(from decoder: any Swift.Decoder) throws
 }
 public typealias Completion<E> = (Swift.Result<E, any Swift.Error>) -> Swift.Void
-
+public struct Draw : Swift.Identifiable, Swift.Hashable {
+  public struct Prize : Swift.Hashable {
+    public let name: Swift.String
+    public let description: Swift.String?
+    public static func == (a: bLinkupSDK.Draw.Prize, b: bLinkupSDK.Draw.Prize) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct Winner : Swift.Hashable {
+    public let user: bLinkupSDK.User
+    public let claimUrl: Swift.String?
+    public static func == (a: bLinkupSDK.Draw.Winner, b: bLinkupSDK.Draw.Winner) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public struct Leaderboard : Swift.Hashable {
+    public let me: bLinkupSDK.LeaderboardItem?
+    public let target: bLinkupSDK.LeaderboardItem?
+    public let userCount: Swift.Int?
+    public static func == (a: bLinkupSDK.Draw.Leaderboard, b: bLinkupSDK.Draw.Leaderboard) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let id: Swift.String
+  public let activation: bLinkupSDK.DrawActivation
+  public let event: bLinkupSDK.DrawEvent?
+  public let prize: bLinkupSDK.Draw.Prize?
+  public let winner: bLinkupSDK.Draw.Winner?
+  public let leaderboard: bLinkupSDK.Draw.Leaderboard?
+  public let seasonName: Swift.String?
+  public let scheduledAt: Foundation.Date?
+  public let triggeredAt: Foundation.Date?
+  public var isSeasonRewards: Swift.Bool {
+    get
+  }
+  public var isDirectWinLeaderboard: Swift.Bool {
+    get
+  }
+  public var entryPoolSize: Swift.Int? {
+    get
+  }
+  public func isAvailableAtSpot(_ spotId: Swift.String?) -> Swift.Bool
+  public static func == (a: bLinkupSDK.Draw, b: bLinkupSDK.Draw) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct DrawActivation : Swift.Hashable {
+  public let type: Swift.String
+  public let name: Swift.String
+  public let instructions: Swift.String?
+  public let shortInstructions: Swift.String?
+  public let maxWinners: Swift.Int?
+  public let winnerSelectionMethod: Swift.String?
+  public let placeSelection: Swift.String?
+  public let spotSelection: Swift.String?
+  public let spotIds: [Swift.String]?
+  public let sponsor: bLinkupSDK.Sponsor?
+  public var headerImageUrl: Swift.String?
+  public var byUsageConfig: bLinkupSDK.ByUsageConfig?
+  public var byUsageTwoStepRandomConfig: bLinkupSDK.ByUsageTwoStepRandomConfig?
+  public static let typeSeasonRewards: Swift.String
+  public static let selectionFirstN: Swift.String
+  public static let selectionByUsage: Swift.String
+  public static let selectionByUsageTwoStepRandom: Swift.String
+  public static let selectionAll: Swift.String
+  public static let selectionSpecific: Swift.String
+  public static func == (a: bLinkupSDK.DrawActivation, b: bLinkupSDK.DrawActivation) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ByUsageConfig : Swift.Hashable {
+  public let placePresencePoints: Swift.Int?
+  public let featuredSpotPresencePoints: Swift.Int?
+  public let spotPresencePoints: Swift.Int?
+  public static func == (a: bLinkupSDK.ByUsageConfig, b: bLinkupSDK.ByUsageConfig) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct ByUsageTwoStepRandomConfig : Swift.Hashable {
+  public let eligiblePoolSize: Swift.Int?
+  public static func == (a: bLinkupSDK.ByUsageTwoStepRandomConfig, b: bLinkupSDK.ByUsageTwoStepRandomConfig) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct DrawEvent : Swift.Hashable {
+  public let id: Swift.String?
+  public let name: Swift.String
+  public let shortName: Swift.String?
+  public let kind: Swift.String?
+  public let startsAt: Foundation.Date?
+  public let promotionStartsAt: Foundation.Date?
+  public static func == (a: bLinkupSDK.DrawEvent, b: bLinkupSDK.DrawEvent) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct LeaderboardItem : Swift.Hashable {
+  public let ranking: Swift.Int
+  public let totalPoints: Swift.Int
+  public let user: bLinkupSDK.User
+  public static func == (a: bLinkupSDK.LeaderboardItem, b: bLinkupSDK.LeaderboardItem) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public class Localization : Swift.Codable {
   public static var shared: bLinkupSDK.Localization {
     get
@@ -741,14 +762,192 @@ public class Localization : Swift.Codable {
   public func encode(to encoder: any Swift.Encoder) throws
   required public init(from decoder: any Swift.Decoder) throws
 }
-@_Concurrency.MainActor @preconcurrency public struct Redeem3ActionSheet : SwiftUICore.View {
+public enum NextLoginStep {
+  case loginWithCode(_: Swift.String)
+  case registerWithCode(_: Swift.String)
+}
+public struct Place : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
+  public let id: Swift.String, name: Swift.String
+  public let mapURL: Swift.String?, geofence: Swift.String?
+  public let latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double
+  public let blinkpoints: [bLinkupSDK.BlinkPoint]?
+  public init(id: Swift.String, name: Swift.String, mapURL: Swift.String? = nil, geofence: Swift.String? = nil, latitude: Swift.Double, longitude: Swift.Double, radius: Swift.Double, blinkpoints: [bLinkupSDK.BlinkPoint]? = nil)
+  public static func == (a: bLinkupSDK.Place, b: bLinkupSDK.Place) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum PresencePoint {
+  case place(Swift.String)
+  case spot(Swift.String)
+}
+public struct Presence : Swift.Identifiable {
+  public enum Confidence {
+    case unknown, weak, strong, manual
+    public static func == (a: bLinkupSDK.Presence.Confidence, b: bLinkupSDK.Presence.Confidence) -> Swift.Bool
+    public func hash(into hasher: inout Swift.Hasher)
+    public var hashValue: Swift.Int {
+      get
+    }
+  }
+  public let id: Swift.String
+  public let user: bLinkupSDK.User
+  public let place: bLinkupSDK.Place?
+  public let spot: bLinkupSDK.Spot?
+  public let isPresent: Swift.Bool
+  public let insertedAt: Swift.String?
+  public init(id: Swift.String, user: bLinkupSDK.User, place: bLinkupSDK.Place?, spot: bLinkupSDK.Spot?, isPresent: Swift.Bool, insertedAt: Swift.String? = nil)
+  public typealias ID = Swift.String
+}
+extension bLinkupSDK.Presence : Swift.Equatable, Swift.Hashable {
+  public static func == (a: bLinkupSDK.Presence, b: bLinkupSDK.Presence) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Season : Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String
+  public let name: Swift.String
+  public let isCurrent: Swift.Bool
+  public let visits: [bLinkupSDK.SeasonVisit]?
+  public static func == (a: bLinkupSDK.Season, b: bLinkupSDK.Season) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SeasonVisit : Swift.Hashable {
+  public let event: bLinkupSDK.DrawEvent?
+  public let type: Swift.String
+  public static let typePlace: Swift.String
+  public static let typeSpot: Swift.String
+  public static let typeOfficialWatchParty: Swift.String
+  public static let typeMissed: Swift.String
+  public static let typeFuture: Swift.String
+  public static func == (a: bLinkupSDK.SeasonVisit, b: bLinkupSDK.SeasonVisit) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SpotType : Swift.Hashable {
+  case unknown, bar
+  public static func == (a: bLinkupSDK.SpotType, b: bLinkupSDK.SpotType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Sponsor : Swift.Hashable {
+  public var logoUrl: Swift.String?
+  public var primaryColor: Swift.String?
+  public var secondaryColor: Swift.String?
+  public static func == (a: bLinkupSDK.Sponsor, b: bLinkupSDK.Sponsor) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct Spot : Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String, name: Swift.String
+  public var type: bLinkupSDK.SpotType?
+  public var latitude: Swift.Double?, longitude: Swift.Double?
+  public var address: Swift.String?
+  public var regionId: Swift.String?
+  public var region: bLinkupSDK.SpotRegion?
+  public var promotion: Swift.String?
+  public var invitable: Swift.Bool
+  public var blinkpointId: Swift.String?
+  public var isFeatured: Swift.Bool
+  public var priceRange: Swift.String?
+  public var radius: Swift.Int?
+  public var sponsor: bLinkupSDK.Sponsor?
+  public var updatedAt: Foundation.Date?
+  public var upvoteCount: Swift.Int?
+  public var upvotedByMe: Swift.Bool?
+  public var usersPresent: Swift.Int?
+  public var website: Swift.String?
+  public var inviteCount: Swift.Int?
+  public var deal: bLinkupSDK.Deal?
+  public var dealStats: bLinkupSDK.DealStats?
+  public static func == (a: bLinkupSDK.Spot, b: bLinkupSDK.Spot) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SpotInvite : Swift.Identifiable, Swift.Hashable, Swift.Equatable {
+  public var id: Swift.String
+  public let source: bLinkupSDK.User, target: bLinkupSDK.User, opponent: bLinkupSDK.User
+  public let income: Swift.Bool
+  public let spot: bLinkupSDK.Spot
+  public var redemptionUrl: Swift.String?
+  public static func == (a: bLinkupSDK.SpotInvite, b: bLinkupSDK.SpotInvite) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct SpotRegion {
+  public let id: Swift.String, name: Swift.String
+  public let latitude: Swift.Double?, longitude: Swift.Double?, radius: Swift.Double?
+  public let isDefault: Swift.Bool?
+}
+extension bLinkupSDK.SpotRegion : Swift.Identifiable, Swift.Hashable {
+  public static func == (a: bLinkupSDK.SpotRegion, b: bLinkupSDK.SpotRegion) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct User : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
+  public let id: Swift.String
+  public let name: Swift.String?
+  public let phoneNumber: Swift.String?
+  public let emailAddress: Swift.String?
+  public let type: bLinkupSDK.UserType?
+  public var presence: bLinkupSDK.Place?
+  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String? = nil, emailAddress: Swift.String? = nil, type: bLinkupSDK.UserType? = nil, presence: bLinkupSDK.Place? = nil)
+  public static func == (a: bLinkupSDK.User, b: bLinkupSDK.User) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum UserType : Swift.String, Swift.Hashable {
+  case unknown, normal, mascot
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+
+
+
+
+
+
+
+public typealias BlinkupRootScreen = bLinkupSDK.Root4Screen
+@_Concurrency.MainActor @preconcurrency public struct Root4Screen : SwiftUICore.View {
+  @_Concurrency.MainActor @preconcurrency public init(token: Swift.String, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
+  @_Concurrency.MainActor @preconcurrency public init(customer: bLinkupSDK.Customer, branding: bLinkupSDK.Branding, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
   @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
     get
   }
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK18Redeem3ActionSheetV4bodyQrvp", 0) __
+  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK11Root4ScreenV4bodyQrvp", 0) __
 }
-@available(iOS 16.0.0, *)
+
+@available(iOS 17.0.0, *)
 public let kBUILD: Swift.String
 public enum Direction : Swift.String, Swift.Decodable {
   case incoming, outgoing
@@ -820,139 +1019,54 @@ public enum Direction : Swift.String, Swift.Decodable {
   public static func getSpots(regionId: Swift.String? = nil) async throws -> [bLinkupSDK.Spot]
   public static func getSpot(_ id: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Spot>)
   public static func getSpot(_ id: Swift.String) async throws -> bLinkupSDK.Spot
-  public static func getFriendsAtPlace(_ place: bLinkupSDK.Place, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Presence]>)
-  public static func getFriendsAtPlace(_ place: bLinkupSDK.Place) async throws -> [bLinkupSDK.Presence]
+  public static func getFriends(at point: bLinkupSDK.PresencePoint, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Presence]>)
+  public static func getFriendsAtPlace(at point: bLinkupSDK.PresencePoint) async throws -> [bLinkupSDK.Presence]
   public static func getMyPresences(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Presence]>)
   public static func getMyPresences() async throws -> [bLinkupSDK.Presence]
-  public static func isUserAtEvent(_ place: bLinkupSDK.Place, completion: @escaping bLinkupSDK.Completion<Swift.Bool>)
-  public static func isUserAtEvent(_ place: bLinkupSDK.Place) async throws -> Swift.Bool
-  public static func setUserAtEvent(_ presence: Swift.Bool, at place: bLinkupSDK.Place, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Presence>)
-  public static func setUserAtEvent(_ presence: Swift.Bool, at place: bLinkupSDK.Place) async throws -> bLinkupSDK.Presence
+  public static func isUser(at point: bLinkupSDK.PresencePoint, completion: @escaping bLinkupSDK.Completion<Swift.Bool>)
+  public static func isUser(at point: bLinkupSDK.PresencePoint) async throws -> Swift.Bool
+  public static func setUserPresence(_ presence: Swift.Bool, at point: bLinkupSDK.PresencePoint, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Presence>)
+  public static func setUserPresence(_ presence: Swift.Bool, at point: bLinkupSDK.PresencePoint) async throws -> bLinkupSDK.Presence
   public static func getInvites(active: Swift.Bool? = nil, direction: bLinkupSDK.Direction? = nil, spotId: Swift.String? = nil, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.SpotInvite]>)
   public static func getInvites(active: Swift.Bool? = nil, direction: bLinkupSDK.Direction? = nil, spotId: Swift.String? = nil) async throws -> [bLinkupSDK.SpotInvite]
   public static func sendInvite(spotId: Swift.String, userId: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.SpotInvite>)
   public static func sendInvite(spotId: Swift.String, userId: Swift.String) async throws -> bLinkupSDK.SpotInvite
   public static func sendInvite(spotId: Swift.String, phoneNumbers: [Swift.String], completion: @escaping bLinkupSDK.Completion<bLinkupSDK.SpotInvite>)
   public static func sendInvite(spotId: Swift.String, phoneNumbers: [Swift.String]) async throws -> bLinkupSDK.SpotInvite
-  public static func getRedemables(active: Swift.Bool? = nil, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Deal]>)
-  public static func getRedemables(active: Swift.Bool? = nil) async throws -> [bLinkupSDK.Deal]
+  public static func getRedeemables(active: Swift.Bool? = nil, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Deal]>)
+  public static func getRedeemables(active: Swift.Bool? = nil) async throws -> [bLinkupSDK.Deal]
   public static func redeem(_ id: Swift.String, spotId: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Deal>)
   public static func redeem(_ id: Swift.String, spotId: Swift.String) async throws -> bLinkupSDK.Deal
+  public static func getDraws(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Draw]>)
+  public static func getDraws() async throws -> [bLinkupSDK.Draw]
+  public static func getWonDraws(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Draw]>)
+  public static func getWonDraws() async throws -> [bLinkupSDK.Draw]
   public static func getBlocks(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Block]>)
   public static func getBlocks() async throws -> [bLinkupSDK.Block]
   public static func blockUser(_ user: bLinkupSDK.User, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Block>)
   public static func blockUser(_ user: bLinkupSDK.User) async throws -> bLinkupSDK.Block
   public static func deleteBlock(_ block: bLinkupSDK.Block, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
   public static func deleteBlock(_ block: bLinkupSDK.Block) async throws
-  @discardableResult
-  public static func addGeofencingObserver(_ observer: @escaping bLinkupSDK.GeoObserver) -> any Combine.Cancellable
-  public static func removeTrackingObserver(id: Swift.String)
-  public static func updateTrackingEvents()
   @objc deinit
 }
-public class Branding : Combine.ObservableObject, Swift.Hashable, Swift.Equatable {
-  public init(primary: UIKit.UIColor? = nil, secondary: UIKit.UIColor? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil, background: Swift.String? = nil)
-  public init(primaryHEX: Swift.String? = nil, secondaryHEX: Swift.String? = nil, fontName: Swift.String? = nil, logo: Swift.String? = nil, logoURL: Swift.String? = nil, name customerName: Swift.String? = nil, title: Swift.String? = nil, mapTabTitle: Swift.String? = nil, arenaTabTitle: Swift.String? = nil, shareMessage: Swift.String? = nil, inviteMessage: Swift.String? = nil, appUrl: Swift.String? = nil, background: Swift.String? = nil)
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (lhs: bLinkupSDK.Branding, rhs: bLinkupSDK.Branding) -> Swift.Bool
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
-  @objc deinit
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-
-public typealias GeoObserver = ([bLinkupSDK.Presence]) -> ()
 public struct GeoPoint {
   public let name: Swift.String
   public let x: Swift.Double, y: Swift.Double, r: Swift.Double
   public init(name: Swift.String, x: Swift.Double, y: Swift.Double, r: Swift.Double)
 }
-
-
-public struct Block : Swift.Identifiable {
-  public let id: Swift.String
-  public let blocker: bLinkupSDK.User, blockee: bLinkupSDK.User
-  public var insertedAt: Swift.String?
-  public init(id: Swift.String, blocker: bLinkupSDK.User, blockee: bLinkupSDK.User, insertedAt: Swift.String? = nil)
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
+extension bLinkupSDK.bLinkup {
+  public static func resendCode(completion: @escaping bLinkupSDK.Completion<bLinkupSDK.NextLoginStep>)
+  @discardableResult
+  public static func resendCode() async throws -> bLinkupSDK.NextLoginStep
+  public static func getDrawLeaderboardSections(_ drawId: Swift.String, completion: @escaping bLinkupSDK.Completion<[[bLinkupSDK.LeaderboardItem]]>)
+  public static func getDrawLeaderboardSections(_ drawId: Swift.String) async throws -> [[bLinkupSDK.LeaderboardItem]]
+  public static func getSeasons(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Season]>)
+  public static func getSeasons() async throws -> [bLinkupSDK.Season]
+  public static func getSeason(_ id: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Season>)
+  public static func getSeason(_ id: Swift.String) async throws -> bLinkupSDK.Season
+  public static func getTutorial(completion: @escaping bLinkupSDK.Completion<Swift.String>)
+  public static func getTutorial() async throws -> Swift.String
 }
-public struct Connection : Swift.Identifiable, Swift.Hashable {
-  public enum Status : Swift.String, Swift.Hashable {
-    case unknown, connected
-    public init?(rawValue: Swift.String)
-    public typealias RawValue = Swift.String
-    public var rawValue: Swift.String {
-      get
-    }
-  }
-  public let id: Swift.String
-  public let status: bLinkupSDK.Connection.Status
-  public let sourceUser: bLinkupSDK.User, targetUser: bLinkupSDK.User
-  public let opponent: bLinkupSDK.User
-  public let income: Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.Connection, b: bLinkupSDK.Connection) -> Swift.Bool
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-public typealias BlinkupRootScreen = bLinkupSDK.Root3Screen
-@_Concurrency.MainActor @preconcurrency public struct Root3Screen : SwiftUICore.View {
-  @_Concurrency.MainActor @preconcurrency public init(token: Swift.String, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
-  @_Concurrency.MainActor @preconcurrency public init(customer: bLinkupSDK.Customer, branding: bLinkupSDK.Branding, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
-  @_Concurrency.MainActor @preconcurrency public var body: some SwiftUICore.View {
-    get
-  }
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias Body = @_opaqueReturnTypeOf("$s10bLinkupSDK11Root3ScreenV4bodyQrvp", 0) __
-}
-
-
-public struct SpotRegion {
-  public let id: Swift.String, name: Swift.String
-  public let latitude: Swift.Double?, longitude: Swift.Double?, radius: Swift.Double?
-  public let isDefault: Swift.Bool?
-}
-extension bLinkupSDK.SpotRegion : Swift.Identifiable, Swift.Hashable {
-  public func hash(into hasher: inout Swift.Hasher)
-  public static func == (a: bLinkupSDK.SpotRegion, b: bLinkupSDK.SpotRegion) -> Swift.Bool
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-
-public struct User : Swift.Identifiable, Swift.Equatable, Swift.Hashable {
-  public let id: Swift.String
-  public let name: Swift.String?
-  public let phoneNumber: Swift.String?
-  public let emailAddress: Swift.String?
-  public let type: bLinkupSDK.UserType?
-  public var presence: bLinkupSDK.Place?
-  public init(id: Swift.String, name: Swift.String?, phoneNumber: Swift.String? = nil, emailAddress: Swift.String? = nil, type: bLinkupSDK.UserType? = nil, presence: bLinkupSDK.Place? = nil)
-  public static func == (a: bLinkupSDK.User, b: bLinkupSDK.User) -> Swift.Bool
-  public func hash(into hasher: inout Swift.Hasher)
-  @available(iOS 13.0, tvOS 13.0, watchOS 6.0, macOS 10.15, *)
-  public typealias ID = Swift.String
-  public var hashValue: Swift.Int {
-    get
-  }
-}
-
-extension bLinkupSDK.Presence.Confidence : Swift.Equatable {}
-extension bLinkupSDK.Presence.Confidence : Swift.Hashable {}
-extension bLinkupSDK.UserType : Swift.RawRepresentable {}
-extension bLinkupSDK.GeofenceTrack : Combine.Cancellable {}
-extension bLinkupSDK.PhoneNumberDecodingStrategy : Swift.Equatable {}
-extension bLinkupSDK.PhoneNumberDecodingStrategy : Swift.Hashable {}
-extension bLinkupSDK.PhoneNumberEncodingStrategy : Swift.Equatable {}
-extension bLinkupSDK.PhoneNumberEncodingStrategy : Swift.Hashable {}
 extension bLinkupSDK.PhoneNumberFormat : Swift.Equatable {}
 extension bLinkupSDK.PhoneNumberFormat : Swift.Hashable {}
 extension bLinkupSDK.PhoneNumberFormat : Swift.RawRepresentable {}
@@ -968,15 +1082,21 @@ extension bLinkupSDK.MetadataTerritory.CodingKeys : Swift.RawRepresentable {}
 extension bLinkupSDK.MetadataPhoneNumberFormat.CodingKeys : Swift.Equatable {}
 extension bLinkupSDK.MetadataPhoneNumberFormat.CodingKeys : Swift.Hashable {}
 extension bLinkupSDK.MetadataPhoneNumberFormat.CodingKeys : Swift.RawRepresentable {}
+extension bLinkupSDK.PhoneNumberDecodingStrategy : Swift.Equatable {}
+extension bLinkupSDK.PhoneNumberDecodingStrategy : Swift.Hashable {}
+extension bLinkupSDK.PhoneNumberEncodingStrategy : Swift.Equatable {}
+extension bLinkupSDK.PhoneNumberEncodingStrategy : Swift.Hashable {}
+extension bLinkupSDK.Presence.Confidence : Swift.Equatable {}
+extension bLinkupSDK.Presence.Confidence : Swift.Hashable {}
+extension bLinkupSDK.Connection.Status : Swift.RawRepresentable {}
 extension bLinkupSDK.Deal.DealStatus : Swift.Equatable {}
 extension bLinkupSDK.Deal.DealStatus : Swift.Hashable {}
 extension bLinkupSDK.Deal.DealStatus : Swift.RawRepresentable {}
 extension bLinkupSDK.Deal.DealType : Swift.Equatable {}
 extension bLinkupSDK.Deal.DealType : Swift.Hashable {}
 extension bLinkupSDK.Deal.DealType : Swift.RawRepresentable {}
-extension bLinkupSDK.Redeem3ActionSheet : Swift.Sendable {}
+extension bLinkupSDK.UserType : Swift.RawRepresentable {}
+extension bLinkupSDK.Root4Screen : Swift.Sendable {}
 extension bLinkupSDK.Direction : Swift.Equatable {}
 extension bLinkupSDK.Direction : Swift.Hashable {}
 extension bLinkupSDK.Direction : Swift.RawRepresentable {}
-extension bLinkupSDK.Connection.Status : Swift.RawRepresentable {}
-extension bLinkupSDK.Root3Screen : Swift.Sendable {}
