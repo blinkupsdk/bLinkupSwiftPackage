@@ -34026,33 +34026,6 @@
       },
       {
         "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "bLinkupSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
-        "declKind": "Import",
-        "moduleName": "bLinkupSDK"
-      },
-      {
-        "kind": "Import",
-        "name": "Foundation",
-        "printedName": "Foundation",
-        "declKind": "Import",
-        "moduleName": "bLinkupSDK",
-        "declAttributes": [
-          "RawDocComment"
-        ]
-      },
-      {
-        "kind": "Import",
         "name": "MapKit",
         "printedName": "MapKit",
         "declKind": "Import",
@@ -43185,28 +43158,7 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Network\/LocalSDKConfig.swift",
       "kind": "Array",
-      "offset": 751,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Network\/LocalSDKConfig.swift",
-      "kind": "Array",
-      "offset": 787,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Network\/LocalSDKConfig.swift",
-      "kind": "Array",
-      "offset": 1100,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Network\/LocalSDKConfig.swift",
-      "kind": "Array",
-      "offset": 1167,
+      "offset": 728,
       "length": 2,
       "value": "[]"
     },
@@ -43813,13 +43765,6 @@
       "value": "0.7"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Models\/ActivationsModels.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1589,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/BarDetailScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 902,
@@ -44249,7 +44194,7 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
       "kind": "BooleanLiteral",
-      "offset": 11300,
+      "offset": 11805,
       "length": 5,
       "value": "false"
     },
@@ -44405,7 +44350,7 @@
       "kind": "StringLiteral",
       "offset": 260,
       "length": 5,
-      "value": "\"203\""
+      "value": "\"204\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/bLinkup.swift",
