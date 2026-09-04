@@ -2,9 +2,12 @@
 // swift-compiler-version: Apple Swift version 6.3.3 effective-5.10 (swiftlang-6.3.3.1.3 clang-2100.1.1.101)
 // swift-module-flags: -target x86_64-apple-ios17.6-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -O -enable-experimental-feature DebugDescriptionMacro -enable-bare-slash-regex -module-name bLinkupSDK
 // swift-module-flags-ignorable:  -formal-cxx-interoperability-mode=off -interface-compiler-version 6.3.3
+import CoreImage.CIFilterBuiltins
 import Combine
 import CommonCrypto
 import Contacts
+import CoreBluetooth
+import CoreImage
 import CoreLocation
 import CryptoKit
 import DeveloperToolsSupport
@@ -639,6 +642,7 @@ public struct Draw : Swift.Identifiable, Swift.Hashable {
   public struct Winner : Swift.Hashable {
     public let user: bLinkupSDK.User
     public let claimUrl: Swift.String?
+    public let isMe: Swift.Bool?
     public static func == (a: bLinkupSDK.Draw.Winner, b: bLinkupSDK.Draw.Winner) -> Swift.Bool
     public func hash(into hasher: inout Swift.Hasher)
     public var hashValue: Swift.Int {
@@ -664,6 +668,17 @@ public struct Draw : Swift.Identifiable, Swift.Hashable {
   public let seasonName: Swift.String?
   public let scheduledAt: Foundation.Date?
   public let triggeredAt: Foundation.Date?
+  public let isVisible: Swift.Bool
+  public var homeWatchpartyConfig: bLinkupSDK.HomeWatchpartyConfig? {
+    get
+  }
+  public var isHomeWatchparty: Swift.Bool {
+    get
+  }
+  public var isEnterableByParty: Swift.Bool {
+    get
+  }
+  public func isWonBy(_ userId: Swift.String?) -> Swift.Bool
   public var isSeasonRewards: Swift.Bool {
     get
   }
@@ -695,7 +710,10 @@ public struct DrawActivation : Swift.Hashable {
   public var headerImageUrl: Swift.String?
   public var byUsageConfig: bLinkupSDK.ByUsageConfig?
   public var byUsageTwoStepRandomConfig: bLinkupSDK.ByUsageTwoStepRandomConfig?
+  public var homeWatchpartyConfig: bLinkupSDK.HomeWatchpartyConfig?
+  public var includesWatchparties: Swift.Bool?
   public static let typeSeasonRewards: Swift.String
+  public static let typeHomeWatchparty: Swift.String
   public static let selectionFirstN: Swift.String
   public static let selectionByUsage: Swift.String
   public static let selectionByUsageTwoStepRandom: Swift.String
@@ -711,6 +729,7 @@ public struct ByUsageConfig : Swift.Hashable {
   public let placePresencePoints: Swift.Int?
   public let featuredSpotPresencePoints: Swift.Int?
   public let spotPresencePoints: Swift.Int?
+  public let watchpartyPresencePoints: Swift.Int?
   public static func == (a: bLinkupSDK.ByUsageConfig, b: bLinkupSDK.ByUsageConfig) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -720,6 +739,16 @@ public struct ByUsageConfig : Swift.Hashable {
 public struct ByUsageTwoStepRandomConfig : Swift.Hashable {
   public let eligiblePoolSize: Swift.Int?
   public static func == (a: bLinkupSDK.ByUsageTwoStepRandomConfig, b: bLinkupSDK.ByUsageTwoStepRandomConfig) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HomeWatchpartyConfig : Swift.Hashable {
+  public let minGroupSize: Swift.Int?
+  public let maxWinningGroups: Swift.Int?
+  public init(minGroupSize: Swift.Int?, maxWinningGroups: Swift.Int?)
+  public static func == (a: bLinkupSDK.HomeWatchpartyConfig, b: bLinkupSDK.HomeWatchpartyConfig) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -743,6 +772,195 @@ public struct LeaderboardItem : Swift.Hashable {
   public let totalPoints: Swift.Int
   public let user: bLinkupSDK.User
   public static func == (a: bLinkupSDK.LeaderboardItem, b: bLinkupSDK.LeaderboardItem) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum HousePartyApprovalMode : Swift.String, Swift.Codable, Swift.Hashable {
+  case auto
+  case manual
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HousePartyStatus : Swift.String, Swift.Codable, Swift.Hashable {
+  case open, closed
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HousePartyMemberStatus : Swift.String, Swift.Codable, Swift.Hashable {
+  case pending
+  case member
+  case left
+  case rejected
+  case expired
+  case banned
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public enum HousePartyRole : Swift.String, Swift.Codable, Swift.Hashable {
+  case host, member
+  case unknown
+  public init?(rawValue: Swift.String)
+  public typealias RawValue = Swift.String
+  public var rawValue: Swift.String {
+    get
+  }
+}
+public struct HousePartyMember : Swift.Identifiable, Swift.Hashable {
+  public var id: Swift.String {
+    get
+  }
+  public let user: bLinkupSDK.User
+  public let role: bLinkupSDK.HousePartyRole
+  public let status: bLinkupSDK.HousePartyMemberStatus
+  public let joinedAt: Foundation.Date?
+  public let requestedAt: Foundation.Date?
+  public var isHost: Swift.Bool {
+    get
+  }
+  public var isPending: Swift.Bool {
+    get
+  }
+  public init(user: bLinkupSDK.User, role: bLinkupSDK.HousePartyRole, status: bLinkupSDK.HousePartyMemberStatus, joinedAt: Foundation.Date? = nil, requestedAt: Foundation.Date? = nil)
+  public static func == (a: bLinkupSDK.HousePartyMember, b: bLinkupSDK.HousePartyMember) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HouseParty : Swift.Identifiable, Swift.Hashable {
+  public let id: Swift.String
+  public let code: Swift.String
+  public let name: Swift.String?
+  public let eventId: Swift.String
+  public let approvalMode: bLinkupSDK.HousePartyApprovalMode
+  public let status: bLinkupSDK.HousePartyStatus
+  public let maxSize: Swift.Int
+  public let memberCount: Swift.Int
+  public let isHost: Swift.Bool
+  public let myStatus: bLinkupSDK.HousePartyMemberStatus?
+  public let pendingCount: Swift.Int?
+  public let members: [bLinkupSDK.HousePartyMember]
+  public init(id: Swift.String, code: Swift.String, name: Swift.String?, eventId: Swift.String, approvalMode: bLinkupSDK.HousePartyApprovalMode, status: bLinkupSDK.HousePartyStatus, maxSize: Swift.Int, memberCount: Swift.Int, isHost: Swift.Bool, myStatus: bLinkupSDK.HousePartyMemberStatus?, pendingCount: Swift.Int?, members: [bLinkupSDK.HousePartyMember])
+  public var displayName: Swift.String {
+    get
+  }
+  public var isOpen: Swift.Bool {
+    get
+  }
+  public var amIMember: Swift.Bool {
+    get
+  }
+  public var amIPending: Swift.Bool {
+    get
+  }
+  public var joinedMembers: [bLinkupSDK.HousePartyMember] {
+    get
+  }
+  public var pendingRequests: [bLinkupSDK.HousePartyMember] {
+    get
+  }
+  public var host: bLinkupSDK.HousePartyMember? {
+    get
+  }
+  public func others(myId: Swift.String?) -> [bLinkupSDK.HousePartyMember]
+  public func contains(_ userId: Swift.String?) -> Swift.Bool
+  public static func == (a: bLinkupSDK.HouseParty, b: bLinkupSDK.HouseParty) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HousePartyActivity : Swift.Identifiable, Swift.Hashable {
+  public enum Action : Swift.String, Swift.Codable, Swift.Hashable {
+    case created, closed, requested, joined, approved, rejected, left
+    case removed, banned, unbanned
+    case requestExpired
+    case requestCancelled
+    case hostTransferred
+    case unknown
+    public var isPartyNews: Swift.Bool {
+      get
+    }
+    public init?(rawValue: Swift.String)
+    public typealias RawValue = Swift.String
+    public var rawValue: Swift.String {
+      get
+    }
+  }
+  public var id: Swift.String {
+    get
+  }
+  public let action: bLinkupSDK.HousePartyActivity.Action
+  public let user: bLinkupSDK.User?
+  public let sizeAfter: Swift.Int?
+  public let at: Foundation.Date
+  public init(action: bLinkupSDK.HousePartyActivity.Action, user: bLinkupSDK.User?, sizeAfter: Swift.Int?, at: Foundation.Date)
+  public static func == (a: bLinkupSDK.HousePartyActivity, b: bLinkupSDK.HousePartyActivity) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HousePartyCursor : Swift.Hashable {
+  public let cursor: Swift.String
+  public let changed: Swift.Bool
+  public init(cursor: Swift.String, changed: Swift.Bool)
+  public static func == (a: bLinkupSDK.HousePartyCursor, b: bLinkupSDK.HousePartyCursor) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct NearbyHouseParty : Swift.Identifiable, Swift.Hashable {
+  public var id: Swift.String {
+    get
+  }
+  public let code: Swift.String
+  public let name: Swift.String?
+  public let hostName: Swift.String?
+  public let memberNames: [Swift.String]
+  public let memberCount: Swift.Int
+  public init(code: Swift.String, name: Swift.String? = nil, hostName: Swift.String? = nil, memberNames: [Swift.String] = [], memberCount: Swift.Int = 0)
+  public static func == (a: bLinkupSDK.NearbyHouseParty, b: bLinkupSDK.NearbyHouseParty) -> Swift.Bool
+  public typealias ID = Swift.String
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct HousePartyConfig : Swift.Hashable {
+  public let maxMembers: Swift.Int
+  public let pendingLimit: Swift.Int
+  public let prizeLabel: Swift.String?
+  public let prizeTitle: Swift.String?
+  public let sponsorLabel: Swift.String?
+  public let sponsorLogoUrl: Swift.String?
+  public let sponsorPrimaryColor: Swift.String?
+  public let sponsorSecondaryColor: Swift.String?
+  public let rulesUrl: Swift.String?
+  public let legalText: Swift.String?
+  public init(maxMembers: Swift.Int = 5, pendingLimit: Swift.Int = 50, prizeLabel: Swift.String? = nil, prizeTitle: Swift.String? = nil, sponsorLabel: Swift.String? = nil, sponsorLogoUrl: Swift.String? = nil, sponsorPrimaryColor: Swift.String? = nil, sponsorSecondaryColor: Swift.String? = nil, rulesUrl: Swift.String? = nil, legalText: Swift.String? = nil)
+  public var orbitSlots: Swift.Int {
+    get
+  }
+  public static let `default`: bLinkupSDK.HousePartyConfig
+  public static func == (a: bLinkupSDK.HousePartyConfig, b: bLinkupSDK.HousePartyConfig) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
@@ -783,6 +1001,17 @@ public enum PresencePoint {
   case place(Swift.String)
   case spot(Swift.String)
 }
+public struct PresenceWatchparty : Swift.Hashable {
+  public let id: Swift.String?
+  public let name: Swift.String?
+  public let code: Swift.String?
+  public init(id: Swift.String?, name: Swift.String?, code: Swift.String?)
+  public static func == (a: bLinkupSDK.PresenceWatchparty, b: bLinkupSDK.PresenceWatchparty) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 public struct Presence : Swift.Identifiable {
   public enum Confidence {
     case unknown, weak, strong, manual
@@ -798,7 +1027,12 @@ public struct Presence : Swift.Identifiable {
   public let spot: bLinkupSDK.Spot?
   public let isPresent: Swift.Bool
   public let insertedAt: Swift.String?
-  public init(id: Swift.String, user: bLinkupSDK.User, place: bLinkupSDK.Place?, spot: bLinkupSDK.Spot?, isPresent: Swift.Bool, insertedAt: Swift.String? = nil)
+  public let watchpartyGroupId: Swift.String?
+  public let watchparty: bLinkupSDK.PresenceWatchparty?
+  public var isWatchparty: Swift.Bool {
+    get
+  }
+  public init(id: Swift.String, user: bLinkupSDK.User, place: bLinkupSDK.Place?, spot: bLinkupSDK.Spot?, isPresent: Swift.Bool, insertedAt: Swift.String? = nil, watchpartyGroupId: Swift.String? = nil, watchparty: bLinkupSDK.PresenceWatchparty? = nil)
   public typealias ID = Swift.String
 }
 extension bLinkupSDK.Presence : Swift.Equatable, Swift.Hashable {
@@ -937,6 +1171,20 @@ public enum UserType : Swift.String, Swift.Hashable {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 public typealias BlinkupRootScreen = bLinkupSDK.Root4Screen
 @_Concurrency.MainActor @preconcurrency public struct Root4Screen : SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public init(token: Swift.String, autoClose: Swift.Bool = false, onClose: (() -> Swift.Void)? = nil)
@@ -991,6 +1239,10 @@ public enum Direction : Swift.String, Swift.Decodable {
   public static func setMetadata(_ value: Swift.String, forKey: Swift.String) async throws
   public static func removeMetadata(_ key: Swift.String, completion: @escaping bLinkupSDK.Completion<Swift.Void>)
   public static func removeMetadata(_ key: Swift.String) async throws
+  public static func setExternalId(_ externalId: Swift.String, completion: bLinkupSDK.Completion<Swift.Void>? = nil)
+  public static func setExternalId(_ externalId: Swift.String) async throws
+  public static func clearExternalId(completion: bLinkupSDK.Completion<Swift.Void>? = nil)
+  public static func clearExternalId() async throws
   public static func findUsers(query: Swift.String?, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.User]>)
   public static func findUsers(query: Swift.String?) async throws -> [bLinkupSDK.User]
   public static func findContacts(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.ContactResult]>)
@@ -1041,6 +1293,42 @@ public enum Direction : Swift.String, Swift.Decodable {
   public static func getDraws() async throws -> [bLinkupSDK.Draw]
   public static func getWonDraws(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Draw]>)
   public static func getWonDraws() async throws -> [bLinkupSDK.Draw]
+  public static var shareUrl: Swift.String? {
+    get
+  }
+  public static var housePartyConfig: bLinkupSDK.HousePartyConfig
+  public static func createHouseParty(name: Swift.String?, approvalMode: bLinkupSDK.HousePartyApprovalMode, maxSize: Swift.Int? = nil, pendingLimit: Swift.Int? = nil, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func createHouseParty(name: Swift.String?, approvalMode: bLinkupSDK.HousePartyApprovalMode, maxSize: Swift.Int? = nil, pendingLimit: Swift.Int? = nil) async throws -> bLinkupSDK.HouseParty
+  public static func lookupHouseParty(code: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func lookupHouseParty(code: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func updateHouseParty(_ id: Swift.String, name: Swift.String? = nil, approvalMode: bLinkupSDK.HousePartyApprovalMode? = nil, maxSize: Swift.Int? = nil, pendingLimit: Swift.Int? = nil, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func updateHouseParty(_ id: Swift.String, name: Swift.String? = nil, approvalMode: bLinkupSDK.HousePartyApprovalMode? = nil, maxSize: Swift.Int? = nil, pendingLimit: Swift.Int? = nil) async throws -> bLinkupSDK.HouseParty
+  public static func getMyHouseParty(completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func getMyHouseParty() async throws -> bLinkupSDK.HouseParty
+  public static func getHouseParty(_ id: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func getHouseParty(_ id: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func getHousePartyMembers(_ id: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func getHousePartyMembers(_ id: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func joinHouseParty(code: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func joinHouseParty(code: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func closeHouseParty(_ id: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func closeHouseParty(_ id: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func leaveHouseParty(_ id: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func leaveHouseParty(_ id: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func approveHousePartyMember(_ userId: Swift.String, in partyId: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func approveHousePartyMember(_ userId: Swift.String, in partyId: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func rejectHousePartyMember(_ userId: Swift.String, in partyId: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func rejectHousePartyMember(_ userId: Swift.String, in partyId: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func banHousePartyMember(_ userId: Swift.String, in partyId: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func banHousePartyMember(_ userId: Swift.String, in partyId: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func removeHousePartyMember(_ userId: Swift.String, in partyId: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func removeHousePartyMember(_ userId: Swift.String, in partyId: Swift.String) async throws -> bLinkupSDK.HouseParty
+  public static func getHousePartyEvents(_ id: Swift.String, completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.HousePartyActivity]>)
+  public static func getHousePartyEvents(_ id: Swift.String) async throws -> [bLinkupSDK.HousePartyActivity]
+  public static func getHousePartyCursor(_ id: Swift.String, since: Swift.String? = nil, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HousePartyCursor>)
+  public static func getHousePartyCursor(_ id: Swift.String, since: Swift.String? = nil) async throws -> bLinkupSDK.HousePartyCursor
+  public static func transferHousePartyHost(to userId: Swift.String, in partyId: Swift.String, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.HouseParty>)
+  public static func transferHousePartyHost(to userId: Swift.String, in partyId: Swift.String) async throws -> bLinkupSDK.HouseParty
   public static func getBlocks(completion: @escaping bLinkupSDK.Completion<[bLinkupSDK.Block]>)
   public static func getBlocks() async throws -> [bLinkupSDK.Block]
   public static func blockUser(_ user: bLinkupSDK.User, completion: @escaping bLinkupSDK.Completion<bLinkupSDK.Block>)
@@ -1095,6 +1383,11 @@ extension bLinkupSDK.Deal.DealStatus : Swift.RawRepresentable {}
 extension bLinkupSDK.Deal.DealType : Swift.Equatable {}
 extension bLinkupSDK.Deal.DealType : Swift.Hashable {}
 extension bLinkupSDK.Deal.DealType : Swift.RawRepresentable {}
+extension bLinkupSDK.HousePartyApprovalMode : Swift.RawRepresentable {}
+extension bLinkupSDK.HousePartyStatus : Swift.RawRepresentable {}
+extension bLinkupSDK.HousePartyMemberStatus : Swift.RawRepresentable {}
+extension bLinkupSDK.HousePartyRole : Swift.RawRepresentable {}
+extension bLinkupSDK.HousePartyActivity.Action : Swift.RawRepresentable {}
 extension bLinkupSDK.UserType : Swift.RawRepresentable {}
 extension bLinkupSDK.Root4Screen : Swift.Sendable {}
 extension bLinkupSDK.Direction : Swift.Equatable {}
