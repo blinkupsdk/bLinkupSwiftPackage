@@ -100,6 +100,23 @@
       },
       {
         "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "UIKit",
         "printedName": "UIKit",
         "declKind": "Import",
@@ -17355,6 +17372,13 @@
       },
       {
         "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK"
+      },
+      {
+        "kind": "Import",
         "name": "SwiftUI",
         "printedName": "SwiftUI",
         "declKind": "Import",
@@ -20649,6 +20673,71 @@
                 "declKind": "Accessor",
                 "usr": "s:10bLinkupSDK4DealC4spotAA4SpotVSgvg",
                 "mangledName": "$s10bLinkupSDK4DealC4spotAA4SpotVSgvg",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "declAttributes": [
+                  "Final"
+                ],
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "pointsEarned",
+            "printedName": "pointsEarned",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10bLinkupSDK4DealC12pointsEarnedSiSgvp",
+            "mangledName": "$s10bLinkupSDK4DealC12pointsEarnedSiSgvp",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "Final",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "isLet": true,
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK4DealC12pointsEarnedSiSgvg",
+                "mangledName": "$s10bLinkupSDK4DealC12pointsEarnedSiSgvg",
                 "moduleName": "bLinkupSDK",
                 "implicit": true,
                 "declAttributes": [
@@ -24926,6 +25015,117 @@
                 "moduleName": "bLinkupSDK",
                 "implicit": true,
                 "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "redeemedRedeemablePoints",
+            "printedName": "redeemedRedeemablePoints",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10bLinkupSDK13ByUsageConfigV24redeemedRedeemablePointsSiSgvp",
+            "mangledName": "$s10bLinkupSDK13ByUsageConfigV24redeemedRedeemablePointsSiSgvp",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK13ByUsageConfigV24redeemedRedeemablePointsSiSgvg",
+                "mangledName": "$s10bLinkupSDK13ByUsageConfigV24redeemedRedeemablePointsSiSgvg",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK13ByUsageConfigV24redeemedRedeemablePointsSiSgvs",
+                "mangledName": "$s10bLinkupSDK13ByUsageConfigV24redeemedRedeemablePointsSiSgvs",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK13ByUsageConfigV24redeemedRedeemablePointsSiSgvM",
+                "mangledName": "$s10bLinkupSDK13ByUsageConfigV24redeemedRedeemablePointsSiSgvM",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -39242,6 +39442,117 @@
           },
           {
             "kind": "Var",
+            "name": "redemptionPoints",
+            "printedName": "redemptionPoints",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "Swift.Int?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:10bLinkupSDK4SpotV16redemptionPointsSiSgvp",
+            "mangledName": "$s10bLinkupSDK4SpotV16redemptionPointsSiSgvp",
+            "moduleName": "bLinkupSDK",
+            "declAttributes": [
+              "HasInitialValue",
+              "HasStorage",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "hasStorage": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK4SpotV16redemptionPointsSiSgvg",
+                "mangledName": "$s10bLinkupSDK4SpotV16redemptionPointsSiSgvg",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "Swift.Int?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK4SpotV16redemptionPointsSiSgvs",
+                "mangledName": "$s10bLinkupSDK4SpotV16redemptionPointsSiSgvs",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:10bLinkupSDK4SpotV16redemptionPointsSiSgvM",
+                "mangledName": "$s10bLinkupSDK4SpotV16redemptionPointsSiSgvM",
+                "moduleName": "bLinkupSDK",
+                "implicit": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
             "name": "hashValue",
             "printedName": "hashValue",
             "children": [
@@ -41853,6 +42164,30 @@
       },
       {
         "kind": "Import",
+        "name": "os",
+        "printedName": "os",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "CoreLocation",
+        "printedName": "CoreLocation",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "MapKit",
         "printedName": "MapKit",
         "declKind": "Import",
@@ -41864,6 +42199,16 @@
         "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "bLinkupSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -41891,6 +42236,26 @@
         "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "bLinkupSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
       },
       {
         "kind": "Import",
@@ -41948,6 +42313,26 @@
       },
       {
         "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "Import",
         "name": "Combine",
         "printedName": "Combine",
         "declKind": "Import",
@@ -41975,8 +42360,8 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
+        "name": "SafariServices",
+        "printedName": "SafariServices",
         "declKind": "Import",
         "moduleName": "bLinkupSDK",
         "declAttributes": [
@@ -41985,8 +42370,8 @@
       },
       {
         "kind": "Import",
-        "name": "WebKit",
-        "printedName": "WebKit",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
         "declKind": "Import",
         "moduleName": "bLinkupSDK"
       },
@@ -41999,6 +42384,13 @@
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "UIKit",
+        "printedName": "UIKit",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK"
       },
       {
         "kind": "Import",
@@ -42114,13 +42506,20 @@
       },
       {
         "kind": "Import",
-        "name": "SwiftUI",
-        "printedName": "SwiftUI",
+        "name": "os",
+        "printedName": "os",
         "declKind": "Import",
         "moduleName": "bLinkupSDK",
         "declAttributes": [
           "RawDocComment"
         ]
+      },
+      {
+        "kind": "Import",
+        "name": "SwiftUI",
+        "printedName": "SwiftUI",
+        "declKind": "Import",
+        "moduleName": "bLinkupSDK"
       },
       {
         "kind": "TypeDecl",
@@ -52013,14 +52412,14 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Internal\/RemoteBranding.swift",
       "kind": "StringLiteral",
-      "offset": 1750,
+      "offset": 2260,
       "length": 14,
       "value": "\"featureTitle\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Internal\/RemoteBranding.swift",
       "kind": "StringLiteral",
-      "offset": 1936,
+      "offset": 2446,
       "length": 33,
       "value": "\"defaultSpotPromotionInviteCount\""
     },
@@ -52894,8 +53293,15 @@
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Localization\/BLLocalized.swift",
+      "kind": "Dictionary",
+      "offset": 364,
+      "length": 165,
+      "value": "[(\"blinkup_sdk_home_afterparty_locations\", \"blinkup_sdk_afterparty_locations\"), (\"blinkup_sdk_home_official_watch_party\", \"blinkup_sdk_official_watch_party\")]"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Localization\/BLLocalized.swift",
       "kind": "StringLiteral",
-      "offset": 158,
+      "offset": 578,
       "length": 13,
       "value": "\"Localizable\""
     },
@@ -53231,56 +53637,70 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "StringLiteral",
-      "offset": 145,
+      "offset": 155,
       "length": 9,
       "value": "\"Connect\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "StringLiteral",
-      "offset": 1003,
+      "offset": 1013,
       "length": 9,
       "value": "\"#00449C\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "StringLiteral",
-      "offset": 1072,
+      "offset": 1082,
       "length": 9,
       "value": "\"#004020\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "StringLiteral",
-      "offset": 1142,
+      "offset": 1152,
       "length": 9,
       "value": "\"#3A6896\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "StringLiteral",
-      "offset": 1167,
+      "offset": 1177,
       "length": 9,
       "value": "\"#EDE5D3\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "StringLiteral",
-      "offset": 1184,
+      "offset": 1194,
       "length": 6,
       "value": "\"boty\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
+      "kind": "StringLiteral",
+      "offset": 6342,
+      "length": 17,
+      "value": "\"com.blinkup.sdk\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
+      "kind": "StringLiteral",
+      "offset": 6371,
+      "length": 10,
+      "value": "\"branding\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "IntegerLiteral",
-      "offset": 5545,
+      "offset": 6915,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/Public\/Branding.swift",
       "kind": "IntegerLiteral",
-      "offset": 6952,
+      "offset": 8362,
       "length": 2,
       "value": "16"
     },
@@ -53707,259 +54127,259 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/Action3Button.swift",
       "kind": "IntegerLiteral",
-      "offset": 1294,
+      "offset": 1274,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/Action3Button.swift",
       "kind": "StringLiteral",
-      "offset": 1328,
+      "offset": 1308,
       "length": 8,
       "value": "\"Submit\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/Action3Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1348,
+      "offset": 1328,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/Action3Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1364,
+      "offset": 1344,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/Action3Button.swift",
       "kind": "StringLiteral",
-      "offset": 1400,
+      "offset": 1380,
       "length": 8,
       "value": "\"Submit\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/Action3Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1420,
+      "offset": 1400,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/Action3Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1436,
+      "offset": 1416,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/Action3Button.swift",
       "kind": "StringLiteral",
-      "offset": 1471,
+      "offset": 1451,
       "length": 8,
       "value": "\"Cancel\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/Action3Button.swift",
       "kind": "BooleanLiteral",
-      "offset": 1491,
+      "offset": 1471,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/LivePulseBadge.swift",
-      "kind": "BooleanLiteral",
-      "offset": 282,
-      "length": 4,
-      "value": "true"
+      "kind": "IntegerLiteral",
+      "offset": 721,
+      "length": 1,
+      "value": "6"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/Elements\/LivePulseBadge.swift",
-      "kind": "FloatLiteral",
-      "offset": 333,
-      "length": 3,
-      "value": "0.7"
+      "kind": "BooleanLiteral",
+      "offset": 786,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "IntegerLiteral",
-      "offset": 4420,
+      "offset": 4509,
       "length": 2,
       "value": "24"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4472,
+      "offset": 4561,
       "length": 16,
       "value": "\"GROUP ACTIVITY\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4513,
+      "offset": 4602,
       "length": 6,
       "value": "\"LIVE\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4578,
+      "offset": 4667,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4589,
+      "offset": 4678,
       "length": 15,
       "value": "\"Jordan joined\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4615,
+      "offset": 4704,
       "length": 8,
       "value": "\"1m ago\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 4638,
+      "offset": 4727,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4683,
+      "offset": 4772,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4694,
+      "offset": 4783,
       "length": 15,
       "value": "\"Taylor joined\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4720,
+      "offset": 4809,
       "length": 8,
       "value": "\"2m ago\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 4743,
+      "offset": 4832,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4788,
+      "offset": 4877,
       "length": 3,
       "value": "\"3\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4799,
+      "offset": 4888,
       "length": 29,
       "value": "\"You started My Hornets Crew\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4872,
+      "offset": 4961,
       "length": 8,
       "value": "\"4m ago\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 4895,
+      "offset": 4984,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 4962,
+      "offset": 5051,
       "length": 20,
       "value": "\"GROUP MEMBERS · 4\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 5039,
+      "offset": 5128,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 5052,
+      "offset": 5141,
       "length": 4,
       "value": "\"me\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 5067,
+      "offset": 5156,
       "length": 3,
       "value": "\"Y\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 5078,
+      "offset": 5167,
       "length": 12,
       "value": "\"You (host)\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 5103,
+      "offset": 5192,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 5146,
+      "offset": 5235,
       "length": 3,
       "value": "\"2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 5159,
+      "offset": 5248,
       "length": 4,
       "value": "\"u2\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 5174,
+      "offset": 5263,
       "length": 3,
       "value": "\"M\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "StringLiteral",
-      "offset": 5185,
+      "offset": 5274,
       "length": 8,
       "value": "\"Marcus\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/GroupActivityViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 5206,
+      "offset": 5295,
       "length": 4,
       "value": "true"
     },
@@ -53973,175 +54393,175 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/NearbyPartyCard.swift",
       "kind": "StringLiteral",
-      "offset": 2585,
+      "offset": 2351,
       "length": 8,
       "value": "\"3f9a2c\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/NearbyPartyCard.swift",
       "kind": "StringLiteral",
-      "offset": 2614,
+      "offset": 2380,
       "length": 8,
       "value": "\"NEARBY\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/NearbyPartyCard.swift",
       "kind": "StringLiteral",
-      "offset": 2643,
+      "offset": 2409,
       "length": 30,
       "value": "\"Jordan's House Party is here\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/NearbyPartyCard.swift",
       "kind": "StringLiteral",
-      "offset": 2693,
+      "offset": 2459,
       "length": 84,
       "value": "\"You're in range. Join and you're watching together — everyone in the party wins.\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/NearbyPartyCard.swift",
       "kind": "Array",
-      "offset": 2801,
+      "offset": 2567,
       "length": 15,
       "value": "[\"M\", \"T\", \"J\"]"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/NearbyPartyCard.swift",
       "kind": "StringLiteral",
-      "offset": 2842,
+      "offset": 2608,
       "length": 27,
       "value": "\"Join Jordan's House Party\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/NearbyPartyCard.swift",
       "kind": "StringLiteral",
-      "offset": 2896,
+      "offset": 2662,
       "length": 19,
       "value": "\"or start your own\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "IntegerLiteral",
-      "offset": 6531,
+      "offset": 6345,
       "length": 2,
       "value": "16"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 6594,
+      "offset": 6408,
       "length": 27,
       "value": "\"Finding nearby friends…\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 6683,
+      "offset": 6497,
       "length": 24,
       "value": "\"2 of 3 needed to enter\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 6770,
+      "offset": 6584,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "BooleanLiteral",
-      "offset": 6783,
+      "offset": 6597,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 6826,
+      "offset": 6640,
       "length": 17,
       "value": "\"Name your group\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 6884,
+      "offset": 6698,
       "length": 17,
       "value": "\"My Hornets Crew\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7009,
+      "offset": 6823,
       "length": 14,
       "value": "\"WHO CAN JOIN\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7142,
+      "offset": 6956,
       "length": 24,
       "value": "\"Anyone nearby can join\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7215,
+      "offset": 7029,
       "length": 51,
       "value": "\"Bluetooth range is the gate — no request needed\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7328,
+      "offset": 7142,
       "length": 22,
       "value": "\"Approve each request\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7399,
+      "offset": 7213,
       "length": 37,
       "value": "\"Fans ask first, you decide who's in\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7564,
+      "offset": 7378,
       "length": 3,
       "value": "\"1\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7578,
+      "offset": 7392,
       "length": 3,
       "value": "\"R\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7590,
+      "offset": 7404,
       "length": 21,
       "value": "\"Riley wants to join\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7664,
+      "offset": 7478,
       "length": 45,
       "value": "\"They're nearby and asked to join your group\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7762,
+      "offset": 7576,
       "length": 6,
       "value": "\"Deny\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Elements\/PartyComposeViews.swift",
       "kind": "StringLiteral",
-      "offset": 7783,
+      "offset": 7597,
       "length": 9,
       "value": "\"Approve\""
     },
@@ -54715,14 +55135,14 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Sheets\/HomePartyInviteSheet.swift",
       "kind": "StringLiteral",
-      "offset": 4860,
+      "offset": 6272,
       "length": 17,
       "value": "\"My Hornets Crew\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/Sheets\/HomePartyInviteSheet.swift",
       "kind": "StringLiteral",
-      "offset": 5099,
+      "offset": 6511,
       "length": 36,
       "value": "\"https:\/\/blinkup.example\/s\/demo\/app\""
     },
@@ -54750,119 +55170,119 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 16638,
+      "offset": 16448,
       "length": 6,
       "value": "\"Idle\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 17124,
+      "offset": 16934,
       "length": 14,
       "value": "\"Nearby party\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "Array",
-      "offset": 17275,
+      "offset": 17085,
       "length": 10,
       "value": "[\"3f9a2c\"]"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 17588,
+      "offset": 17398,
       "length": 16,
       "value": "\"Several nearby\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "Array",
-      "offset": 17741,
+      "offset": 17551,
       "length": 30,
       "value": "[\"3f9a2c\", \"a1b2c3\", \"0d0e0f\"]"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 17937,
+      "offset": 17747,
       "length": 9,
       "value": "\"Entered\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18131,
+      "offset": 17941,
       "length": 10,
       "value": "\"u-marcus\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18149,
+      "offset": 17959,
       "length": 8,
       "value": "\"Marcus\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18276,
+      "offset": 18086,
       "length": 10,
       "value": "\"u-taylor\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18294,
+      "offset": 18104,
       "length": 8,
       "value": "\"Taylor\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18421,
+      "offset": 18231,
       "length": 10,
       "value": "\"u-jordan\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18439,
+      "offset": 18249,
       "length": 8,
       "value": "\"Jordan\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18635,
+      "offset": 18445,
       "length": 17,
       "value": "\"My Hornets Crew\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18778,
+      "offset": 18588,
       "length": 18,
       "value": "\"Waiting requests\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18981,
+      "offset": 18791,
       "length": 9,
       "value": "\"u-riley\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 18998,
+      "offset": 18808,
       "length": 7,
       "value": "\"Riley\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeParty\/HomePartyView.swift",
       "kind": "StringLiteral",
-      "offset": 19197,
+      "offset": 19007,
       "length": 17,
       "value": "\"My Hornets Crew\""
     },
@@ -54937,6 +55357,41 @@
       "value": "0"
     },
     {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1270,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 2104,
+      "length": 8,
+      "value": "\"button\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "Dictionary",
+      "offset": 2585,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "Dictionary",
+      "offset": 3053,
+      "length": 3,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3987,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/BarDetailScreen.swift",
       "kind": "BooleanLiteral",
       "offset": 902,
@@ -54967,9 +55422,37 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DealConfirmationScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 637,
+      "offset": 1180,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DealConfirmationScreen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1220,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DealPill.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2380,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DealPill.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2482,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DealPill.swift",
+      "kind": "IntegerLiteral",
+      "offset": 2527,
+      "length": 2,
+      "value": "64"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DrawDetailScreen.swift",
@@ -54981,231 +55464,203 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DrawDetailScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 11045,
+      "offset": 12243,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DrawDetailScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 11112,
+      "offset": 12310,
       "length": 2,
       "value": "28"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DrawDetailScreen.swift",
       "kind": "IntegerLiteral",
-      "offset": 11179,
+      "offset": 12377,
       "length": 2,
       "value": "16"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DrawDetailScreen.swift",
-      "kind": "IntegerLiteral",
-      "offset": 11608,
-      "length": 2,
-      "value": "22"
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeBands.swift",
+      "kind": "BooleanLiteral",
+      "offset": 2960,
+      "length": 5,
+      "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/DrawDetailScreen.swift",
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeBands.swift",
+      "kind": "BooleanLiteral",
+      "offset": 3006,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeButtons.swift",
       "kind": "IntegerLiteral",
-      "offset": 11900,
+      "offset": 891,
       "length": 2,
-      "value": "14"
+      "value": "32"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeButtons.swift",
+      "kind": "IntegerLiteral",
+      "offset": 3428,
+      "length": 2,
+      "value": "32"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 231,
+      "offset": 347,
       "length": 8,
       "value": "0x000000"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 288,
+      "offset": 404,
       "length": 8,
       "value": "0x8E8E93"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 339,
-      "length": 8,
-      "value": "0x0057B8"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
-      "kind": "IntegerLiteral",
-      "offset": 394,
-      "length": 8,
-      "value": "0x00408A"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
-      "kind": "IntegerLiteral",
-      "offset": 448,
-      "length": 8,
-      "value": "0x0054B5"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
-      "kind": "IntegerLiteral",
-      "offset": 504,
-      "length": 8,
-      "value": "0xC7A857"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
-      "kind": "IntegerLiteral",
-      "offset": 564,
-      "length": 8,
-      "value": "0xA88C3E"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
-      "kind": "IntegerLiteral",
-      "offset": 613,
+      "offset": 453,
       "length": 8,
       "value": "0xE4E4E4"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 665,
+      "offset": 574,
+      "length": 8,
+      "value": "0xE4E4E4"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 629,
+      "length": 8,
+      "value": "0x8E8E93"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
+      "kind": "IntegerLiteral",
+      "offset": 681,
       "length": 8,
       "value": "0xE5E5EA"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 723,
+      "offset": 739,
       "length": 8,
       "value": "0xD1D1D6"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 775,
+      "offset": 791,
       "length": 8,
       "value": "0xC7C7CC"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 827,
+      "offset": 843,
       "length": 8,
       "value": "0xF2F2F7"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 877,
+      "offset": 893,
       "length": 8,
       "value": "0xE03131"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 926,
+      "offset": 942,
       "length": 8,
       "value": "0xE5322B"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
-      "kind": "IntegerLiteral",
-      "offset": 982,
-      "length": 8,
-      "value": "0xEAF1FB"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1040,
-      "length": 8,
-      "value": "0xA4C2E5"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "FloatLiteral",
-      "offset": 1263,
+      "offset": 1165,
       "length": 3,
       "value": "0.7"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1311,
+      "offset": 1213,
       "length": 8,
       "value": "0x0B3FC9"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1366,
+      "offset": 1268,
       "length": 8,
       "value": "0xE7E9F2"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1416,
-      "length": 8,
-      "value": "0x0B57D0"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1470,
+      "offset": 1322,
       "length": 8,
       "value": "0x4CAF50"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1532,
+      "offset": 1384,
       "length": 8,
       "value": "0xE9E7F5"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1585,
+      "offset": 1437,
       "length": 8,
       "value": "0xC7A04E"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1644,
+      "offset": 1496,
       "length": 8,
       "value": "0xA6A6A6"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1716,
+      "offset": 1568,
       "length": 8,
       "value": "0xD8D8DE"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1774,
+      "offset": 1626,
       "length": 8,
       "value": "0xE4E4EA"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1828,
+      "offset": 1680,
       "length": 8,
       "value": "0xF2F2F7"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeColors.swift",
       "kind": "IntegerLiteral",
-      "offset": 1888,
+      "offset": 1740,
       "length": 8,
       "value": "0x2FA84F"
     },
@@ -55275,63 +55730,77 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeMappers.swift",
       "kind": "BooleanLiteral",
-      "offset": 7563,
+      "offset": 7542,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeMappers.swift",
       "kind": "BooleanLiteral",
-      "offset": 10233,
+      "offset": 9973,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeMappers.swift",
       "kind": "BooleanLiteral",
-      "offset": 10722,
+      "offset": 10462,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeMappers.swift",
       "kind": "BooleanLiteral",
-      "offset": 16486,
+      "offset": 16624,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 7709,
+      "offset": 6305,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 7983,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeModels.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8011,
-      "length": 4,
-      "value": "true"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeModels.swift",
-      "kind": "BooleanLiteral",
-      "offset": 8041,
+      "offset": 7469,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeModels.swift",
       "kind": "BooleanLiteral",
-      "offset": 11918,
+      "offset": 8085,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeModels.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8359,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeModels.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8387,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeModels.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8417,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/HomeModels.swift",
+      "kind": "BooleanLiteral",
+      "offset": 12373,
       "length": 5,
       "value": "false"
     },
@@ -55345,16 +55814,30 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/RootChrome.swift",
       "kind": "StringLiteral",
-      "offset": 5267,
+      "offset": 3015,
+      "length": 7,
+      "value": "\"other\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/RootChrome.swift",
+      "kind": "StringLiteral",
+      "offset": 9217,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/RootChrome.swift",
       "kind": "StringLiteral",
-      "offset": 5297,
+      "offset": 9247,
       "length": 2,
       "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/RootChrome.swift",
+      "kind": "Dictionary",
+      "offset": 11275,
+      "length": 3,
+      "value": "[]"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/SeasonRewardsScreen.swift",
@@ -55364,142 +55847,184 @@
       "value": "0"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/FableLoginScreen.swift",
-      "kind": "StringLiteral",
-      "offset": 612,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/FableProfile4Screen.swift",
-      "kind": "StringLiteral",
-      "offset": 679,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/FableProfile4Screen.swift",
-      "kind": "StringLiteral",
-      "offset": 716,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/FableProfile4Screen.swift",
-      "kind": "Array",
-      "offset": 761,
-      "length": 2,
-      "value": "[]"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/FableProfile4Screen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 868,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/FableProfile4Screen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 915,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/FableProfile4Screen.swift",
-      "kind": "StringLiteral",
-      "offset": 956,
-      "length": 2,
-      "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/FableProfile4Screen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 998,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/FableProfile4Screen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 1043,
-      "length": 5,
-      "value": "false"
-    },
-    {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
       "kind": "IntegerLiteral",
-      "offset": 184,
+      "offset": 206,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
       "kind": "StringLiteral",
-      "offset": 499,
+      "offset": 521,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
       "kind": "StringLiteral",
-      "offset": 539,
+      "offset": 561,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
       "kind": "StringLiteral",
-      "offset": 580,
+      "offset": 602,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 640,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
+      "kind": "IntegerLiteral",
+      "offset": 863,
+      "length": 2,
+      "value": "20"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
+      "kind": "StringLiteral",
+      "offset": 15024,
+      "length": 41,
+      "value": "\"https:\/\/www.blinkupapp.com\/terms-of-use\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
+      "kind": "StringLiteral",
+      "offset": 15109,
+      "length": 43,
+      "value": "\"https:\/\/www.blinkupapp.com\/privacy-policy\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 16260,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/PhoneFormatting.swift",
+      "kind": "StringLiteral",
+      "offset": 444,
+      "length": 4,
+      "value": "\"US\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/PhoneFormatting.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1799,
+      "length": 4,
+      "value": "true"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Profile4Screen.swift",
+      "kind": "StringLiteral",
+      "offset": 674,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Profile4Screen.swift",
+      "kind": "StringLiteral",
+      "offset": 711,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Profile4Screen.swift",
+      "kind": "Array",
+      "offset": 756,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Profile4Screen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 863,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Profile4Screen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 910,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Profile4Screen.swift",
+      "kind": "StringLiteral",
+      "offset": 951,
+      "length": 2,
+      "value": "\"\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Profile4Screen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 993,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Profile4Screen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1038,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
+      "kind": "StringLiteral",
+      "offset": 343,
+      "length": 33,
+      "value": "\"blinkup_sdk_login_start_winning\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
+      "kind": "BooleanLiteral",
+      "offset": 574,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
       "kind": "BooleanLiteral",
       "offset": 618,
       "length": 5,
       "value": "false"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 709,
-      "length": 5,
-      "value": "false"
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4508,
+      "length": 2,
+      "value": "16"
     },
     {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Login4Screen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 12733,
-      "length": 5,
-      "value": "false"
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4709,
+      "length": 2,
+      "value": "50"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
+      "kind": "IntegerLiteral",
+      "offset": 4732,
+      "length": 1,
+      "value": "2"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
       "kind": "StringLiteral",
-      "offset": 210,
-      "length": 6,
-      "value": "\"Next\""
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 413,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
-      "kind": "BooleanLiteral",
-      "offset": 457,
-      "length": 5,
-      "value": "false"
-    },
-    {
-      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/UI4\/Tutorial4Screen.swift",
-      "kind": "StringLiteral",
-      "offset": 4075,
+      "offset": 4872,
       "length": 10,
       "value": "\"tutorial\""
     },
@@ -55548,14 +56073,14 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeViewModel.swift",
       "kind": "BooleanLiteral",
-      "offset": 6386,
+      "offset": 6747,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/HomeViewModel.swift",
       "kind": "IntegerLiteral",
-      "offset": 9435,
+      "offset": 9796,
       "length": 1,
       "value": "0"
     },
@@ -55583,63 +56108,63 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NavBar4.swift",
       "kind": "BooleanLiteral",
-      "offset": 2685,
+      "offset": 2653,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NavBar4.swift",
       "kind": "StringLiteral",
-      "offset": 2723,
+      "offset": 2691,
       "length": 8,
       "value": "\"Closed\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/RootScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 187,
+      "offset": 197,
       "length": 4,
       "value": "true"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/RootScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 544,
+      "offset": 995,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/RootScreen.swift",
       "kind": "BooleanLiteral",
-      "offset": 1334,
+      "offset": 1785,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3190,
+      "offset": 7235,
       "length": 46,
       "value": "\"TkPnD3_yP3j6dUEAksgRjJ-auYijyUECLxVEnFqHJVE=\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3271,
+      "offset": 7316,
       "length": 9,
       "value": "\"Staging\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3399,
+      "offset": 7444,
       "length": 7,
       "value": "\"Inter\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/RootScreen.swift",
       "kind": "StringLiteral",
-      "offset": 3438,
+      "offset": 7483,
       "length": 7,
       "value": "\"Logo2\""
     },
@@ -55648,7 +56173,7 @@
       "kind": "StringLiteral",
       "offset": 260,
       "length": 5,
-      "value": "\"212\""
+      "value": "\"218\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/bLinkup.swift",
@@ -55695,21 +56220,21 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/bLinkup.swift",
       "kind": "StringLiteral",
-      "offset": 9938,
+      "offset": 10061,
       "length": 13,
       "value": "\"external_id\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 15391,
+      "offset": 15514,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/bLinkup.swift",
       "kind": "BooleanLiteral",
-      "offset": 15730,
+      "offset": 15853,
       "length": 5,
       "value": "false"
     }

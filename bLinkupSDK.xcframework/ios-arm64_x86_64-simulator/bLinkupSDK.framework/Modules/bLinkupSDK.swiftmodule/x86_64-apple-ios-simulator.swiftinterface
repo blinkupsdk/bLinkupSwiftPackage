@@ -14,6 +14,7 @@ import DeveloperToolsSupport
 import Foundation
 import MapKit
 import MessageUI
+import SafariServices
 import Security
 import Swift
 import SwiftUI
@@ -24,6 +25,7 @@ import _MapKit_SwiftUI
 import _StringProcessing
 import _SwiftConcurrencyShims
 import _WebKit_SwiftUI
+import os
 extension SwiftUICore.View {
   @_Concurrency.MainActor @preconcurrency public func addLoadingView(isLoading: SwiftUICore.Binding<Swift.Bool>) -> some SwiftUICore.View
   
@@ -610,6 +612,7 @@ public struct Customer : Swift.Codable, Swift.Equatable {
   final public let userId: Swift.String?
   final public let spotId: Swift.String?
   final public let spot: bLinkupSDK.Spot?
+  final public let pointsEarned: Swift.Int?
   public static func == (lhs: bLinkupSDK.Deal, rhs: bLinkupSDK.Deal) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public typealias ID = Swift.String
@@ -730,6 +733,7 @@ public struct ByUsageConfig : Swift.Hashable {
   public let featuredSpotPresencePoints: Swift.Int?
   public let spotPresencePoints: Swift.Int?
   public let watchpartyPresencePoints: Swift.Int?
+  public var redeemedRedeemablePoints: Swift.Int?
   public static func == (a: bLinkupSDK.ByUsageConfig, b: bLinkupSDK.ByUsageConfig) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
@@ -1108,6 +1112,7 @@ public struct Spot : Swift.Identifiable, Swift.Hashable {
   public var inviteCount: Swift.Int?
   public var deal: bLinkupSDK.Deal?
   public var dealStats: bLinkupSDK.DealStats?
+  public var redemptionPoints: Swift.Int?
   public static func == (a: bLinkupSDK.Spot, b: bLinkupSDK.Spot) -> Swift.Bool
   public typealias ID = Swift.String
   public func hash(into hasher: inout Swift.Hasher)
