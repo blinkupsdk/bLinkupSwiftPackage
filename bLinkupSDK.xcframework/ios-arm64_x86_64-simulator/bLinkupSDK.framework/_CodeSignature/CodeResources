@@ -14,7 +14,7 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		DwrRioC97gZ8KSXpgHFbiHiMSNw=
+		Z5jnBVgxDTu+rdXqUADxT9pLiWg=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		g09ZIgB1jNxGyrUJcHYNKvCQTIA=
+		yHmHckn/C2cc7ch33g1Da+c0rL4=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		DwrRioC97gZ8KSXpgHFbiHiMSNw=
+		Z5jnBVgxDTu+rdXqUADxT9pLiWg=
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -50,7 +50,7 @@
 		</data>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		jr6gIKZEMiVy9sVh5ICFfLjPf1k=
+		utFh+qYpJAyZITjcZ8VOQKVFbjk=
 		</data>
 		<key>PhoneNumberMetadata.json</key>
 		<data>
@@ -92,7 +92,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			nSc3x8pPyELT7m1x3zeFaFQZRCsffwKgtKEgYexQ06U=
+			e31/EzTnblGeEtmJZTGNs9SFE3o8S7vkTWA0HfYzJC4=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -120,14 +120,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			14h9okhlTqsulDmKnGCK+gyGP08vODNUClEvzRYc9Fs=
+			DLC55LxpYf6gFnFFNhbP60p5DG9wVih+Jd2KiNmq4b4=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			nSc3x8pPyELT7m1x3zeFaFQZRCsffwKgtKEgYexQ06U=
+			e31/EzTnblGeEtmJZTGNs9SFE3o8S7vkTWA0HfYzJC4=
 			</data>
 		</dict>
 		<key>Modules/bLinkupSDK.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -155,7 +155,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			kd+B2bAfOKSMpxkKQeOxAkHgJwRZIsqEkpQ9FDLp+cU=
+			H1JAkpVcHi1naZYyCmK4Hb1YpjGZqNs6S0N4DIE85+U=
 			</data>
 		</dict>
 		<key>PhoneNumberMetadata.json</key>

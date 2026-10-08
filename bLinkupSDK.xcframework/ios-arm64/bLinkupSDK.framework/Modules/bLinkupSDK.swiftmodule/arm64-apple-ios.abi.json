@@ -55359,35 +55359,182 @@
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 1270,
+      "offset": 1231,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 1336,
       "length": 5,
       "value": "false"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
       "kind": "StringLiteral",
-      "offset": 2104,
+      "offset": 2295,
       "length": 8,
       "value": "\"button\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
       "kind": "Dictionary",
-      "offset": 2585,
+      "offset": 2878,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
       "kind": "Dictionary",
-      "offset": 3053,
+      "offset": 3987,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 5893,
+      "length": 5,
+      "value": "\"ios\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 6155,
+      "length": 10,
+      "value": "\"local_id\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 6231,
+      "length": 13,
+      "value": "\"sdk_version\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 6271,
+      "length": 13,
+      "value": "\"app_version\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 6310,
+      "length": 12,
+      "value": "\"session_id\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 6346,
+      "length": 10,
+      "value": "\"event_id\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 6382,
+      "length": 12,
+      "value": "\"is_gameday\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 6420,
+      "length": 12,
+      "value": "\"checked_in\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 6592,
+      "length": 6,
+      "value": "\"wire\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7883,
+      "length": 3,
+      "value": "500"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 7937,
+      "length": 2,
+      "value": "30"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8046,
+      "length": 5,
+      "value": "2000"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8139,
+      "length": 1,
+      "value": "7"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8143,
+      "length": 2,
+      "value": "24"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8148,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "IntegerLiteral",
+      "offset": 8153,
+      "length": 2,
+      "value": "60"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "StringLiteral",
+      "offset": 8201,
+      "length": 27,
+      "value": "\"com.blinkup.sdk.analytics\""
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "Array",
+      "offset": 8267,
+      "length": 2,
+      "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
       "kind": "BooleanLiteral",
-      "offset": 3987,
+      "offset": 8297,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 8329,
+      "length": 5,
+      "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/SDK-UI4\/NewUI\/Analytics.swift",
+      "kind": "BooleanLiteral",
+      "offset": 13359,
       "length": 5,
       "value": "false"
     },
@@ -56173,7 +56320,7 @@
       "kind": "StringLiteral",
       "offset": 260,
       "length": 5,
-      "value": "\"218\""
+      "value": "\"219\""
     },
     {
       "filePath": "\/Users\/chas\/Work\/Blinkup\/_SDK\/_SDK\/SDK\/bLinkup.swift",
